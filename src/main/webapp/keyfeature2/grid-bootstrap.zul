@@ -1,0 +1,47 @@
+<?import org.zkoss.keyfeature2.* ?>
+<zk xmlns:n="native">
+	<style
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</style>
+	<div viewModel="@id('vm')@init('org.zkoss.keyfeature2.PersonViewModel')" width="300px">
+		<n:table class="table">
+			<n:caption>Staff List</n:caption>
+			<n:thead>
+				<n:tr>
+					<n:th scope="row">#</n:th>
+					<n:th>Name</n:th>
+					<n:th>Department</n:th>
+				</n:tr>
+			</n:thead>
+			<n:tbody>
+				<forEach items="@load(vm.personList)">
+					<n:tr>
+						<n:td><label value="@load(forEachStatus.index)"/></n:td>
+						<n:td><label value="@load(each.name)"/></n:td>
+						<n:td>
+							<choose>
+								<when test="@load(each.department eq Department.IT)">
+									<n:span class="label label-primary">
+									<label value="@load(each.department)"/></n:span>
+								</when>
+								<when test="@load(each.department eq Department.RD)">
+									<n:span class="label label-success">
+									<label value="@load(each.department)"/></n:span>
+								</when>
+								<when test="@load(each.department eq Department.ADMIN)">
+									<n:span class="label label-default">
+									<label value="@load(each.department)"/></n:span>
+								</when>
+								<when test="@load(each.department eq Department.SALES)">
+									<n:span class="label label-warning">
+									<label value="@load(each.department)"/></n:span>
+								</when>
+							</choose>
+						</n:td>
+					</n:tr>
+				</forEach>
+			</n:tbody>
+		</n:table>
+	</div>
+
+</zk>
