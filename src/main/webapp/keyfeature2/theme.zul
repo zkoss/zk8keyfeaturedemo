@@ -1,0 +1,19 @@
+<zk>
+	<div viewModel="@id('vm')@init('org.zkoss.keyfeature2.ThemeViewModel')">
+		<groupbox hflex="min">
+			<caption>
+			Theme Selector:
+			</caption>
+		<radiogroup model="@load(vm.themeList)" selectedItem="@bind(vm.selectedTheme)">
+			<template name="model">
+				<radio label="@load(each)" style="padding:5px"/>
+			</template>
+		</radiogroup>
+		</groupbox>
+		<separator/>
+		<iframe width="600px" height="600px" src="@load(vm.selectedThemeUri)"/>
+		<!--
+		<apply templateURI="@load(vm.selectedThemeUri)"/>
+		  -->
+	</div>
+</zk>

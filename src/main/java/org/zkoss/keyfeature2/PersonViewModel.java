@@ -4,7 +4,6 @@ import org.zkoss.bind.annotation.Init;
 import org.zkoss.zul.ListModelList;
 
 public class PersonViewModel {
-	public static String test="in ViewModel";
 	private ListModelList<Person> personList;
 	
 	@Init

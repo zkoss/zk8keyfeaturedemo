@@ -1,7 +1,6 @@
 package org.zkoss.keyfeature2;
 
 public class Person {
-	public static String test="in Person";
 	private String name;
 	private Department department;
 	
