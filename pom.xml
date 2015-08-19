@@ -5,7 +5,7 @@
 	<artifactId>zk8keyfeaturedemo</artifactId>
 	<version>0.0.1</version>
 	<properties>
-		<zk.version>8.0.0.FL.20150814-Eval</zk.version>
+		<zk.version>8.0.0.FL.20150818-Eval</zk.version>
 		<commons-io>1.3.1</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
@@ -61,6 +61,11 @@
 			<artifactId>commons-io</artifactId>
 			<version>${commons-io}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zuti</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
 		
 		<!-- ZK 5 breeze theme
 		<dependency>
@@ -70,11 +75,6 @@
 			<optional>true</optional>
 		</dependency>
 		 -->
-		<dependency>
-			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zuti</artifactId>
-			<version>${zk.version}</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
