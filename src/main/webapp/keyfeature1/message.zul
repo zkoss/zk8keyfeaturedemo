@@ -1,0 +1,10 @@
+<h:li class="media media-sm" xmlns:h="native">
+	<h:a class="pull-left">
+		<h:img src="${message.author.picture}" alt=""
+			class="media-object rounded-corner" />
+	</h:a>
+	<h:div class="media-body">
+		<h:h5 class="media-heading">${message.author.username}</h:h5>
+		<h:p>${message.content}</h:p>
+	</h:div>
+</h:li>

@@ -1,0 +1,35 @@
+<?component name="statBox" templateURI="statBoxTemplate.zul"?>
+<?component name="customPanel" templateURI="customPanel.zul"?>
+<?component name="messageBoard" templateURI="messageBoard.zul"?>
+<?import org.zkoss.keyfeature1.MyViewModel?>
+<zk xmlns:h="native" xmlns:x="xhtml">
+	<style src="./scripts/font-awesome.min.css"/>
+	<style src="./scripts/style.min.css"/>
+	<style src="./scripts/bootstrap.min.css"/>
+
+	<div viewModel="@id('vm')@init('MyViewModel')" sclass="container">
+		<div sclass="row">
+			<forEach items="@init(vm.myStats)">
+				<statBox statBlock="@init(each)"
+					detailCommand="@init(MyViewModel.VIEW_DETAIL)" />
+			</forEach>
+		</div>
+		<div sclass="row">
+			<customPanel panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)" panelTitle="Message">
+				<template name="panelContent">
+					<messageBoard messages="@init(vm.myMessages)" />
+				</template>
+			</customPanel>
+		</div>
+	</div>
+	<script src="./scripts/jquery-1.9.1.min.js" />
+	<script src="./scripts/jquery-migrate-1.1.0.min.js" />
+	<script src="./scripts/jquery-ui.min.js" />
+	<script src="./scripts/bootstrap.min.js" />
+	<script src="./scripts/jquery.slimscroll.min.js" />
+	<script type="text/javascript" defer="true">
+		<![CDATA[ $(document).ready(function() {
+		$('#slimScrollDiv').slimScroll({ height: '250px' });
+		}); ]]>	
+	</script>
+</zk>

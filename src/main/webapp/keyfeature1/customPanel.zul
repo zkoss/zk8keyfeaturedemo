@@ -1,0 +1,39 @@
+<h:div class="panel panel-inverse" xmlns:h="native">
+	<h:div class="panel-heading">
+		<h:div class="panel-heading-btn">
+			<div onClick="@command(panelCommand,buttonId='button1')"
+				class="btn btn-xs btn-icon btn-circle btn-default">
+				<h:i class="fa fa-expand" />
+			</div>
+			<div onClick="@command(panelCommand,buttonId='button2')"
+				class="btn btn-xs btn-icon btn-circle btn-success">
+				<h:i class="fa fa-repeat" />
+			</div>
+			<div onClick="@command(panelCommand,buttonId='button3')"
+				class="btn btn-xs btn-icon btn-circle btn-warning">
+				<h:i class="fa fa-minus" />
+			</div>
+			<div onClick="@command(panelCommand,buttonId='button3')"
+				class="btn btn-xs btn-icon btn-circle btn-danger">
+				<h:i class="fa fa-times" />
+			</div>
+		</h:div>
+		<h:h4 class="panel-title">${panelTitle}</h:h4>
+	</h:div>
+	<h:div class="panel-body" >
+		<h:div id="slimScrollDiv" style="overflow: hidden; width: auto; height: 100%;">
+			<apply template="panelContent" />
+		</h:div>
+	</h:div>
+	<h:div class="panel-footer">
+		<h:form>
+			<h:div class="input-group">
+				<textbox value="@save(vm.messageTextbox)" class="form-control bg-silver" placeholder="Enter message" />
+				<h:span class="input-group-btn">
+					<button class="btn btn-primary" onClick="@command('addNewMessage')" iconSclass="fa fa-pencil">
+					</button>
+				</h:span>
+			</h:div>
+		</h:form>
+	</h:div>
+</h:div>
