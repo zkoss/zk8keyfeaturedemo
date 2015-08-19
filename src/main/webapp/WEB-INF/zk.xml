@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <zk>
-	<!-- [Optional]
-	Uncomment if you want to defines the application's name 
-	
-	<preference>
-		<name>org.zkoss.zk.ui.WebApp.name</name>
-		<value>zkcase8</value>
-	</preference>
-	-->
-	
+	<client-config>
+		<data-handler>
+			<name>labelauty</name>
+			<depends>/auty/jquery-labelauty.js</depends>
+			<script>
+				function (wgt, dataValue) {
+				jq(wgt._subnodes.real).labelauty(dataValue);
+				}
+			</script>
+		</data-handler>
+	</client-config>
 </zk>
