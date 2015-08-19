@@ -1,30 +1,29 @@
-<zk>
+<zk xmlns:sh="shadow" xmlns:ca="client/attribute">
 	<style src="/auty/jquery-labelauty.css"></style>
-	<div xmlns:ca="client/attribute">
-		<hlayout>
-			<vlayout>
-				<checkbox checked="true"
-					ca:data-labelauty='{"checked_label": "You selected this", "unchecked_label": "You do not want it"}' />
-				<checkbox disabled="true"
-					ca:data-labelauty='{"checked_label": "You selected this", "unchecked_label": "You do not want it"}' />
-				<checkbox checked="true"
-					ca:data-labelauty='{"label":"false"}' />
-				<checkbox disabled="true"
-					ca:data-labelauty='{"label":"false"}' />
-			</vlayout>
-			<vlayout>
-				<radiogroup>
-					<radio checked="true"
-						onCheck="test.value=event.toString()"
-						ca:data-labelauty='{"checked_label": "Apples", "unchecked_label": "No Apples"}' />
-					<radio onCheck="test.value=event.toString()"
-						ca:data-labelauty='{"checked_label": "Oranges", "unchecked_label": "No Oranges"}' />
-					<radio disabled="true"
-						ca:data-labelauty='{"checked_label": "Bananas", "unchecked_label": "No Bananas"}' />
-				</radiogroup>
-			</vlayout>
-			<label id="test" />
-		</hlayout>
-	</div>
+	<style src="/auty/custom-style.css" />
+	
+	<div sclass="container" viewModel="@id('vm') @init('org.zkoss.keyfeature3.AutyViewModel')">
+		<sh:forEach items="@init(vm.questions)" var="question">
+			<label sclass="statement" value="@init(question.statement)"/>
+			<div>
+				<sh:apply template="@load(question.type)"/>
+			</div>
+			<separator spacing="18px"/>
+		</sh:forEach>
 
+		<template name="checkbox">
+			<sh:forEach items="@init(question.options)">
+				<checkbox checked="@bind(each.checked)" ca:data-labelauty="${each}" />
+			</sh:forEach> 
+		</template>
+		<template name="radio">
+			<radiogroup>
+				<div>
+					<sh:forEach items="@init(question.options)">
+						<radio checked="@bind(each.checked)" ca:data-labelauty="${each}" />
+					</sh:forEach> 
+				</div>
+			</radiogroup>
+		</template>
+	</div>
 </zk>

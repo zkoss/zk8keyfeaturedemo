@@ -1,0 +1,19 @@
+input.labelauty+label {
+	display: inline-block;
+}
+
+input.labelauty.terms-icon+label>span.labelauty-checked-image {
+	background-image: url(images/terms-checked.png);
+}
+
+input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
+	background-image: url(images/terms-unchecked.png);
+}
+
+.statement {
+	font-size: 14px;
+}
+
+.container {
+	margin: 12px 0px 0px 8px;
+}
