@@ -7,7 +7,17 @@
 			<depends>/auty/jquery-labelauty.js</depends>
 			<script>
 				function (wgt, dataValue) {
-				jq(wgt._subnodes.real).labelauty(dataValue);
+					jq(wgt._subnodes.real).labelauty(dataValue);
+				}
+			</script>
+		</data-handler>
+		<data-handler>
+			<name>slimscroll</name>
+			<depends>/keyfeature1/scripts/jquery.slimscroll.min.js</depends>
+			<script>
+				function(wgt, dataValue) {
+					jq(wgt).slimScroll(dataValue);
+					console.log(arguments);
 				}
 			</script>
 		</data-handler>

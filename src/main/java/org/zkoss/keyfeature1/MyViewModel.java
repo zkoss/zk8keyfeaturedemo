@@ -3,6 +3,8 @@ package org.zkoss.keyfeature1;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
+import org.zkoss.json.JSONArray;
+import org.zkoss.json.JSONObject;
 import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.ListModelList;
 
@@ -12,6 +14,9 @@ public class MyViewModel {
 	private ListModelList<StatBlock> myStats = new ListModelList<StatBlock>();
 	private ListModelList<Message> myMessages = new ListModelList<Message>();
 	private String messageTextbox;
+	private JSONObject scrollProperty = new JSONObject();
+
+
 
 
 	@Init
@@ -25,6 +30,8 @@ public class MyViewModel {
 		myMessages.add(new Message(new User("Terry Ng","./img/user-6.jpg"),"Sed in ante vel ipsum tristique euismod posuere eget nulla. Quisque ante sem, scelerisque iaculis interdum quis, eleifend id mi. Fusce congue leo nec mauris malesuada, id scelerisque sapien ultricies."));
 		myMessages.add(new Message(new User("Fiona Log","./img/user-8.jpg"),"Pellentesque dictum in tortor ac blandit. Nulla rutrum eu leo vulputate ornare. Nulla a semper mi, ac lacinia sapien. Sed volutpat ornare eros, vel semper sem sagittis in. Quisque risus ipsum, iaculis quis cursus eu, tristique sed nulla."));
 		myMessages.add(new Message(new User("John Doe","./img/user-7.jpg"),"Morbi molestie lorem quis accumsan elementum. Morbi condimentum nisl iaculis, laoreet risus sed, porta neque. Proin mi leo, dapibus at ligula a, aliquam consectetur metus."));
+		
+		scrollProperty.put("height", "200px");
 	}
 
 	public ListModelList<Message> getMyMessages() {
@@ -38,7 +45,11 @@ public class MyViewModel {
 	public void setMessageTextbox(String messageTextbox) {
 		this.messageTextbox = messageTextbox;
 	}
-
+	
+	public JSONObject getScrollProperty() {
+		return scrollProperty;
+	}
+	
 	@Command(VIEW_DETAIL)
 	public void viewDetail(@BindingParam("statId") String statId) {
 		Clients.showNotification(statId, null, null, null, 2000);

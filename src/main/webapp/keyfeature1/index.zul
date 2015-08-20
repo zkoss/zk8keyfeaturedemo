@@ -15,7 +15,7 @@
 			</forEach>
 		</div>
 		<div sclass="row">
-			<customPanel panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)" panelTitle="Message">
+			<customPanel panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)" panelTitle="Message" scrollProperty="@init(vm.scrollProperty)">
 				<template name="panelContent">
 					<messageBoard messages="@init(vm.myMessages)" />
 				</template>
@@ -27,9 +27,5 @@
 	<script src="./scripts/jquery-ui.min.js" />
 	<script src="./scripts/bootstrap.min.js" />
 	<script src="./scripts/jquery.slimscroll.min.js" />
-	<script type="text/javascript" defer="true">
-		<![CDATA[ $(document).ready(function() {
-		$('#slimScrollDiv').slimScroll({ height: '250px' });
-		}); ]]>	
-	</script>
+
 </zk>
