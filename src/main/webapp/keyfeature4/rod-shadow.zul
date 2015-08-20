@@ -1,0 +1,25 @@
+<?link rel="stylesheet" href="/keyfeature1/scripts/bootstrap.min.css"?>
+<zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client" xmlns:ca="client/attribute">
+	<style src="./scripts/rod-shadow.css" />
+
+	<window id="win" border="normal" title="shadow rod demo"
+		viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')">
+		<x:ul id="container" class="list-group"
+			style="height: ${vm.rowHeight * vm.visibleSize}px;"
+			data-rowHeight="${vm.rowHeight}" data-visibleSize="${vm.visibleSize}" data-cachedSize="${vm.cachedSize}">
+			<x:li style="@load(vm.topHeight)"></x:li>
+			<forEach items="@load(vm.users)">
+				<x:li class="list-group-item">
+					<image src="${each.picture}" sclass="user-picture" />
+					<vlayout width="400px" spacing="0" sclass="user-info">
+						<label value="${each.name}" sclass="user-name" />
+						<label value="${each.email}" />
+					</vlayout>
+				</x:li>
+			</forEach>
+			<x:li style="@load(vm.bottomHeight)"></x:li>
+		</x:ul>
+	</window>
+
+	<script type="text/javascript" src="./scripts/rod-shadow.js"></script>
+</zk>

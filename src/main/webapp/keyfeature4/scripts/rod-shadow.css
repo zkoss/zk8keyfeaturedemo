@@ -1,0 +1,19 @@
+.z-window-content {
+	padding: 0px;
+	position: relative;
+}
+.list-group {
+	margin: 0px;
+	overflow-y: scroll;
+}
+.list-group-item .user-info {
+	display: inline-block;
+	vertical-align: bottom;
+}
+.list-group-item .user-name {
+	font-weight: bold;
+}
+.list-group-item .user-picture {
+	border-radius: 50%;
+	width:40px;
+}
