@@ -1,27 +1,27 @@
-zk.afterMount(function(){
-	var container = zk.$('$container');
+function initRodList(container) {
 	var $container = jq(container);
-	container.rowHeight = $container.data('rowheight');
-	container.visibleSize = $container.data('visiblesize');
-	container.cachedSize = $container.data('cachedsize');
-	container.loading = false;
-	container.begin = 0;
-	container.scrollTop = 0;
+	var $topPadding = $container.find('> .topPadding');
+	var $bottomPadding = $container.find('> .bottomPadding');
+	var binder = zkbind.$(container);
+	
 	$container.on('scroll', function(evt) {
-		if (container.loading) {
-			$container[0].scrollTop = container.scrollTop;
+		if (container.loadingPosition) {
+			$container.scrollTop(container.loadingPosition);
 			return;
 		}
-		var itemIndex = evt.target.scrollTop / container.rowHeight;
-		if (itemIndex > (container.begin + container.cachedSize - container.visibleSize) || itemIndex < container.begin) {
-			container.loading = true;
-			container.scrollTop = jq('.list-group')[0].scrollTop;
-			container.begin = Math.floor(itemIndex / container.visibleSize) * container.visibleSize;
-			container.end = container.begin + container.visibleSize * 3;
-			zkbind.$('$container').command('scrolling', {begin: container.begin, end: container.end});
-			zkbind.$('$container').after('scrolling', function() {
-				container.loading = false;
-			});
+		if ($bottomPadding.position().top < $container.height()) {
+			loadData(Math.floor($container.scrollTop() / container.rowHeight), 'down');
+		} else if ($topPadding.height() > $container.scrollTop()) {
+			loadData(Math.ceil(($container.scrollTop() + $container.height()) / container.rowHeight), 'up');
 		}
 	});
-});
+	
+	binder.after('loadData', function() {
+		container.loadingPosition = null;
+	});
+
+	function loadData(index, direction) {
+		container.loadingPosition = $container.scrollTop();
+		binder.command('loadData', {loadingIndex: index, direction: direction});
+	}
+}

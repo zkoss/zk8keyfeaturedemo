@@ -10,54 +10,39 @@ import org.zkoss.bind.annotation.ToClientCommand;
 import org.zkoss.bind.annotation.ToServerCommand;
 import org.zkoss.zul.ListModelList;
 
-@ToServerCommand({"scrolling"})
-@ToClientCommand({"scrolling"})
+@ToServerCommand({ShadowRodVM.LOAD_DATA_COMMAND})
+@ToClientCommand({ShadowRodVM.LOAD_DATA_COMMAND})
 public class ShadowRodVM {
+	static final String LOAD_DATA_COMMAND = "loadData";
 	private int totalSize = 2000;
-	private int cachedSize = 30;
-	private int rowHeight = 62;
-	private int topHeight = 0;
-	private int bottomHeight = 0;
-	private int visibleSize = 10;
 	private int begin = 0;
-	private int end = visibleSize * 3;
+	private int cachedSize = 30;
+	private int rowHeight = 61;
 	private ListModelList<User> usersList;
 
 	@Init
 	public void init() {
-		usersList = new ListModelList<User>(load(0, cachedSize));  // simulate load from DB
-		topHeight = begin * rowHeight;
-		bottomHeight = (totalSize - end) * rowHeight;
+		usersList = new ListModelList<User>(loadUsers(0));  // simulate load from DB
 	}
 
-	@Command("scrolling")
-	@SmartNotifyChange({"begin", "end", "topHeight", "bottomHeight"})
-	public void doScrolling(@BindingParam("begin") int begin,
-			@BindingParam("end") int end) {
+	@Command(LOAD_DATA_COMMAND)
+	@SmartNotifyChange({"topHeight", "bottomHeight"})
+	public void loadData(@BindingParam("loadingIndex") int loadingIndex, @BindingParam("direction") String direction) {
 		usersList.clear();
-		usersList.addAll(load(begin, end));
+		if("down".equals(direction)) {
+			usersList.addAll(loadUsers(loadingIndex));
+		} else if("up".equals(direction)) {
+			usersList.addAll(loadUsers(loadingIndex - cachedSize));
+		}
 	}
 
-	private List<User> load(int begin, int end) {
-		if(end > totalSize) {
-			end = totalSize;
-			begin = end - cachedSize;
-		}
-		this.begin = begin;
-		this.end = end;
-		return UserService.getUsers(begin, end);
+	private List<User> loadUsers(int index) {
+		this.begin = Math.max(index, 0);
+		return UserService.getUsers(begin, getEnd());
 	}
 
 	public ListModelList<User> getUsers() {
 		return usersList;
-	}
-
-	public int getTotalSize() {
-		return totalSize;
-	}
-
-	public int getCachedSize() {
-		return cachedSize;
 	}
 
 	public int getRowHeight() {
@@ -65,25 +50,17 @@ public class ShadowRodVM {
 	}
 
 	public String getTopHeight() {
-		topHeight = begin * rowHeight;
+		int topHeight = begin * rowHeight;
 		return "height:" + topHeight + "px;";
 	}
 
 	public String getBottomHeight() {
-		bottomHeight = (totalSize - end) * rowHeight;
+		int bottomHeight = (totalSize - getEnd()) * rowHeight;
 		return "height:" + bottomHeight + "px;";
 	}
 
-	public int getBegin() {
-		return begin;
-	}
-
-	public int getVisibleSize() {
-		return visibleSize;
-	}
-
-	public int getEnd() {
-		return end;
+	private int getEnd() {
+		return Math.min(begin + cachedSize, totalSize - 1);
 	}
 
 }

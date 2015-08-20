@@ -21,11 +21,15 @@ public class UserService {
 	static {
 		// get dummy users from http://api.randomuser.me/
 		JSONObject jsonFromUrl = getJSONFromUrl("http://api.randomuser.me/?results=2000");
+		int index = 0;
 		for (Object user : (JSONArray) jsonFromUrl.get("results")) {
 			JSONObject u = (JSONObject) ((JSONObject) user).get("user");
 			JSONObject name = (JSONObject) u.get("name");
-			users.add(new User((String) u.get("gender"), name.get("first") + " " + name.get("last"),
-					(String) u.get("email"), (String) ((JSONObject) u.get("picture")).get("thumbnail")));
+			users.add(new User(
+					(String) u.get("gender"), 
+					name.get("first") + " " + name.get("last"),
+					(String) u.get("email"), 
+					(String) ((JSONObject) u.get("picture")).get("thumbnail")));
 		}
 	}
 
