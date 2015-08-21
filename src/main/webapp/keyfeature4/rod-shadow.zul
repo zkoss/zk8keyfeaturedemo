@@ -8,7 +8,7 @@
 			<x:li class="topPadding"/>
 			<forEach items="@load(vm.users)">
 				<x:li class="list-group-item">
-					<n:image src="${each.picture}" class="user-picture" />
+					<n:img src="${each.picture}" class="user-picture" />
 					<vlayout width="400px" spacing="0" sclass="user-info">
 						<label value="${each.name}" sclass="user-name" />
 						<label value="${each.email}" />
