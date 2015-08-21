@@ -1,6 +1,6 @@
 <zk xmlns:sh="shadow" xmlns:ca="client/attribute">
-	<style src="/auty/jquery-labelauty.css"></style>
-	<style src="/auty/custom-style.css" />
+	<style src="/keyfeature3/scripts/auty/jquery-labelauty.css"></style>
+	<style src="/keyfeature3/scripts/auty/custom-style.css" />
 	
 	<div sclass="container" viewModel="@id('vm') @init('org.zkoss.keyfeature3.AutyViewModel')">
 		<sh:forEach items="@init(vm.questions)" var="question">

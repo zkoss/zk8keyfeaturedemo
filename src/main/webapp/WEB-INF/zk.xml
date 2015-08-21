@@ -4,7 +4,7 @@
 	<client-config>
 		<data-handler>
 			<name>labelauty</name>
-			<depends>/auty/jquery-labelauty.js</depends>
+			<depends>/keyfeature3/scripts/auty/jquery-labelauty.js</depends>
 			<script>
 				function (wgt, dataValue) {
 					jq(wgt._subnodes.real).labelauty(dataValue);
