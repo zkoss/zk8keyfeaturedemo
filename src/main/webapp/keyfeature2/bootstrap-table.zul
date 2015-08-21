@@ -1,11 +1,11 @@
-<?import org.zkoss.keyfeature2.* ?>
+<?import org.zkoss.keyfeature2.organization.Department ?>
 <zk xmlns:n="native">
 	<style
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	</style>
-	<div viewModel="@id('vm')@init('org.zkoss.keyfeature2.PersonViewModel')" width="300px">
-		<n:table class="table">
-			<n:caption>Staff List</n:caption>
+	<n:div style="width: 300px">
+		<n:table class="table table-striped">
+			<n:caption>Staff list: ${organization.name} (${organization.memberCount} members)</n:caption>
 			<n:thead>
 				<n:tr>
 					<n:th scope="row">#</n:th>
@@ -14,7 +14,7 @@
 				</n:tr>
 			</n:thead>
 			<n:tbody>
-				<forEach items="@load(vm.personList)">
+				<forEach items="@init(organization.members)">
 					<n:tr>
 						<n:td><label value="@load(forEachStatus.index)"/></n:td>
 						<n:td><label value="@load(each.name)"/></n:td>
@@ -42,6 +42,6 @@
 				</forEach>
 			</n:tbody>
 		</n:table>
-	</div>
+	</n:div>
 
 </zk>

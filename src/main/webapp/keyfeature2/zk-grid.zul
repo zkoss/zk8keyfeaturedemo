@@ -1,0 +1,18 @@
+<zk>
+	<window title="Staff list: ${organization.name} (${organization.memberCount} members)" border="normal">
+		<grid model="@init(organization.members)">
+			<columns>
+				<column label="#" width="30px"></column>
+				<column label="Name"></column>
+				<column label="Department"></column>
+			</columns>
+			<template name="model">
+				<row>
+					<label value="@load(forEachStatus.index)" />
+					<label value="@load(each.name)" />
+					<label value="@load(each.department)" />
+				</row>
+			</template>
+		</grid>
+	</window>
+</zk>

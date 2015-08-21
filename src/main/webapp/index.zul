@@ -1,4 +1,8 @@
 <zk xmlns:n="native">
+	<style
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</style>
+
 	<n:h2>Control HTML Design in Java</n:h2>
 	<div>
 		Easily turn HTML(Layout) pages created by a web designer into a
@@ -6,15 +10,19 @@
 		them in pure Java Apply your own HTML based layout to coexist
 		with ZK data driven power
 	</div>
-	<iframe src="/keyfeature1/index.zul" width="80%" height="100%"/>
+	<div class="well">
+		<iframe src="/keyfeature1/index.zul" width="60%" height="600px"/>
+	</div>
 	<tabbox></tabbox>
 	
 	<separator bar="true" />
 	
 	<n:h2>View/Logic Separation</n:h2>
-	<div>Effortless theme or styling customization</div>
-	<iframe src="/keyfeature2/theme.zul" width="600px" height="400px" />
-	<tabbox></tabbox>
+	<div>Effortless theme or styling customization: Represent your model objects in various ways. MVVM and Databinding enables you to develop the UI separated from your java code. 
+	This allows to render the same data, visually and functionally different.</div>
+	<div class="well">
+		<iframe src="/keyfeature2/theme.zul" width="950px" height="400px" />
+	</div>
 	
 	<separator bar="true" />
 	
@@ -27,13 +35,14 @@
 		
 		(Robert: decorating exising widgets, without affecting the server side functions)
 	</div>
-	<iframe src="/keyfeature3/auty.zul" width="600px" height="300px"
-		style="overflow:hide" />
-	<tabbox></tabbox>
+	<div class="well">
+		<iframe src="/keyfeature3/auty.zul" width="600px" height="300px"/>
+	</div>
 	
 	<separator bar="true" />
 	
 	<n:h2>Streaming Enterprise Data to the Client</n:h2>
-	<iframe src="/keyfeature4/rod-shadow.zul" width="600px" height="700px" />
-	<tabbox></tabbox>
+	<div class="well">
+		<iframe src="/keyfeature4/rod-shadow.zul" width="600px" height="700px" />
+	</div>
 </zk>

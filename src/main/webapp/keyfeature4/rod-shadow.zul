@@ -5,17 +5,17 @@
 	<window id="win" border="normal" title="shadow rod demo" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')">
 		<x:ul id="userList" class="list-group" style="height: 400px;" 
 				w:onBind="initRodList(this, ${vm.totalSize}, 61);">
-			<x:li class="topPadding"/>
+			<n:li class="topPadding"/>
 			<forEach items="@load(vm.users)">
-				<x:li class="list-group-item">
+				<n:li class="list-group-item">
 					<n:img src="${each.picture}" class="user-picture" />
 					<vlayout width="400px" spacing="0" sclass="user-info">
 						<label value="${each.name}" sclass="user-name" />
 						<label value="${each.email}" />
 					</vlayout>
-				</x:li>
+				</n:li>
 			</forEach>
-			<x:li class="bottomPadding"/>
+			<n:li class="bottomPadding"/>
 		</x:ul>
 	</window>
 

@@ -1,4 +1,4 @@
-package org.zkoss.keyfeature2;
+package org.zkoss.keyfeature2.organization;
 
 public class Person {
 	private String name;

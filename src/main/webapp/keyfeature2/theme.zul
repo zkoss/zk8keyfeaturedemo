@@ -1,16 +1,34 @@
 <zk>
-	<div viewModel="@id('vmt')@init('org.zkoss.keyfeature2.ThemeViewModel')">
-		<groupbox hflex="min">
-			<caption>
-			Theme Selector:
-			</caption>
-		<radiogroup model="@load(vmt.themeList)" selectedItem="@bind(vmt.selectedTheme)">
-			<template name="model">
-				<radio label="@load(each)" style="padding:5px"/>
-			</template>
-		</radiogroup>
-		</groupbox>
-		<separator/>
-		<apply templateURI="@load(vmt.selectedThemeUri)"/>
+	<div viewModel="@id('vm')@init('org.zkoss.keyfeature2.TemplatingViewModel')">
+		<hlayout>
+			<div width="400px">
+				<apply organization="@init(vm.organization)" templateURI="@load(vm.currentTemplate.uri)" />
+			</div>
+
+			<vlayout width="500px">
+				<hlayout>
+					Choose a template to render the organization in different ways:
+					<selectbox model="@init(vm.availableTemplates)" selectedItem="@bind(vm.currentTemplate)">
+						<template name="model">
+							<label value="@load(each.name)"/>
+						</template>
+					</selectbox>
+				</hlayout>
+		
+				<hlayout spacing="0">
+					<label sclass="code" value="&lt;apply organization=&quot;@init(vm.organization)&quot; templateURI=&quot;"/>
+					<selectbox model="@init(vm.availableTemplates)" selectedItem="@bind(vm.currentTemplate)">
+						<template name="model">
+							<label value="@load(each.uri)"/>
+						</template>
+					</selectbox>
+					<label sclass="code" value="&quot;/&gt;"/>
+				</hlayout>
+			</vlayout>
+			
+			<separator/>
+		
+		</hlayout>
+
 	</div>
 </zk>

@@ -1,0 +1,24 @@
+<?import org.zkoss.keyfeature2.organization.Department ?>
+<zk>
+	<window title="Staff list: ${organization.name} (${organization.memberCount} members)" border="normal">
+		<caption> <label value=" EDITABLE" style="color: red; font-weight: bold;"/></caption>
+		<grid model="@init(organization.members)">
+			<columns>
+				<column label="#" width="30px"></column>
+				<column label="Name"></column>
+				<column label="Department"></column>
+			</columns>
+			<template name="model">
+				<row>
+					<label value="@load(forEachStatus.index)"/>
+					<textbox value="@bind(each.name)"/>
+					<selectbox model="@init(Department.values())" selectedItem="@bind(each.department)">
+						<template name="model">
+							<label value="@init(each)"/>
+						</template>
+					</selectbox>
+				</row>
+			</template>
+		</grid>
+	</window>
+</zk>

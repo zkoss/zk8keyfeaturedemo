@@ -2,6 +2,7 @@ package org.zkoss.keyfeature2;
 
 import org.zkoss.bind.BindContext;
 import org.zkoss.bind.Converter;
+import org.zkoss.keyfeature2.organization.Department;
 import org.zkoss.zk.ui.Component;
 
 public class Department2ColorConverter implements Converter<String, Department, Component> {
