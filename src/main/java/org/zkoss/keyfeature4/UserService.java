@@ -27,7 +27,7 @@ public class UserService {
 			JSONObject name = (JSONObject) u.get("name");
 			users.add(new User(
 					(String) u.get("gender"), 
-					name.get("first") + " " + name.get("last"),
+					name.get("first") + " " + name.get("last") + " " + index++,
 					(String) u.get("email"), 
 					(String) ((JSONObject) u.get("picture")).get("thumbnail")));
 		}
@@ -39,6 +39,10 @@ public class UserService {
 
 	public static List<User> getAllUsers() {
 		return users;
+	}
+
+	public static int getUsersCount() {
+		return users.size();
 	}
 
 	public static JSONObject getJSONFromUrl(String url) {

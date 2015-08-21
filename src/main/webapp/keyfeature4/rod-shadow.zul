@@ -3,19 +3,20 @@
 	<style src="./scripts/rod-shadow.css" />
 
 	<window id="win" border="normal" title="shadow rod demo" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')">
-		<x:ul id="userList" class="list-group" style="height: 400px;"
-				w:onBind="initRodList(this);" w:rowHeight="${vm.rowHeight}">
-			<x:li class="topPadding" style="@load(vm.topHeight)"/>
+		<x:ul id="userList" class="list-group" style="height: 610px;"
+				w:totalSize="${vm.totalSize}" w:cacheSize="${vm.cachedSize}" w:rowHeight="${vm.rowHeight}"
+				w:onBind="initRodList(this);">
+			<x:li class="topPadding"/>
 			<forEach items="@load(vm.users)">
-				<n:li class="list-group-item" height="${vm.rowHeight}">
+				<x:li class="list-group-item" height="${vm.rowHeight}px">
 					<n:image src="${each.picture}" class="user-picture" />
 					<vlayout width="400px" spacing="0" sclass="user-info">
 						<label value="${each.name}" sclass="user-name" />
 						<label value="${each.email}" />
 					</vlayout>
-				</n:li>
+				</x:li>
 			</forEach>
-			<x:li class="bottomPadding" style="@load(vm.bottomHeight)"/>
+			<x:li class="bottomPadding"/>
 		</x:ul>
 	</window>
 

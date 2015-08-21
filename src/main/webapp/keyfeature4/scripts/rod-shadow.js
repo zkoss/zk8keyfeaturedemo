@@ -16,9 +16,16 @@ function initRodList(container) {
 		}
 	});
 	
-	binder.after('loadData', function() {
+	binder.after('loadData', function(pos) {
 		container.loadingPosition = null;
 	});
+	
+	binder.after('updateBegin', function(begin) {
+		$topPadding.height(begin * container.rowHeight);
+		$bottomPadding.height((container.totalSize - container.cacheSize - begin) * container.rowHeight);
+		console.log(begin);
+	});
+
 
 	function loadData(index, direction) {
 		container.loadingPosition = $container.scrollTop();

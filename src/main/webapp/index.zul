@@ -6,7 +6,7 @@
 		them in pure Java Apply your own HTML based layout to coexist
 		with ZK data driven power
 	</div>
-	<iframe src="/keyfeature1/index.zul" width="800px" height="800px"/>
+	<iframe src="/keyfeature1/index.zul" width="80%" height="100%"/>
 	<tabbox></tabbox>
 	
 	<separator bar="true" />
@@ -19,11 +19,13 @@
 	<separator bar="true" />
 	
 	<n:h2>
-		Easily Integrate Any Existing Javascript Widgets or Libraries
+		Easily Integrate with Existing Javascript Widgets or Libraries
 	</n:h2>
 	<div>
 		Flexibility to integrate ZK with any front-end libraries
 		Interact with client-side libraries using ZK’s new client-side
+		
+		(Robert: decorating exising widgets, without affecting the server side functions)
 	</div>
 	<iframe src="/keyfeature3/auty.zul" width="600px" height="300px"
 		style="overflow:hide" />
