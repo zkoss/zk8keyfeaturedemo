@@ -1,0 +1,18 @@
+<zk xmlns:sh="shadow" xmlns:ca="client/attribute">
+	<style src="/keyfeature3/scripts/auty/jquery-labelauty.css"></style>
+	<style src="/keyfeature3/scripts/auty/custom-style.css" />
+	
+	<div sclass="container" viewModel="@id('vm') @init('org.zkoss.keyfeature3.IntegrationShowcaseViewModel')">
+		<vlayout>
+			<hlayout>
+				<checkbox checked="@bind(vm.likesJava8)" label="@load(vm.likesJava8 ? 'I like Java 8' : 'I don\'t like it')"/>
+				----- (add labelauty) ----->
+				<checkbox checked="@bind(vm.likesJava8)" ca:data-labelauty='{"class":"labelauty terms-icon", "checked_label": "I like Java 8", "unchecked_label": "I don&apos;t like it"}' />
+			</hlayout>
+			<hlayout>
+				<label value="@load(vm.percentage)"/> ----- (easy pi chart) ----> <label ca:data-easy="33%"/>
+			</hlayout>
+			...
+		</vlayout>
+	</div>
+</zk>
