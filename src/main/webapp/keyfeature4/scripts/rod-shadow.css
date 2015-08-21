@@ -7,7 +7,7 @@
 	overflow-y: scroll;
 }
 
-#userList > li {
+#userList > .topPadding, #userList > .bottomPadding {
 	display: block;
 }
 	

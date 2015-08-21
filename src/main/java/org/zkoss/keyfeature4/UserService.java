@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,7 +55,7 @@ public class UserService {
 			httpURLConnection = (HttpURLConnection) u.openConnection();
 			httpURLConnection.setRequestMethod("GET");
 			BufferedReader bufferedReader = new BufferedReader(
-					new InputStreamReader(httpURLConnection.getInputStream()));
+					new InputStreamReader(httpURLConnection.getInputStream(), Charset.forName("UTF-8")));
 			StringBuilder stringBuilder = new StringBuilder();
 
 			String line;

@@ -20,7 +20,6 @@ public class ShadowRodVM {
 	private int begin = 0;
 	private int cachedSize = 30;
 	private int totalSize;
-	private int rowHeight = 61;
 	private ListModelList<User> usersList;
 
 	@Init
@@ -57,13 +56,4 @@ public class ShadowRodVM {
 	public int getTotalSize() {
 		return totalSize;
 	}
-
-	public int getCachedSize() {
-		return cachedSize;
-	}
-
-	public int getRowHeight() {
-		return rowHeight;
-	}
-
 }
