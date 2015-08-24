@@ -1,18 +1,60 @@
-<zk xmlns:sh="shadow" xmlns:ca="client/attribute">
-	<style src="/keyfeature3/scripts/auty/jquery-labelauty.css"></style>
+<zk xmlns:sh="shadow" xmlns:ca="client/attribute" xmlns:n="native">
+	<style src="/keyfeature3/scripts/hightlights/default.min.css" />
+	<style src="/keyfeature3/scripts/auty/jquery-labelauty.css" />
+	<style
+		src="/keyfeature3/scripts/dhtmlxscheduler/dhtmlxscheduler.css" />
 	<style src="/keyfeature3/scripts/auty/custom-style.css" />
-	
-	<div sclass="container" viewModel="@id('vm') @init('org.zkoss.keyfeature3.IntegrationShowcaseViewModel')">
+
+	<div sclass="container"
+		viewModel="@id('vm') @init('org.zkoss.keyfeature3.IntegrationShowcaseViewModel')">
 		<vlayout>
 			<hlayout>
-				<checkbox checked="@bind(vm.likesJava8)" label="@load(vm.likesJava8 ? 'I like Java 8' : 'I don\'t like it')"/>
+				<checkbox checked="@bind(vm.likesJava8)"
+					label="@load(vm.likesJava8 ? 'I like Java 8' : 'I don\'t like it')" />
 				----- (add labelauty) ----->
-				<checkbox checked="@bind(vm.likesJava8)" ca:data-labelauty='{"class":"labelauty terms-icon", "checked_label": "I like Java 8", "unchecked_label": "I don&apos;t like it"}' />
+				<checkbox checked="@bind(vm.likesJava8)"
+					ca:data-labelauty='{"class":"labelauty terms-icon", "checked_label": "I like Java 8", "unchecked_label": "I don&apos;t like it"}' />
 			</hlayout>
 			<hlayout>
-				<label value="@load(vm.percentage)"/> ----- (easy pi chart) ----> <label ca:data-easy="33%"/>
+				<textbox value="@bind(vm.percentage)" />
+				----- (easy pi chart) ---->
+				<label ca:data-easypiechart="" />
 			</hlayout>
-			...
+			<hlayout>
+				<textbox value="@bind(vm.syntax)" />
+				----- (highlight) ---->
+				<label ca:data-syntax-highlight=""
+					value="@load(vm.syntax)" />
+			</hlayout>
+			<hlayout>
+				<textbox value="@bind(vm.markdown)" />
+				----- (markdown) ---->
+				<label ca:data-markdown="true" multiline="true"
+					value="@load(vm.markdown)" />
+			</hlayout>
+			<hlayout></hlayout>
+		</vlayout>
+		<vlayout>
+			<div ca:data-dhtmlxscheduler="{initial_view: 'month'}"
+				height="512px" width="965px">
+				<div class="dhx_cal_navline">
+					<n:div class="dhx_cal_prev_button"></n:div>
+					<n:div class="dhx_cal_next_button"></n:div>
+					<n:div class="dhx_cal_today_button"></n:div>
+					<n:div class="dhx_cal_date"></n:div>
+					<n:div class="dhx_cal_tab" name="day_tab"
+						style="right:204px;">
+					</n:div>
+					<n:div class="dhx_cal_tab" name="week_tab"
+						style="right:140px;">
+					</n:div>
+					<n:div class="dhx_cal_tab" name="month_tab"
+						style="right:76px;">
+					</n:div>
+				</div>
+				<div class="dhx_cal_header"></div>
+				<div class="dhx_cal_data"></div>
+			</div>
 		</vlayout>
 	</div>
 </zk>

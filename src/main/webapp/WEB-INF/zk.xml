@@ -3,6 +3,15 @@
 <zk>
 	<client-config>
 		<data-handler>
+			<name>slimscroll</name>
+			<depends>/keyfeature1/scripts/jquery.slimscroll.min.js </depends>
+			<script>
+				function(wgt, dataValue) {
+					jq(wgt).slimScroll(dataValue);
+				}
+			</script>
+		</data-handler>
+		<data-handler>
 			<name>labelauty</name>
 			<depends>/keyfeature3/scripts/auty/jquery-labelauty.js</depends>
 			<script>
@@ -12,11 +21,116 @@
 			</script>
 		</data-handler>
 		<data-handler>
-			<name>slimscroll</name>
-			<depends>/keyfeature1/scripts/jquery.slimscroll.min.js</depends>
+			<name>syntax-highlight</name>
+			<depends>/keyfeature3/scripts/hightlights/highlight.min.js</depends>
 			<script>
-				function(wgt, dataValue) {
-					jq(wgt).slimScroll(dataValue);
+				function (wgt, dataValue) {
+					hljs.configure({useBR: true});
+					var w = wgt.$n();
+					hljs.highlightBlock(w);
+					wgt.setOverride("setValue", function(dataValue) {
+						this.$setValue(dataValue);
+					console.log(this);
+						hljs.highlightBlock(w);
+					});
+				}
+			</script>
+		</data-handler>
+		<data-handler>
+			<name>markdown</name>
+			<depends>/keyfeature3/scripts/markdown/showdown.min.js</depends>
+			<script>
+				function (wgt, dataValue) {
+					var converter = new showdown.Converter();
+					wgt.$n().innerHTML = converter.makeHtml(wgt.getValue());
+					wgt.setOverride("setValue", function(value) {
+						this.$setValue(value);
+						this.$n().innerHTML = converter.makeHtml(value);
+					});
+				}
+			</script>
+		</data-handler>
+		<data-handler>
+			<name>easypiechart</name>
+			<depends>/keyfeature3/scripts/easypiechart/jquery.easy-pie-chart.js</depends>
+			<script>
+				function (wgt, dataValue) {
+					var configuration = dataValue.length > 0 ? $.evalJSON(dataValue) : {},
+						$w = jq(wgt.$n()),
+						size = $w.data('size'),
+						label = $w.find('span'),
+						defaultConfig = { //Change the text by step (Animation)
+							onStep: function(value) {
+								label.text(~~value + '%');
+							},
+							onStop: function(from, to) {
+								label.text(~~to + '%');
+							}
+						};
+				
+					$.extend(configuration, defaultConfig, size ? {size: size} : {});
+					$w.easyPieChart(configuration);
+				
+					var self = this;
+					if (self.after) {
+						self.after('$clientUpdate', function (evt) {
+							if (evt != null)
+								$w.data('easyPieChart').update(evt);
+						});
+					}
+				}
+			</script>
+		</data-handler>
+		<data-handler>
+			<name>dhtmlxscheduler</name>
+			<depends>/keyfeature3/scripts/dhtmlxscheduler/dhtmlxscheduler.js</depends>
+			<script>
+				function (wgt, dataValue) {
+					var dataObj = dataValue.length > 0 ? $.evalJSON(dataValue) : {};
+					var initial_date = dataObj.initial_date,
+						initial_view = dataObj.initial_view;
+					scheduler.init(wgt.$n(), initial_date ? initial_date : new Date(), initial_view ? initial_view : "week");
+				
+					var data = dataObj.data;
+					if (data)
+						scheduler.parse(data, "json");
+				
+					var self = this;
+					if (self.command) {
+						var formatFunc = scheduler.date.date_to_str("%Y-%m-%d %H:%i");
+				
+						scheduler.attachEvent("onEventAdded", function(id, ev){
+				       		self.command("$addServerEvent", {id: id, start_date: formatFunc(ev.start_date), end_date: formatFunc(ev.end_date), subject: ev.subject, text: ev.text});
+				        });
+						scheduler.attachEvent("onEventDeleted", function(id, ev){
+				       		self.command("$deleteServerEvent", {id: id});
+				        });
+				        scheduler.attachEvent("onEventChanged", function(id, ev){
+							self.command("$changeServerEvent", {id: id, start_date: formatFunc(ev.start_date), end_date: formatFunc(ev.end_date), subject: ev.subject, text: ev.text});
+				        });
+					}
+				
+					if (self.after) {
+						self.after('$addClientEvent', function (evt) {
+							if (evt != null) {
+								for (var i = 0 ; i != evt.length; i++) {
+									scheduler.addEvent({
+										start_date: new Date(evt[i].start_date),
+										end_date:   new Date(evt[i].end_date),
+										text:   evt[i].text,
+										subject: evt[i].subject, //userdata
+									});
+								}
+							}
+						});
+						self.after('$deleteClientEvent', function (evt) {
+							if (evt != null) {
+								for (var i = 0 ; i != evt.length; i++) {
+									scheduler.deleteEvent(evt[i]);
+								}
+							}
+						});
+				    }
 				}
 			</script>
 		</data-handler>
