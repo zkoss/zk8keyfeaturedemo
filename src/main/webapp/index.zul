@@ -1,8 +1,8 @@
-<zk xmlns:n="native">
-	<style
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	</style>
-
+<zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client">
+<!-- 	<style -->
+<!-- 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+<!-- 	</style> -->
+<?link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.css"?>
 	<n:h2>Control HTML Design in Java</n:h2>
 	<div>
 		Easily turn HTML(Layout) pages created by a web designer into a
@@ -10,11 +10,64 @@
 		them in pure Java Apply your own HTML based layout to coexist
 		with ZK data driven power
 	</div>
-	<div class="well">
-		<iframe src="/keyfeature1/index.zul" width="60%" height="600px"/>
-	</div>
-	<tabbox></tabbox>
-	
+	<hlayout>
+		<div class="well" hflex="3" vflex="1">
+			<iframe src="/keyfeature1/index.zul" width="90%" height="600px"/>
+		</div>
+
+		<tabbox hflex="2" vflex="1">
+			<tabs id="tabs">
+				<tab label="Step 1" />
+				<tab label="Step 2" />
+			</tabs>
+			<tabpanels>
+				<tabpanel renderdefer="100">
+					<vlayout vflex="1" hflex="1">
+						<label
+							value="the statBoxTemplate.zul file will be used as the structure for each stat box, based on the box values" />
+						<textbox  ca:data-codeMirror="true" rows="10"
+							multiline="true" w:onBind="console.log(event)">
+							<attribute name="value"><![CDATA[<!-- has 2 parameters statBlock and detailCommand -->
+<h:div class="col-md-3 col-sm-6" xmlns:h="native">
+	<h:div class="widget widget-stats bg-${statBlock.style}">
+		<h:div class="stats-icon">
+			<h:i class="fa ${statBlock.icon}" />
+		</h:div>
+		<h:div class="stats-info">
+			<h:h4>${statBlock.title}</h:h4>
+			<h:p>${statBlock.value}</h:p>
+		</h:div>
+		<h:div class="stats-link">
+			<a onClick="@command(detailCommand,statId=statBlock.id)">
+				View Detail
+				<h:i class="fa fa-arrow-circle-o-right" />
+			</a>
+		</h:div>
+	</h:div>
+</h:div>]]></attribute>
+						</textbox>
+					</vlayout>
+				</tabpanel>
+				<tabpanel>
+					<vlayout>
+						<label
+							value="Defining the statbox element and using it in the main zul file" />
+						<textbox ca:data-codeMirror="true" rows="10"
+							multiline="true">
+							<attribute name="value"><![CDATA[<?component name="statBox" templateURI="statBoxTemplate.zul"?>
+
+...
+
+<forEach items="@init(vm.myStats)">
+	<statBox statBlock="@init(each)" 
+		detailCommand="@init(MyViewModel.VIEW_DETAIL)"/>
+</forEach> ]]></attribute>
+						</textbox>
+					</vlayout>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</hlayout>
 	<separator bar="true" />
 	
 	<n:h2>View/Logic Separation</n:h2>
