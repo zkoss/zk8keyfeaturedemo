@@ -134,5 +134,19 @@
 				}
 			</script>
 		</data-handler>
+	    <data-handler>
+			<name>codeMirror</name>
+            <depends>https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.js</depends>
+       		<depends>https://cdn.rawgit.com/codemirror/CodeMirror/master/mode/xml/xml.js</depends>
+            <script>
+            function(wgt, dataValue) {
+            		var myTextArea = wgt.$n();
+					editor = CodeMirror.fromTextArea(myTextArea, 
+						{lineNumbers: true, mode: "xml", textWrapping: true, readOnly:true}
+					);
+					editor.setSize("auto","auto");
+			}
+    </script>
+	    </data-handler>
 	</client-config>
 </zk>
