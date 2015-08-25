@@ -10,7 +10,7 @@
 	</div>
 	<hlayout>
 		<div class="well" hflex="3" vflex="1">
-			<iframe src="/keyfeature1/index.zul" width="90%" height="600px"/>
+			<iframe src="/keyfeature1/index.zul" width="100%" height="600px"/>
 		</div>
 
 		<tabbox hflex="2" vflex="1">
@@ -19,11 +19,11 @@
 				<tab label="Step 2" />
 			</tabs>
 			<tabpanels>
-				<tabpanel renderdefer="100">
+				<tabpanel renderdefer="100" >
 					<vlayout vflex="1" hflex="1">
 						<label
 							value="the statBoxTemplate.zul file will be used as the structure for each stat box, based on the box values" />
-						<textbox  ca:data-codeMirror="true" rows="10"
+						<textbox ca:data-codeMirror="true" 
 							multiline="true" w:onBind="console.log(event)">
 							<attribute name="value"><![CDATA[<!-- has 2 parameters statBlock and detailCommand -->
 <h:div class="col-md-3 col-sm-6" xmlns:h="native">

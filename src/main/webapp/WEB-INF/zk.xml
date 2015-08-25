@@ -142,8 +142,9 @@
             function(wgt, dataValue) {
             		var myTextArea = wgt.$n();
 					editor = CodeMirror.fromTextArea(myTextArea, 
-						{lineNumbers: true, mode: "xml", height: "dynamic", width: "dynamic", textWrapping: true, readOnly:true}
+						{lineNumbers: true, mode: "xml", textWrapping: true, readOnly:true}
 					);
+					editor.setSize("auto","auto");
 			}
     </script>
 	    </data-handler>
