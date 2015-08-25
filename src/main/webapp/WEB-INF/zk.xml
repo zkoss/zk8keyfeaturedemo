@@ -26,12 +26,14 @@
 			<script>
 				function (wgt, dataValue) {
 					hljs.configure({useBR: true});
-					var w = wgt.$n();
-					hljs.highlightBlock(w);
+					jq(wgt.$n()).each(function(i, block) {
+					    hljs.highlightBlock(block);
+					});
 					wgt.setOverride("setValue", function(dataValue) {
 						this.$setValue(dataValue);
-					console.log(this);
-						hljs.highlightBlock(w);
+						jq(this.node).each(function(i, block) {
+						    hljs.highlightBlock(block);
+						});
 					});
 				}
 			</script>
@@ -47,6 +49,18 @@
 						this.$setValue(value);
 						this.$n().innerHTML = converter.makeHtml(value);
 					});
+				}
+			</script>
+		</data-handler>
+		<data-handler>
+			<name>mask</name>
+			<depends>/keyfeature3/scripts/mask/jquery.mask.min.js</depends>
+			<script>
+				function (wgt, dataValue) {
+					jq(wgt.$n()).mask(dataValue);
+					wgt.listen({onChange: function (event) {
+						event.data.value = jq(this.$n()).cleanVal();
+					}});
 				}
 			</script>
 		</data-handler>
@@ -78,59 +92,6 @@
 								$w.data('easyPieChart').update(evt);
 						});
 					}
-				}
-			</script>
-		</data-handler>
-		<data-handler>
-			<name>dhtmlxscheduler</name>
-			<depends>/keyfeature3/scripts/dhtmlxscheduler/dhtmlxscheduler.js</depends>
-			<script>
-				function (wgt, dataValue) {
-					var dataObj = dataValue.length > 0 ? $.evalJSON(dataValue) : {};
-					var initial_date = dataObj.initial_date,
-						initial_view = dataObj.initial_view;
-					scheduler.init(wgt.$n(), initial_date ? initial_date : new Date(), initial_view ? initial_view : "week");
-				
-					var data = dataObj.data;
-					if (data)
-						scheduler.parse(data, "json");
-				
-					var self = this;
-					if (self.command) {
-						var formatFunc = scheduler.date.date_to_str("%Y-%m-%d %H:%i");
-				
-						scheduler.attachEvent("onEventAdded", function(id, ev){
-				       		self.command("$addServerEvent", {id: id, start_date: formatFunc(ev.start_date), end_date: formatFunc(ev.end_date), subject: ev.subject, text: ev.text});
-				        });
-						scheduler.attachEvent("onEventDeleted", function(id, ev){
-				       		self.command("$deleteServerEvent", {id: id});
-				        });
-				        scheduler.attachEvent("onEventChanged", function(id, ev){
-							self.command("$changeServerEvent", {id: id, start_date: formatFunc(ev.start_date), end_date: formatFunc(ev.end_date), subject: ev.subject, text: ev.text});
-				        });
-					}
-				
-					if (self.after) {
-						self.after('$addClientEvent', function (evt) {
-							if (evt != null) {
-								for (var i = 0 ; i != evt.length; i++) {
-									scheduler.addEvent({
-										start_date: new Date(evt[i].start_date),
-										end_date:   new Date(evt[i].end_date),
-										text:   evt[i].text,
-										subject: evt[i].subject, //userdata
-									});
-								}
-							}
-						});
-						self.after('$deleteClientEvent', function (evt) {
-							if (evt != null) {
-								for (var i = 0 ; i != evt.length; i++) {
-									scheduler.deleteEvent(evt[i]);
-								}
-							}
-						});
-				    }
 				}
 			</script>
 		</data-handler>

@@ -1,8 +1,6 @@
 <zk xmlns:sh="shadow" xmlns:ca="client/attribute" xmlns:n="native">
 	<style src="/keyfeature3/scripts/hightlights/default.min.css" />
 	<style src="/keyfeature3/scripts/auty/jquery-labelauty.css" />
-	<style
-		src="/keyfeature3/scripts/dhtmlxscheduler/dhtmlxscheduler.css" />
 	<style src="/keyfeature3/scripts/auty/custom-style.css" />
 
 	<div sclass="container"
@@ -21,40 +19,26 @@
 				<label ca:data-easypiechart="" />
 			</hlayout>
 			<hlayout>
-				<textbox value="@bind(vm.syntax)" />
+				<textbox rows="5" cols="30" value="@bind(vm.syntax)" />
 				----- (highlight) ---->
-				<label ca:data-syntax-highlight=""
-					value="@load(vm.syntax)" />
+				<n:pre>
+					<n:code>
+						<label ca:data-syntax-highlight=""
+							value="@load(vm.syntax)" />
+					</n:code>
+				</n:pre>
 			</hlayout>
 			<hlayout>
-				<textbox value="@bind(vm.markdown)" />
+				<textbox rows="5" cols="30" value="@bind(vm.markdown)" />
 				----- (markdown) ---->
 				<label ca:data-markdown="true" multiline="true"
 					value="@load(vm.markdown)" />
 			</hlayout>
-			<hlayout></hlayout>
-		</vlayout>
-		<vlayout>
-			<div ca:data-dhtmlxscheduler="{initial_view: 'month'}"
-				height="512px" width="965px">
-				<div class="dhx_cal_navline">
-					<n:div class="dhx_cal_prev_button"></n:div>
-					<n:div class="dhx_cal_next_button"></n:div>
-					<n:div class="dhx_cal_today_button"></n:div>
-					<n:div class="dhx_cal_date"></n:div>
-					<n:div class="dhx_cal_tab" name="day_tab"
-						style="right:204px;">
-					</n:div>
-					<n:div class="dhx_cal_tab" name="week_tab"
-						style="right:140px;">
-					</n:div>
-					<n:div class="dhx_cal_tab" name="month_tab"
-						style="right:76px;">
-					</n:div>
-				</div>
-				<div class="dhx_cal_header"></div>
-				<div class="dhx_cal_data"></div>
-			</div>
+			<hlayout>
+				<textbox value="format: 9999-99999999" />
+				----- (mask) ---->
+				<textbox ca:data-mask="9999-99999999" />
+			</hlayout>
 		</vlayout>
 	</div>
 </zk>

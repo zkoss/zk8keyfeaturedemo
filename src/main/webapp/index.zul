@@ -87,7 +87,7 @@
 		(Robert: decorating exising widgets, without affecting the server side functions)
 	</div>
 	<div class="well">
-		<iframe src="/keyfeature3/index.zul" width="1024px" height="300px"/>
+		<iframe src="/keyfeature3/index.zul" width="600px" height="300px"/>
 	</div>
 	
 	<separator bar="true" />
