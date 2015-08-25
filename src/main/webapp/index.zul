@@ -1,7 +1,5 @@
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client">
-<!-- 	<style -->
-<!-- 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-<!-- 	</style> -->
+<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"?>
 <?link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.css"?>
 	<n:h2>Control HTML Design in Java</n:h2>
 	<div>
