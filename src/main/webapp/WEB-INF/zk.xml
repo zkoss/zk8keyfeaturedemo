@@ -25,13 +25,13 @@
 			<depends>/keyfeature3/scripts/hightlights/highlight.min.js</depends>
 			<script>
 				function (wgt, dataValue) {
-					hljs.configure({useBR: true});
+					hljs.configure(dataValue);
 					jq(wgt.$n()).each(function(i, block) {
 					    hljs.highlightBlock(block);
 					});
 					wgt.setOverride("setValue", function(dataValue) {
 						this.$setValue(dataValue);
-						jq(this.node).each(function(i, block) {
+						jq(wgt.$n()).each(function(i, block) {
 						    hljs.highlightBlock(block);
 						});
 					});

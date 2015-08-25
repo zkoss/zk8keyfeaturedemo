@@ -14,30 +14,30 @@
 					ca:data-labelauty='{"class":"labelauty terms-icon", "checked_label": "I like Java 8", "unchecked_label": "I don&apos;t like it"}' />
 			</hlayout>
 			<hlayout>
-				<textbox value="@bind(vm.percentage)" />
+				<textbox value="@bind(vm.percentage)" instant="true" />
 				----- (easy pi chart) ---->
-				<label ca:data-easypiechart="" />
+				<label ca:data-easypiechart="{ 'barColor': 'blue' }" />
 			</hlayout>
 			<hlayout>
-				<textbox rows="5" cols="30" value="@bind(vm.syntax)" />
+				<textbox rows="5" cols="30" value="@bind(vm.syntax)" instant="true" />
 				----- (highlight) ---->
 				<n:pre>
 					<n:code>
-						<label ca:data-syntax-highlight=""
+						<label ca:data-syntax-highlight="{useBR: true}"
 							value="@load(vm.syntax)" />
 					</n:code>
 				</n:pre>
 			</hlayout>
 			<hlayout>
-				<textbox rows="5" cols="30" value="@bind(vm.markdown)" />
+				<textbox rows="5" cols="30" value="@bind(vm.markdown)" instant="true" />
 				----- (markdown) ---->
 				<label ca:data-markdown="true" multiline="true"
 					value="@load(vm.markdown)" />
 			</hlayout>
 			<hlayout>
-				<textbox value="format: 9999-99999999" />
+				<label value="format: 99-99999" />
 				----- (mask) ---->
-				<textbox ca:data-mask="9999-99999999" />
+				<textbox ca:data-mask="99-99999" />
 			</hlayout>
 		</vlayout>
 	</div>
