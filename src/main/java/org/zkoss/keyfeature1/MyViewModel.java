@@ -18,9 +18,6 @@ public class MyViewModel {
 	private String messageTextbox;
 	private JSONObject scrollProperty = new JSONObject();
 
-
-
-
 	@Init
 	public void init() {
 		myStats.add(new StatBlock("totalVisitorClick", "Total Visitors", "3,291,922", "fa-desktop", "green"));

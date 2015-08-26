@@ -12,7 +12,6 @@
 		<div class="well" hflex="3" vflex="1">
 			<iframe src="/keyfeature1/index.zul" width="100%" height="600px"/>
 		</div>
-
 		<tabbox hflex="2" vflex="1">
 			<tabs id="tabs">
 				<tab label="statBoxTemplate.zul" />
@@ -67,16 +66,13 @@
 		</tabbox>
 	</hlayout>
 	<separator bar="true" />
-	
 	<n:h2>View/Logic Separation</n:h2>
 	<div>Effortless theme or styling customization: Represent your model objects in various ways. MVVM and Databinding enables you to develop the UI separated from your java code. 
 	This allows to render the same data, visually and functionally different.</div>
 	<div class="well">
 		<iframe src="/keyfeature2/theme.zul" width="950px" height="400px" />
 	</div>
-	
 	<separator bar="true" />
-	
 	<n:h2>
 		Easily Integrate with Existing Javascript Widgets or Libraries
 	</n:h2>
