@@ -15,8 +15,8 @@
 
 		<tabbox hflex="2" vflex="1">
 			<tabs id="tabs">
-				<tab label="Step 1" />
-				<tab label="Step 2" />
+				<tab label="Creating the template" />
+				<tab label="Applying the template" />
 			</tabs>
 			<tabpanels>
 				<tabpanel renderdefer="100" >
