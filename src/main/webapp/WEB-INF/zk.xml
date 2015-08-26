@@ -10,7 +10,6 @@
 					myScrollDiv = wgt.$n();
 					myScrollable = jq(myScrollDiv);
 					myScrollable.slimScroll(dataValue);
-						
 				 	if(dataValue.scrollToEnd){
 			            var binder = zkbind.$(myScrollDiv);
 			            binder.after(dataValue.scrollToEnd, function() {

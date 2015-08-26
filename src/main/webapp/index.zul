@@ -24,7 +24,7 @@
 						<label
 							value="the statBoxTemplate.zul file will be used as the structure for each stat box, based on the box values" />
 						<textbox ca:data-codeMirror="true" 
-							multiline="true" w:onBind="console.log(event)">
+							multiline="true">
 							<attribute name="value"><![CDATA[<!-- has 2 parameters statBlock and detailCommand -->
 <h:div class="col-md-3 col-sm-6" xmlns:h="native">
 	<h:div class="widget widget-stats bg-${statBlock.style}">
