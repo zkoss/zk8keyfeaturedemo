@@ -35,7 +35,7 @@
 						panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)"
 						panelTitle="User map" scrollProperty="@init(vm.scrollProperty)">
 						<template name="panelContent">
-							<apply templateURI="worldmap.zul"/>
+							<apply templateURI="worldMap.zul"/>
 						</template>
 					</apply>
 				</div>
