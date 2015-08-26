@@ -15,8 +15,8 @@
 
 		<tabbox hflex="2" vflex="1">
 			<tabs id="tabs">
-				<tab label="Creating the template" />
-				<tab label="Applying the template" />
+				<tab label="statBoxTemplate.zul" />
+				<tab label="index.zul" />
 			</tabs>
 			<tabpanels>
 				<tabpanel renderdefer="100" >
@@ -49,7 +49,7 @@
 				<tabpanel>
 					<vlayout>
 						<label
-							value="Defining the statbox element and using it in the main zul file" />
+							value="Defining the statbox element and using it in the main index.zul file" />
 						<textbox ca:data-codeMirror="true" rows="10"
 							multiline="true">
 							<attribute name="value"><![CDATA[<?component name="statBox" templateURI="statBoxTemplate.zul"?>
