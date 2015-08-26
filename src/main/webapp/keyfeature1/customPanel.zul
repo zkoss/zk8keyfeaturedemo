@@ -1,4 +1,4 @@
-<h:div class="panel panel-inverse" xmlns:h="native" xmlns:x="xhtml" xmlns:ca="client/attribute">
+<h:div class="panel panel-inverse" xmlns:h="native" xmlns:x="xhtml" xmlns:ca="client/attribute" >
 	<h:div class="panel-heading">
 		<h:div class="panel-heading-btn">
 			<div onClick="@command(panelCommand,buttonId='button1')"
@@ -20,18 +20,10 @@
 		</h:div>
 		<h:h4 class="panel-title">${panelTitle}</h:h4>
 	</h:div>
-	<h:div class="panel-body">
-		<div ca:data-slimscroll="${scrollProperty}">
+		
 			<apply template="panelContent" />
-		</div>
-	</h:div>
-	<h:div class="panel-footer">
-			<h:div class="input-group">
-				<textbox onOK="@command('addNewMessage')" value="@save(vm.messageTextbox)" class="form-control bg-silver" placeholder="Enter message" />
-				<h:span class="input-group-btn">
-					<button class="btn btn-primary" onClick="@command('addNewMessage')" iconSclass="fa fa-pencil">
-					</button>
-				</h:span>
-			</h:div>
+
+	<h:div >
+		<apply template="panelFooter" />
 	</h:div>
 </h:div>

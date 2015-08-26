@@ -1,11 +1,13 @@
 <?component name="message" templateURI="message.zul"?>
-<zk xmlns:h="native" xmlns:x="xhtml" >
-	<x:div>
-		<x:ul
-			class="media-list media-list-with-divider media-messaging">
-			<forEach items="@load(messages)">
-				<message message="${each}" />
-			</forEach>
-		</x:ul>
+<zk xmlns:h="native" xmlns:x="xhtml" xmlns:ca="client/attribute">
+	<x:div  class="panel-body">
+		<div ca:data-slimscroll="${scrollProperty}">
+			<x:ul
+				class="media-list media-list-with-divider media-messaging">
+				<forEach items="@load(messages)">
+					<message message="${each}" />
+				</forEach>
+			</x:ul>
+		</div>
 	</x:div>
 </zk>

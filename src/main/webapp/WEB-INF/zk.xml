@@ -7,7 +7,16 @@
 			<depends>/keyfeature1/scripts/jquery.slimscroll.min.js </depends>
 			<script>
 				function(wgt, dataValue) {
-					jq(wgt).slimScroll(dataValue);
+					myScrollDiv = wgt.$n();
+					myScrollable = jq(myScrollDiv);
+					myScrollable.slimScroll(dataValue);
+						
+				 	if(dataValue.scrollToEnd){
+			            var binder = zkbind.$(myScrollDiv);
+			            binder.after(dataValue.scrollToEnd, function() {
+							myScrollable.slimScroll({ scrollBy: myScrollDiv.scrollHeight });
+			            });
+		            }					
 				}
 			</script>
 		</data-handler>
@@ -17,22 +26,6 @@
 			<script>
 				function (wgt, dataValue) {
 					jq(wgt._subnodes.real).labelauty(dataValue);
-				}
-			</script>
-		</data-handler>
-		<data-handler>
-			<name>syntax-highlight</name>
-			<depends>/keyfeature3/scripts/hightlights/highlight.min.js</depends>
-			<script>
-				function (wgt, dataValue) {
-					hljs.configure({useBR: true});
-					var w = wgt.$n();
-					hljs.highlightBlock(w);
-					wgt.setOverride("setValue", function(dataValue) {
-						this.$setValue(dataValue);
-					console.log(this);
-						hljs.highlightBlock(w);
-					});
 				}
 			</script>
 		</data-handler>

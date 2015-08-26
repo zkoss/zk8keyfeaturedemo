@@ -3,12 +3,14 @@ package org.zkoss.keyfeature1;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
-import org.zkoss.json.JSONArray;
+import org.zkoss.bind.annotation.ToClientCommand;
 import org.zkoss.json.JSONObject;
 import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.ListModelList;
 
+@ToClientCommand(MyViewModel.ADD_NEW_MESSAGE)
 public class MyViewModel {
+	static final String ADD_NEW_MESSAGE = "addNewMessage";
 	public static final String HANDLE_PANEL_BUTTON = "handlePanelButton";
 	public static final String VIEW_DETAIL = "viewDetail";
 	private ListModelList<StatBlock> myStats = new ListModelList<StatBlock>();
@@ -32,6 +34,8 @@ public class MyViewModel {
 		myMessages.add(new Message(new User("John Doe","./img/user-7.jpg"),"Morbi molestie lorem quis accumsan elementum. Morbi condimentum nisl iaculis, laoreet risus sed, porta neque. Proin mi leo, dapibus at ligula a, aliquam consectetur metus."));
 		
 		scrollProperty.put("height", "200px");
+		scrollProperty.put("start", "bottom");
+		scrollProperty.put("scrollToEnd", ADD_NEW_MESSAGE);
 	}
 
 	public ListModelList<Message> getMyMessages() {
@@ -61,10 +65,10 @@ public class MyViewModel {
 	}
 	
 	@Command
-	public void addNewMessage(){
-		myMessages.add(new Message(new User("John Doe","./img/user-7.jpg"),messageTextbox));
+	public void addNewMessage() {
+		if (messageTextbox != null && !"".equals(messageTextbox)) {
+			myMessages.add(new Message(new User("John Doe", "./img/user-7.jpg"), messageTextbox));
+		}
 	}
-	
-	
 
 }

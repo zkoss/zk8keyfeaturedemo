@@ -1,25 +1,46 @@
 <?component name="statBox" templateURI="statBoxTemplate.zul"?>
 <?component name="customPanel" templateURI="customPanel.zul"?>
 <?component name="messageBoard" templateURI="messageBoard.zul"?>
+<?component name="messageBoardFooter" templateURI="messageBoardFooter.zul"?>
 <?import org.zkoss.keyfeature1.MyViewModel?>
 <?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"?>
 <zk xmlns:h="native" xmlns:x="xhtml">
-	<style src="./scripts/style.min.css"/>
-	<style src="./scripts/bootstrap.min.css"/>
+	<style src="./scripts/style.min.css" />
+	<style src="./scripts/bootstrap.min.css" />
+	<div apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm')@init('MyViewModel')" sclass="container">
+		<div sclass="">
+			<div sclass="row">
+				<forEach items="@init(vm.myStats)">
+					<statBox statBlock="@init(each)"
+						detailCommand="@init(MyViewModel.VIEW_DETAIL)" />
+				</forEach>
+			</div>
+			<div sclass="row" id="messageRow">
+				<div sclass="col-md-6">
+					<apply templateURI="customPanel.zul"
+						panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)"
+						panelTitle="Message" scrollProperty="@init(vm.scrollProperty)">
+						<template name="panelContent">
+							<messageBoard
+								messages="@init(vm.myMessages)" />
+						</template>
+						<template name="panelFooter">
+							<messageBoardFooter />
+						</template>
+					</apply>
+				</div>
+				<div sclass="col-md-6">
+					<apply templateURI="customPanel.zul"
+						panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)"
+						panelTitle="User map" scrollProperty="@init(vm.scrollProperty)">
+						<template name="panelContent">
+							<apply templateURI="worldmap.zul"/>
+						</template>
+					</apply>
+				</div>
+			</div>
 
-	<div viewModel="@id('vm')@init('MyViewModel')" sclass="container">
-		<div sclass="row">
-			<forEach items="@init(vm.myStats)">
-				<statBox statBlock="@init(each)"
-					detailCommand="@init(MyViewModel.VIEW_DETAIL)" />
-			</forEach>
-		</div>
-		<div sclass="row">
-			<customPanel panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)" panelTitle="Message" scrollProperty="@init(vm.scrollProperty)">
-				<template name="panelContent">
-					<messageBoard messages="@init(vm.myMessages)" />
-				</template>
-			</customPanel>
 		</div>
 	</div>
 	<script src="./scripts/jquery-1.9.1.min.js" />
