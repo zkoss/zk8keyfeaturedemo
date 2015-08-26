@@ -16,4 +16,6 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 
 .container {
 	margin: 12px 0px 0px 8px;
+	background-color: white;
+	padding: 10px;
 }
