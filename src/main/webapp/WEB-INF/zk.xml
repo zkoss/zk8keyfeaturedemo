@@ -21,6 +21,7 @@
 		</data-handler>
 		<data-handler>
 			<name>labelauty</name>
+			<link href="/keyfeature3/scripts/auty/jquery-labelauty.css" rel="stylesheet" />
 			<script src="/keyfeature3/scripts/auty/jquery-labelauty.js"/>
 			<script>
 				function (wgt, dataValue) {
@@ -30,6 +31,7 @@
 		</data-handler>
 		<data-handler>
 			<name>syntax-highlight</name>
+			<link href="/keyfeature3/scripts/hightlights/default.min.css" rel="stylesheet" />
 			<script src="/keyfeature3/scripts/hightlights/highlight.min.js"/>
 			<script>
 				function (wgt, dataValue) {

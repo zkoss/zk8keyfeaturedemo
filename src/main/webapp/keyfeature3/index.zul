@@ -1,6 +1,4 @@
 <zk xmlns:sh="shadow" xmlns:ca="client/attribute" xmlns:n="native">
-	<style src="/keyfeature3/scripts/hightlights/default.min.css" />
-	<style src="/keyfeature3/scripts/auty/jquery-labelauty.css" />
 	<style src="/keyfeature3/scripts/auty/custom-style.css" />
 
 	<div sclass="container"
@@ -19,7 +17,8 @@
 				<label ca:data-easypiechart="{ 'barColor': 'blue' }" />
 			</hlayout>
 			<hlayout>
-				<textbox rows="5" cols="30" value="@bind(vm.syntax)" instant="true" />
+				<textbox rows="5" cols="30" value="@bind(vm.syntax)"
+					instant="true" />
 				----- (highlight) ---->
 				<n:pre>
 					<n:code>
@@ -29,7 +28,8 @@
 				</n:pre>
 			</hlayout>
 			<hlayout>
-				<textbox rows="5" cols="30" value="@bind(vm.markdown)" instant="true" />
+				<textbox rows="5" cols="30" value="@bind(vm.markdown)"
+					instant="true" />
 				----- (markdown) ---->
 				<label ca:data-markdown="true" multiline="true"
 					value="@load(vm.markdown)" />
