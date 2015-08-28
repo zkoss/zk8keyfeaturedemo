@@ -4,7 +4,7 @@
 	<client-config>
 		<data-handler>
 			<name>slimscroll</name>
-			<script src="/keyfeature1/scripts/jquery.slimscroll.min.js"/>
+			<depends>/keyfeature1/scripts/jquery.slimscroll.min.js </depends>
 			<script>
 				function(wgt, dataValue) {
 					myScrollDiv = wgt.$n();
@@ -21,7 +21,7 @@
 		</data-handler>
 		<data-handler>
 			<name>labelauty</name>
-			<script src="/keyfeature3/scripts/auty/jquery-labelauty.js"/>
+			<depends>/keyfeature3/scripts/auty/jquery-labelauty.js</depends>
 			<script>
 				function (wgt, dataValue) {
 					jq(wgt._subnodes.real).labelauty(dataValue);
@@ -30,7 +30,7 @@
 		</data-handler>
 		<data-handler>
 			<name>syntax-highlight</name>
-			<script src="/keyfeature3/scripts/hightlights/highlight.min.js"/>
+			<depends>/keyfeature3/scripts/hightlights/highlight.min.js</depends>
 			<script>
 				function (wgt, dataValue) {
 					hljs.configure(dataValue);
@@ -48,7 +48,7 @@
 		</data-handler>
 		<data-handler>
 			<name>markdown</name>
-			<script src="/keyfeature3/scripts/markdown/showdown.min.js"/>
+			<depends>/keyfeature3/scripts/markdown/showdown.min.js</depends>
 			<script>
 				function (wgt, dataValue) {
 					var converter = new showdown.Converter();
@@ -62,7 +62,7 @@
 		</data-handler>
 		<data-handler>
 			<name>mask</name>
-			<script src="/keyfeature3/scripts/mask/jquery.mask.min.js"/>
+			<depends>/keyfeature3/scripts/mask/jquery.mask.min.js</depends>
 			<script>
 				function (wgt, dataValue) {
 					jq(wgt.$n()).mask(dataValue);
@@ -74,7 +74,7 @@
 		</data-handler>
 		<data-handler>
 			<name>easypiechart</name>
-			<script src="/keyfeature3/scripts/easypiechart/jquery.easy-pie-chart.js"/>
+			<depends>/keyfeature3/scripts/easypiechart/jquery.easy-pie-chart.js</depends>
 			<script>
 				function (wgt, dataValue) {
 					var configuration = dataValue.length > 0 ? $.evalJSON(dataValue) : {},
@@ -105,8 +105,8 @@
 		</data-handler>
 	    <data-handler>
 			<name>codeMirror</name>
-            <script src="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.js"/>
-       		<script src="https://cdn.rawgit.com/codemirror/CodeMirror/master/mode/xml/xml.js"/>
+            <depends>https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.js</depends>
+       		<depends>https://cdn.rawgit.com/codemirror/CodeMirror/master/mode/xml/xml.js</depends>
             <script>
             function(wgt, dataValue) {
             		var myTextArea = wgt.$n();
@@ -115,7 +115,7 @@
 					);
 					editor.setSize("auto","auto");
 			}
-   			 </script>
+    </script>
 	    </data-handler>
 	</client-config>
 </zk>
