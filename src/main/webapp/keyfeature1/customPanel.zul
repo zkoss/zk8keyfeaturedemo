@@ -21,7 +21,7 @@
 		<h:h4 class="panel-title">${panelTitle}</h:h4>
 	</h:div>
 			<apply template="panelContent" />
-	<h:div >
+	
 		<apply template="panelFooter" />
-	</h:div>
+
 </h:div>

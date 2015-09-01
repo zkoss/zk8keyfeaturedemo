@@ -30,7 +30,7 @@ public class MyViewModel {
 		myMessages.add(new Message(new User("Fiona Log","./img/user-8.jpg"),"Pellentesque dictum in tortor ac blandit. Nulla rutrum eu leo vulputate ornare. Nulla a semper mi, ac lacinia sapien."));
 		myMessages.add(new Message(new User("John Doe","./img/user-7.jpg"),"Morbi molestie lorem quis accumsan elementum. Morbi condimentum nisl iaculis, laoreet risus sed, porta neque."));
 		
-		scrollProperty.put("height", "236px");
+		scrollProperty.put("height", "215px");
 		scrollProperty.put("scrollToEnd", ADD_NEW_MESSAGE);
 	}
 

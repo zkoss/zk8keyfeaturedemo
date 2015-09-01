@@ -3,7 +3,8 @@
 <?component name="messageBoard" templateURI="messageBoard.zul"?>
 <?component name="messageBoardFooter" templateURI="messageBoardFooter.zul"?>
 <?import org.zkoss.keyfeature1.MyViewModel?>
-<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"?>
+<?style src="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
+<?style src="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"?>
 <?style src="./scripts/bootstrap.min.css"?>
 <?style src="./scripts/style.min.css"?>
 <zk xmlns:h="native" xmlns:x="xhtml">

@@ -1468,7 +1468,9 @@ legend {
 .btn-circle, .btn.btn-circle {
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
-	border-radius: 50%
+	border-radius: 50%;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 .btn-icon.btn-xs {
@@ -1587,7 +1589,8 @@ legend {
 .btn.btn-primary {
 	color: #fff;
 	background: #348fe2;
-	border-color: #348fe2
+	border-color: #348fe2;
+	text-shadow: none;
 }
 
 .btn-primary.active, .btn-primary:active, .btn-primary:focus,
