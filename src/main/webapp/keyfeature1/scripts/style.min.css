@@ -4400,7 +4400,9 @@ ul.tagit.inverse li.tagit-choice .tagit-close:focus .ui-icon-close:before,
 .widget-stats .stats-info p {
 	font-size: 24px;
 	font-weight: 300;
-	margin-bottom: 0
+	margin-bottom: 0;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	
 }
 
 .widget-stats .stats-link a {

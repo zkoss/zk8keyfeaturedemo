@@ -20,10 +20,10 @@ public class MyViewModel {
 
 	@Init
 	public void init() {
-		myStats.add(new StatBlock("totalVisitorClick", "Total Visitors", "3,291,922", "fa-desktop", "green"));
-		myStats.add(new StatBlock("bounceRateClick", "Bounce Rate", "20,44%", "fa-chain-broken ", "blue"));
-		myStats.add(new StatBlock("uniqueVisitorClick", "Unique Visitors", "1,291,922", "fa-users", "purple"));
-		myStats.add(new StatBlock("avgTimeClick", "Avg Time On Site", "00:12:23", "fa-clock-o", "red"));
+		myStats.add(new StatBlock("totalVisitorClick", "TOTAL VISITORS", "3,291,922", "fa-desktop", "green"));
+		myStats.add(new StatBlock("bounceRateClick", "BOUNCE RATE", "20,44%", "fa-chain-broken ", "blue"));
+		myStats.add(new StatBlock("uniqueVisitorClick", "UNIQUE VISITORS", "1,291,922", "fa-users", "purple"));
+		myStats.add(new StatBlock("avgTimeClick", "AVG TIME ON SITE", "00:12:23", "fa-clock-o", "red"));
 		
 		myMessages.add(new Message(new User("John Doe","./img/user-5.jpg"),"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id nunc non eros fermentum vestibulum ut id felis."));
 		myMessages.add(new Message(new User("Terry Ng","./img/user-6.jpg"),"Sed in ante vel ipsum tristique euismod posuere eget nulla. Quisque ante sem, scelerisque iaculis interdum quis, eleifend id mi."));

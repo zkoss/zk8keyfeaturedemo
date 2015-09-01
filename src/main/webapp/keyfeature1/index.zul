@@ -4,9 +4,9 @@
 <?component name="messageBoardFooter" templateURI="messageBoardFooter.zul"?>
 <?import org.zkoss.keyfeature1.MyViewModel?>
 <?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"?>
+<?style src="./scripts/bootstrap.min.css"?>
+<?style src="./scripts/style.min.css"?>
 <zk xmlns:h="native" xmlns:x="xhtml">
-	<style src="./scripts/style.min.css" />
-	<style src="./scripts/bootstrap.min.css" />
 	<div apply="org.zkoss.bind.BindComposer"
 		viewModel="@id('vm')@init('MyViewModel')" sclass="container">
 		<div sclass="">
