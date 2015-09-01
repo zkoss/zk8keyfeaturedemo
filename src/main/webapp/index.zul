@@ -1,12 +1,9 @@
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client">
 <?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"?>
 <?link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.css"?>
-	<n:h2>Control HTML Design in Java</n:h2>
+	<n:h2>Control Bootstrap/HTML Layout in Java</n:h2>
 	<div>
-		Easily turn HTML(Layout) pages created by a web designer into a
-		dynamic web page with data binding Reuse HTML design and control
-		them in pure Java Apply your own HTML based layout to coexist
-		with ZK data driven power
+		Using ZK 8’s UI Templating, you can easily apply a predesigned HTML layout or a Bootstrap template and enliven it in Java.
 	</div>
 	<hlayout>
 		<div class="well" hflex="3" vflex="1">
@@ -66,21 +63,18 @@
 		</tabbox>
 	</hlayout>
 	<separator bar="true" />
-	<n:h2>View/Logic Separation</n:h2>
-	<div>Effortless theme or styling customization: Represent your model objects in various ways. MVVM and Databinding enables you to develop the UI separated from your java code. 
-	This allows to render the same data, visually and functionally different.</div>
+	<n:h2>Clear View/Logic Separation</n:h2>
+	<div>ZK 8’s MVVM pattern cleanly separates view and logic, allowing representation of the same data structure with varying detail, layout or even functionality. </div>
 	<div class="well">
 		<iframe src="/keyfeature2/theme.zul" width="950px" height="400px" />
 	</div>
 	<separator bar="true" />
 	<n:h2>
-		Easily Integrate with Existing Javascript Widgets or Libraries
+		Easily Integrate Third-Party Javascript Libraries
 	</n:h2>
 	<div>
-		Flexibility to integrate ZK with any front-end libraries
-		Interact with client-side libraries using ZK’s new client-side
-		
-		(Robert: decorating exising widgets, without affecting the server side functions)
+		By using ZK 8's Data-handler, you can conveniently incorporate many third-party Javascript libraries.
+
 	</div>
 	<div class="well">
 		<iframe src="/keyfeature3/index.zul" width="600px" height="300px"/>
@@ -88,7 +82,11 @@
 	
 	<separator bar="true" />
 	
-	<n:h2>Streaming Enterprise Data to the Client</n:h2>
+	<n:h2>More Dynamic UIs in MVVM with Client Binding</n:h2>
+    <div>
+		In this example, we used ZK 8’s Client Binding to render data on demand in a “seamlessly” scrollable view. The principle of View/Logic separation is preserved; while the ViewModel provides the data, the client-side JS handles the positioning and scrolling.
+
+	</div>
 	<div class="well">
 		<iframe src="/keyfeature4/rod-shadow.zul" width="600px" height="700px" />
 	</div>
