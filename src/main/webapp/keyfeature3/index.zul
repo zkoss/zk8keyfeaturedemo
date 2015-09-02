@@ -39,6 +39,14 @@
 				----- (mask) ---->
 				<textbox ca:data-mask="99-99999" />
 			</hlayout>
+			<hlayout>
+				<label value="70%" style="font-size: 100px"/>
+				----- (chartist) ---->
+				<style>
+					.ct-label {fill: white}
+				</style>
+				<label value="70%" ca:data-chartist-pie='{"total": 100}'/>
+			</hlayout>
 		</vlayout>
 	</div>
 </zk>

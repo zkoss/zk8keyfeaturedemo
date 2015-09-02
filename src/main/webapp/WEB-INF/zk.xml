@@ -75,6 +75,22 @@
 			</script>
 		</data-handler>
 		<data-handler>
+			<name>chartist-pie</name>
+		    <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"/>
+		    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+			<script><![CDATA[
+				function (wgt, dataValue) {
+					console.log(wgt, dataValue);
+					jq(wgt).hide();
+					var chartDiv = jq('<div/>');
+					chartDiv.width(100).height(100);
+					chartDiv.insertAfter(wgt.$n());
+					new Chartist.Pie(chartDiv[0], {series: [parseFloat(wgt.getValue())], labels: [wgt.getValue()]}, dataValue);
+				}
+			]]>
+			</script>
+		</data-handler>
+		<data-handler>
 			<name>easypiechart</name>
 			<script src="/keyfeature3/scripts/easypiechart/jquery.easy-pie-chart.js"/>
 			<script>
