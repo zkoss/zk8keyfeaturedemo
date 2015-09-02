@@ -1,52 +1,40 @@
-<zk xmlns:sh="shadow" xmlns:ca="client/attribute" xmlns:n="native">
+<?component name="display" templateURI="display.zul" ?>
+<zk>
 	<style src="/keyfeature3/scripts/auty/custom-style.css" />
 
 	<div sclass="container"
 		viewModel="@id('vm') @init('org.zkoss.keyfeature3.IntegrationShowcaseViewModel')">
-		<vlayout>
-			<hlayout>
-				<checkbox checked="@bind(vm.likesJava8)"
-					label="@load(vm.likesJava8 ? 'I like Java 8' : 'I don\'t like it')" />
-				----- (add labelauty) ----->
-				<checkbox checked="@bind(vm.likesJava8)"
-					ca:data-labelauty='{"class":"labelauty terms-icon", "checked_label": "I like Java 8", "unchecked_label": "I don&apos;t like it"}' />
-			</hlayout>
-			<hlayout>
-				<textbox value="@bind(vm.percentage)" instant="true" />
-				----- (easy pi chart) ---->
-				<label ca:data-easypiechart="{ 'barColor': 'blue' }" />
-			</hlayout>
-			<hlayout>
-				<textbox rows="5" cols="30" value="@bind(vm.syntax)"
-					instant="true" />
-				----- (highlight) ---->
-				<n:pre>
-					<n:code>
-						<label ca:data-syntax-highlight="{useBR: true}"
-							value="@load(vm.syntax)" />
-					</n:code>
-				</n:pre>
-			</hlayout>
-			<hlayout>
-				<textbox rows="5" cols="30" value="@bind(vm.markdown)"
-					instant="true" />
-				----- (markdown) ---->
-				<label ca:data-markdown="true" multiline="true"
-					value="@load(vm.markdown)" />
-			</hlayout>
-			<hlayout>
-				<label value="format: 99-99999" />
-				----- (mask) ---->
-				<textbox ca:data-mask="99-99999" />
-			</hlayout>
-			<hlayout>
-				<label value="70%" style="font-size: 100px"/>
-				----- (chartist) ---->
-				<style>
-					.ct-label {fill: white}
-				</style>
-				<label value="70%" ca:data-chartist-pie='{"total": 100}'/>
-			</hlayout>
-		</vlayout>
+		<tabbox height="300px">
+			<custom-attributes org.zkoss.zul.client.rod="false"/>
+			<tabs>
+				<tab label="auty" />
+				<tab label="pi chart" />
+				<tab label="hight light" />
+				<tab label="markdown" />
+				<tab label="mask" />
+				<tab label="chartist" />
+			</tabs>
+			<tabpanels>
+				<tabpanel>
+					<display original="o.auty" decorated="d.auty" />
+				</tabpanel>
+				<tabpanel>
+					<display original="o.piChart" decorated="d.piChart" />
+				</tabpanel>
+				<tabpanel>
+					<display original="o.hightlight" decorated="d.hightlight" />
+				</tabpanel>
+				<tabpanel>
+					<display original="o.markdown" decorated="d.markdown" />
+				</tabpanel>
+				<tabpanel>
+					<display original="o.mask" decorated="d.mask" />
+				</tabpanel>
+				<tabpanel>
+					<display original="o.chartist" decorated="d.chartist" />
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
 	</div>
+
 </zk>

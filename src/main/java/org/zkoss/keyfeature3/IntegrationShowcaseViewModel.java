@@ -10,7 +10,8 @@ public class IntegrationShowcaseViewModel {
 	private boolean likesJava8 = true;
 	private String percentage = "33%";
 	private String syntax = "var int i = 0; \n\n for(var i=0; i<10; i++) { \n \tconsole.log('Hello');\n }\n";
-	private String markdown = "This is a normal paragraph: \n\n" + "    System.out.println('code block') \n\n" + "#Large#";
+	private String markdown = "This is a normal paragraph: \n\n" + "    System.out.println('code block') \n\n"
+			+ "#Large#";
 
 	public boolean isLikesJava8() {
 		return likesJava8;
