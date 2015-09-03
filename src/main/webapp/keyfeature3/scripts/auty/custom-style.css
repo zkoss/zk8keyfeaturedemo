@@ -2,12 +2,12 @@ input.labelauty+label {
 	display: inline-block;
 }
 
-input.labelauty.terms-icon+label>span.labelauty-checked-image {
-	background-image: url(images/terms-checked.png);
+input.labelauty.disable-icon+label>span.labelauty-checked-image {
+	background-image: url(images/input-disabled.png);
 }
 
-input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
-	background-image: url(images/terms-unchecked.png);
+input.labelauty.disable-icon+label>span.labelauty-unchecked-image {
+	background-image: url(images/input-disabled.png);
 }
 
 .statement {
