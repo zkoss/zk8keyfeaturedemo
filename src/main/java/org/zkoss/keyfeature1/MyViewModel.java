@@ -10,11 +10,12 @@ import org.zkoss.zul.ListModelList;
 
 @ToClientCommand(MyViewModel.ADD_NEW_MESSAGE)
 public class MyViewModel {
-	static final String ADD_NEW_MESSAGE = "addNewMessage";
+	public static final String ADD_NEW_MESSAGE = "addNewMessage";
 	public static final String HANDLE_PANEL_BUTTON = "handlePanelButton";
 	public static final String VIEW_DETAIL = "viewDetail";
 	private ListModelList<StatBlock> myStats = new ListModelList<StatBlock>();
 	private ListModelList<Message> myMessages = new ListModelList<Message>();
+	private ListModelList<PanelButton> myPanelButtons = new ListModelList<PanelButton>();
 	private String messageTextbox;
 	private JSONObject scrollProperty = new JSONObject();
 
@@ -30,8 +31,11 @@ public class MyViewModel {
 		myMessages.add(new Message(new User("Fiona Log","./img/user-8.jpg"),"Pellentesque dictum in tortor ac blandit. Nulla rutrum eu leo vulputate ornare. Nulla a semper mi, ac lacinia sapien."));
 		myMessages.add(new Message(new User("John Doe","./img/user-7.jpg"),"Morbi molestie lorem quis accumsan elementum. Morbi condimentum nisl iaculis, laoreet risus sed, porta neque."));
 		
-		scrollProperty.put("height", "215px");
-		scrollProperty.put("scrollToEnd", ADD_NEW_MESSAGE);
+		myPanelButtons.add(new PanelButton("button1","fa-expand","btn-default",HANDLE_PANEL_BUTTON));
+		myPanelButtons.add(new PanelButton("button2","fa-repeat","btn-success",HANDLE_PANEL_BUTTON));
+		myPanelButtons.add(new PanelButton("button3","fa-minus","btn-warning",HANDLE_PANEL_BUTTON));
+		myPanelButtons.add(new PanelButton("button4","fa-times","btn-danger",HANDLE_PANEL_BUTTON));
+
 	}
 
 	public ListModelList<Message> getMyMessages() {
@@ -40,6 +44,10 @@ public class MyViewModel {
 
 	public ListModelList<StatBlock> getMyStats() {
 		return myStats;
+	}
+	
+	public ListModelList<PanelButton> getMyPanelButtons() {
+		return myPanelButtons;
 	}
 	
 	public void setMessageTextbox(String messageTextbox) {
@@ -60,7 +68,7 @@ public class MyViewModel {
 		Clients.showNotification(buttonId, null, null, null, 2000);
 	}
 	
-	@Command
+	@Command(ADD_NEW_MESSAGE)
 	public void addNewMessage() {
 		if (messageTextbox != null && !"".equals(messageTextbox)) {
 			myMessages.add(new Message(new User("John Doe", "./img/user-7.jpg"), messageTextbox));

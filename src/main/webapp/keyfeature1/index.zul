@@ -6,47 +6,36 @@
 <?style src="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
 <?style src="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"?>
 <?style src="./scripts/bootstrap.min.css"?>
-<?style src="./scripts/style.min.css"?>
+<?style src="./scripts/style.css"?>
 <zk xmlns:h="native" xmlns:x="xhtml">
-	<div apply="org.zkoss.bind.BindComposer"
-		viewModel="@id('vm')@init('MyViewModel')" sclass="container">
+	<div viewModel="@id('vm')@init('MyViewModel')" sclass="container">
 		<div sclass="">
 			<div sclass="row">
 				<forEach items="@init(vm.myStats)">
 					<statBox statBlock="@init(each)"
-						detailCommand="@init(MyViewModel.VIEW_DETAIL)" />
+						detailCommand="@init(MyViewModel.VIEW_DETAIL)"/>
 				</forEach>
 			</div>
-			<div sclass="row" id="messageRow">
+			<div sclass="row" >
 				<div sclass="col-md-6">
-					<apply templateURI="customPanel.zul"
-						panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)"
-						panelTitle="Message" scrollProperty="@init(vm.scrollProperty)">
+					<customPanel panelTitle="Message"
+						panelButtons="@init(vm.myPanelButtons)"
+						scrollProperty='{"height": "215px", "scrollToEnd": "${MyViewModel.ADD_NEW_MESSAGE}"}'>
 						<template name="panelContent">
-							<messageBoard
-								messages="@init(vm.myMessages)" />
+							<messageBoard messages="@init(vm.myMessages)"/>
 						</template>
 						<template name="panelFooter">
-							<messageBoardFooter />
+							<messageBoardFooter/>
 						</template>
-					</apply>
+					</customPanel>
 				</div>
 				<div sclass="col-md-6">
-					<apply templateURI="customPanel.zul"
-						panelCommand="@init(MyViewModel.HANDLE_PANEL_BUTTON)"
-						panelTitle="User map" scrollProperty="@init(vm.scrollProperty)">
-						<template name="panelContent">
-							<apply templateURI="worldMap.zul"/>
-						</template>
-					</apply>
+				<customPanel panelButtons="@init(vm.myPanelButtons)"
+						panelTitle="User map" bodyStyle="p-0" noFooter="true">
+						<template name="panelContent" src="worldMap.zul"/>
+					</customPanel>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="./scripts/jquery-1.9.1.min.js" />
-	<script src="./scripts/jquery-migrate-1.1.0.min.js" />
-	<script src="./scripts/jquery-ui.min.js" />
-	<script src="./scripts/bootstrap.min.js" />
-	<script src="./scripts/jquery.slimscroll.min.js" />
-
 </zk>
