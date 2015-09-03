@@ -1,10 +1,10 @@
 <zk xmlns:sh="shadow" xmlns:ca="client/attribute" xmlns:n="native">
 	<div>
 		<hlayout>
-			<vlayout width="500px" height="600px">
+			<vlayout width="300px" height="150px">
 				<sh:apply template="@load(original)" />
 			</vlayout>
-			<vlayout width="500px" height="600px">
+			<vlayout width="300px" height="150px">
 				<sh:apply template="@load(decorated)" />
 			</vlayout>
 		</hlayout>
