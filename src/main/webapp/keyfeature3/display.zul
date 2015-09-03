@@ -61,11 +61,11 @@
 	</template>
 
 	<template name="o.chartist">
-		<label value="70%" />
+		<textbox value="@bind(vm.chartist_percentage)" instant="true" />
 	</template>
 
 	<template name="d.chartist">
 		<style>.ct-label {fill: white}</style>
-		<label value="70%" ca:data-chartist-pie='{"total": 100}' />
+		<label value="@load(vm.chartist_percentage)" ca:data-chartist-pie='{"width": "100", "height": "100", "total": "100"}' />
 	</template>
 </zk>

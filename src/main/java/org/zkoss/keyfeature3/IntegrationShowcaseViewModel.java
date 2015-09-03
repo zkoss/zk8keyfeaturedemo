@@ -9,6 +9,7 @@ public class IntegrationShowcaseViewModel {
 
 	private boolean likesJava8 = true;
 	private String percentage = "33%";
+	private String chartist_percentage = "55%";
 	private String syntax = "var int i = 0; \n\n for(var i=0; i<10; i++) { \n \tconsole.log('Hello');\n }\n";
 	private String markdown = "This is a normal paragraph: \n\n" + "    System.out.println('code block') \n\n"
 			+ "#Large#";
@@ -43,6 +44,14 @@ public class IntegrationShowcaseViewModel {
 
 	public void setPercentage(String percentage) {
 		this.percentage = percentage;
+	}
+
+	public String getChartist_percentage() {
+		return chartist_percentage;
+	}
+
+	public void setChartist_percentage(String chartist_percentage) {
+		this.chartist_percentage = chartist_percentage;
 	}
 
 }
