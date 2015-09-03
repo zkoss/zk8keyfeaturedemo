@@ -34,11 +34,9 @@
 	</template>
 
 	<template name="d.hightlight">
-		<n:pre>
-			<n:code>
-				<label ca:data-syntax-highlight="{useBR: true}"
-					value="@load(vm.syntax)" />
-			</n:code>
+		<n:pre style="margin: 0px">
+			<label ca:data-syntax-highlight="{useBR: true}"
+				value="@load(vm.syntax)" />
 		</n:pre>
 	</template>
 
