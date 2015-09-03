@@ -1,0 +1,71 @@
+<zk xmlns:sh="shadow" xmlns:ca="client/attribute" xmlns:n="native">
+	<div>
+		<hlayout>
+			<vlayout width="500px" height="600px">
+				<sh:apply template="@load(original)" />
+			</vlayout>
+			<vlayout width="500px" height="600px">
+				<sh:apply template="@load(decorated)" />
+			</vlayout>
+		</hlayout>
+	</div>
+
+	<template name="o.auty">
+		<checkbox checked="@bind(vm.likesJava8)"
+			label="@load(vm.likesJava8 ? 'I like Java 8' : 'I don\'t like it')" />
+	</template>
+
+	<template name="d.auty">
+		<checkbox checked="@bind(vm.likesJava8)"
+			ca:data-labelauty='{"class":"labelauty terms-icon", "checked_label": "I like Java 8", "unchecked_label": "I don&apos;t like it"}' />
+	</template>
+
+	<template name="o.piChart">
+		<textbox value="@bind(vm.percentage)" instant="true" />
+	</template>
+
+	<template name="d.piChart">
+		<label ca:data-easypiechart="{ 'barColor': 'blue' }" />
+	</template>
+
+	<template name="o.hightlight">
+		<textbox rows="5" cols="30" value="@bind(vm.syntax)"
+			instant="true" />
+	</template>
+
+	<template name="d.hightlight">
+		<n:pre>
+			<n:code>
+				<label ca:data-syntax-highlight="{useBR: true}"
+					value="@load(vm.syntax)" />
+			</n:code>
+		</n:pre>
+	</template>
+
+	<template name="o.markdown">
+		<textbox rows="5" cols="30" value="@bind(vm.markdown)"
+			instant="true" />
+	</template>
+
+	<template name="d.markdown">
+		<label ca:data-markdown="true" multiline="true"
+			value="@load(vm.markdown)" />
+	</template>
+
+	<template name="o.mask">
+		<label value="format: 99-99999" />
+	</template>
+
+	<template name="d.mask">
+		<textbox ca:data-mask="99-99999" />
+	</template>
+
+	<template name="o.chartist">
+		<label value="70%" />
+	</template>
+
+	<template name="d.chartist">
+		<style>.ct-label {fill: white}</style>
+		<label value="70%" ca:data-chartist-pie='{"total": 100}' />
+	</template>
+</zk>

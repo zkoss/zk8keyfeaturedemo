@@ -77,7 +77,7 @@
 
 	</div>
 	<div class="well">
-		<iframe src="/keyfeature3/index.zul" width="600px" height="300px"/>
+		<iframe src="/keyfeature3/index.zul" width="1000px" height="600px"/>
 	</div>
 	
 	<separator bar="true" />
