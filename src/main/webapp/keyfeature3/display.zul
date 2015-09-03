@@ -28,14 +28,6 @@
 			disabled="true" />
 	</template>
 
-	<template name="o.piChart">
-		<textbox value="@bind(vm.percentage)" instant="true" />
-	</template>
-
-	<template name="d.piChart">
-		<label ca:data-easypiechart="{ 'barColor': 'blue' }" />
-	</template>
-
 	<template name="o.hightlight">
 		<textbox rows="5" cols="30" value="@bind(vm.syntax)"
 			instant="true" />
