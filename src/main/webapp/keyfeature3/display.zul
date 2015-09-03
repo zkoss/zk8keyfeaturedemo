@@ -11,14 +11,18 @@
 	</div>
 
 	<template name="o.auty">
-		<checkbox checked="@bind(vm.selected)"
-			label="@load(vm.selected ? 'option selected' : 'option not selected')" />
+		<checkbox checked="@bind(vm.travel)"
+			label="@load(vm.travel ? 'I\'ve been to Taiwan' : 'I didn\'t visit taiwan')" />
+		<checkbox checked="@bind(vm.like)"
+			label="@load(vm.like ? 'I like JDK 8' : 'I don\'t like JDK 8')" />
 		<checkbox label="disabled" disabled="true" />
 	</template>
 
 	<template name="d.auty">
-		<checkbox checked="@bind(vm.selected)"
-			ca:data-labelauty='{"checked_label": "option selected", "unchecked_label": "option not selected", "minimum_width": "100px"}' />
+		<checkbox checked="@bind(vm.travel)"
+			ca:data-labelauty='{"checked_label": "I&#39;ve been to Taiwan", "unchecked_label": "I didn&#39;t visit taiwan", "minimum_width": "100px"}' />
+		<checkbox checked="@bind(vm.like)"
+			ca:data-labelauty='{"class": "labelauty terms-icon", "checked_label": "I like JDK 8", "unchecked_label": "I don&#39;t like JDK 8", "minimum_width": "100px"}' />
 		<checkbox
 			ca:data-labelauty='{"class": "labelauty disable-icon", "checked_label": "disabled", "unchecked_label": "disabled", "minimum_width": "100px"}'
 			disabled="true" />
@@ -57,19 +61,74 @@
 	</template>
 
 	<template name="o.mask">
-		<hlayout><label value="Collection Time: " /><textbox value="21143513" /></hlayout>
-		<hlayout><label value="Delivery Date: " /><textbox value="10122015" /></hlayout>
-		<hlayout><label value="Tracking No.: " /><textbox value="AAA000000" /></hlayout>
-		<hlayout><label value="Price: " /><textbox value="999999" /></hlayout>
-		<hlayout><label value="Contact No.: " /><textbox value="12153333333" /></hlayout>
+		<tablelayout columns="2">
+			<tablechildren>
+				<label value="Collection Time: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox value="21143513" />
+			</tablechildren>
+			<tablechildren>
+				<label value="Delivery Date: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox value="10122015" />
+			</tablechildren>
+			<tablechildren>
+				<label value="Tracking No.: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox value="AAA000000" />
+			</tablechildren>
+			<tablechildren>
+				<label value="Price: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox value="999999" />
+			</tablechildren>
+			<tablechildren>
+				<label value="Contact No.: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox value="12153333333" />
+			</tablechildren>
+		</tablelayout>
 	</template>
 
 	<template name="d.mask">
-		<hlayout><label value="Collection Time: " /><textbox ca:data-mask="99:99:99.99" value="21143513" /></hlayout>
-		<hlayout><label value="Delivery Date: " /><textbox ca:data-mask="99/99/9999" value="10122015" /></hlayout>
-		<hlayout><label value="Tracking No.: " /><textbox ca:data-mask="AAA-999999" value="AAA000000" /></hlayout>
-		<hlayout><label value="Price: " /><textbox ca:data-mask="99,999.99" value="999999" /></hlayout>
-		<hlayout><label value="Contact No.: " /><textbox ca:data-mask="+9(99)999-9999" value="12153333333" /></hlayout>
+		<tablelayout columns="2">
+			<tablechildren>
+				<label value="Collection Time: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox ca:data-mask="99:99:99.99" value="21143513" />
+			</tablechildren>
+			<tablechildren>
+				<label value="Delivery Date: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox ca:data-mask="99/99/9999" value="10122015" />
+			</tablechildren>
+			<tablechildren>
+				<label value="Tracking No.: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox ca:data-mask="AAA-999999" value="AAA000000" />
+			</tablechildren>
+			<tablechildren>
+				<label value="Price: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox ca:data-mask="99,999.99" value="999999" />
+			</tablechildren>
+			<tablechildren>
+				<label value="Contact No.: " />
+			</tablechildren>
+			<tablechildren>
+				<textbox ca:data-mask="+9(99)999-9999"
+					value="12153333333" />
+			</tablechildren>
+		</tablelayout>
 	</template>
 
 	<template name="o.chartist">

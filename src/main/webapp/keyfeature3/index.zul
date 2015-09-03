@@ -7,19 +7,18 @@
 		<tabbox height="300px">
 			<custom-attributes org.zkoss.zul.client.rod="false"/>
 			<tabs>
-				<tab label="auty" />
-				<tab label="pi chart" />
+				<tab label="chartist" />
+				<tab label="labelauty" />
 				<tab label="hight light" />
 				<tab label="markdown" />
 				<tab label="mask" />
-				<tab label="chartist" />
 			</tabs>
 			<tabpanels>
 				<tabpanel>
-					<display original="o.auty" decorated="d.auty" />
+					<display original="o.chartist" decorated="d.chartist" />
 				</tabpanel>
 				<tabpanel>
-					<display original="o.piChart" decorated="d.piChart" />
+					<display original="o.auty" decorated="d.auty" />
 				</tabpanel>
 				<tabpanel>
 					<display original="o.hightlight" decorated="d.hightlight" />
@@ -29,9 +28,6 @@
 				</tabpanel>
 				<tabpanel>
 					<display original="o.mask" decorated="d.mask" />
-				</tabpanel>
-				<tabpanel>
-					<display original="o.chartist" decorated="d.chartist" />
 				</tabpanel>
 			</tabpanels>
 		</tabbox>

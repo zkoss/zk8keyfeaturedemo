@@ -7,19 +7,28 @@ import org.zkoss.bind.annotation.ToClientCommand;
 @ToClientCommand({ "easypiechart$clientUpdate" })
 public class IntegrationShowcaseViewModel {
 
-	private boolean selected = true;
+	private boolean like = true;
+	private boolean travel = true;
 	private String percentage = "33%";
 	private String chartist_percentage = "55%";
 	private String syntax = "var int i = 0; \n\n for(var i=0; i<10; i++) { \n \tconsole.log('Hello');\n }\n";
 	private String markdown = "This is a normal paragraph: \n\n" + "    System.out.println('code block') \n\n"
 			+ "#Large#";
 
-	public boolean isSelected() {
-		return selected;
+	public boolean isLike() {
+		return like;
 	}
 
-	public void setSelected(boolean likesJava8) {
-		this.selected = likesJava8;
+	public void setLike(boolean like) {
+		this.like = like;
+	}
+
+	public boolean isTravel() {
+		return travel;
+	}
+
+	public void setTravel(boolean travel) {
+		this.travel = travel;
 	}
 
 	public String getPercentage() {
