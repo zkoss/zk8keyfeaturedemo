@@ -8,7 +8,7 @@ import org.zkoss.bind.annotation.ToClientCommand;
 public class IntegrationShowcaseViewModel {
 
 	private boolean like = true;
-	private boolean travel = true;
+	private boolean zk = true;
 	private String percentage = "33%";
 	private String chartist_percentage = "55%";
 	private String syntax = "var int i = 0; \n\n for(var i=0; i<10; i++) { \n \tconsole.log('Hello');\n }\n";
@@ -23,12 +23,12 @@ public class IntegrationShowcaseViewModel {
 		this.like = like;
 	}
 
-	public boolean isTravel() {
-		return travel;
+	public boolean isZk() {
+		return zk;
 	}
 
-	public void setTravel(boolean travel) {
-		this.travel = travel;
+	public void setZk(boolean zk) {
+		this.zk = zk;
 	}
 
 	public String getPercentage() {
