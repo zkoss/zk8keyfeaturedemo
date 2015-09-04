@@ -15,7 +15,7 @@
 			label="@load(vm.zk ? 'I am skilled at ZK' : 'I am still learning ZK')" />
 		<checkbox checked="@bind(vm.like)"
 			label="@load(vm.like ? 'I like JDK 8' : 'I don\'t like JDK 8')" />
-		<checkbox label="disabled" disabled="true" />
+		<checkbox label="I am disabled" disabled="true" />
 	</template>
 
 	<template name="d.auty">
@@ -24,7 +24,7 @@
 		<checkbox checked="@bind(vm.like)"
 			ca:data-labelauty='{"class": "labelauty terms-icon", "checked_label": "I like JDK 8", "unchecked_label": "I don&#39;t like JDK 8", "minimum_width": "100px"}' />
 		<checkbox
-			ca:data-labelauty='{"class": "labelauty disable-icon", "checked_label": "disabled", "unchecked_label": "disabled", "minimum_width": "100px"}'
+			ca:data-labelauty='{"class": "labelauty disable-icon", "checked_label": "I am disabled", "unchecked_label": "I am disabled", "minimum_width": "100px"}'
 			disabled="true" />
 	</template>
 

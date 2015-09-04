@@ -3,12 +3,10 @@ input.labelauty+label {
 }
 
 input.labelauty.disable-icon+label>span.labelauty-checked-image {
-	opacity: 0.5;
 	background-image: url(images/input-disabled.png);
 }
 
 input.labelauty.disable-icon+label>span.labelauty-unchecked-image {
-	opacity: 0.5;
 	background-image: url(images/input-disabled.png);
 }
 
@@ -28,4 +26,8 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	margin: 12px 0px 0px 8px;
 	background-color: white;
 	padding: 10px;
+}
+
+.z-checkbox input[type=checkbox][disabled]+label.z-checkbox-content{
+	opacity: 0.5;
 }
