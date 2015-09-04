@@ -3,10 +3,12 @@ input.labelauty+label {
 }
 
 input.labelauty.disable-icon+label>span.labelauty-checked-image {
+	opacity: 0.5;
 	background-image: url(images/input-disabled.png);
 }
 
 input.labelauty.disable-icon+label>span.labelauty-unchecked-image {
+	opacity: 0.5;
 	background-image: url(images/input-disabled.png);
 }
 

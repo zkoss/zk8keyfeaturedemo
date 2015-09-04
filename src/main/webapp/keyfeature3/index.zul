@@ -9,7 +9,7 @@
 			<tabs>
 				<tab label="chartist" />
 				<tab label="labelauty" />
-				<tab label="high light" />
+				<tab label="highlight" />
 				<tab label="markdown" />
 				<tab label="mask" />
 			</tabs>
@@ -21,7 +21,7 @@
 					<display original="o.auty" decorated="d.auty" />
 				</tabpanel>
 				<tabpanel>
-					<display original="o.hightlight" decorated="d.hightlight" />
+					<display original="o.highlight" decorated="d.highlight" />
 				</tabpanel>
 				<tabpanel>
 					<display original="o.markdown" decorated="d.markdown" />
