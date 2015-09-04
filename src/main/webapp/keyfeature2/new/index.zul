@@ -1,0 +1,25 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<?link rel="stylesheet" type="text/css" href="css/datalist.css.dsp"?>
+<?script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.js"?>
+<zk xmlns:n="native" xmlns:x="xhtml">
+	<div viewModel="@id('vm') @init('org.zkoss.keyfeature2.DataListViewModel')">
+		<n:header>
+			<n:div sclass="center-block">
+<!-- 				<n:div sclass="header pull-left"> -->
+<!-- 					<n:i sclass="z-icon-spinner"></n:i> -->
+<!-- 					<label sclass="header-info" value="@load(c:cat3('In Progress (', vm.dataList.size(), ')'))" /> -->
+<!-- 					<n:i sclass="z-icon-search"></n:i> -->
+<!-- 					<textbox sclass="z-icon- search" width="300px" zclass="none" placeholder="Search" onChanging="@command('filter',query=event.value)" /> -->
+<!-- 				</n:div> -->
+				<n:div sclass="toolbar">
+					<forEach items="@init(vm.availableTemplates)" >
+						<a iconSclass="@init(each.icon)" sclass="@load(each.active ? 'active' : '')" tooltiptext="@init(each.name)" onClick="@command('changeTemplate', template=each)"/>
+					</forEach>
+				</n:div>
+			</n:div>
+		</n:header>
+		<div sclass="data-container">
+			<apply templateURI="@load(vm.currentTemplate.uri)" catalog="@load(vm.catalog)"/>
+		</div>
+	</div>
+</zk>

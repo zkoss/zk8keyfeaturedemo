@@ -1,0 +1,22 @@
+<zk xmlns:x="xhtml" xmlns:n="native">
+	<div viewModel="@id('vm') @init('org.zkoss.keyfeature2.EditCatalogViewModel')"
+		 form="@id('catalogForm') @load(catalog) @save(catalog, before='save')">
+		<grid model="@load(catalogForm.items)">
+			<columns>
+				<column label="Title"/>
+				<column label="Author"/>
+			</columns>
+			<template name="model" var="item">
+				<row>
+					<textbox value="@bind(item.title)" maxlength="30"/>
+					<combobox model="@bind(catalog.authors)" selectedItem="@bind(item.author)" readonly="true">
+						<template name="model">
+							<comboitem label="@init(each.name)"/>
+						</template>
+					</combobox>
+				</row>
+			</template>
+		</grid>
+		<button label="save" iconSclass="z-icon-check" onClick="@command('save')"/>
+	</div>
+</zk>
