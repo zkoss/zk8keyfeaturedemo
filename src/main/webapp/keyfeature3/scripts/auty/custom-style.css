@@ -28,6 +28,6 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	padding: 10px;
 }
 
-.z-checkbox input[type=checkbox][disabled]+label.z-checkbox-content{
+.z-checkbox input[type=checkbox][disabled=disabled]+label.z-checkbox-content{
 	opacity: 0.5;
 }
