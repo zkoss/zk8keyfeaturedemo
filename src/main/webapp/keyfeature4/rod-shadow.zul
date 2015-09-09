@@ -41,6 +41,7 @@
 				<x:div w:cityInit="'${each.key}'" w:cityNumber="${each.value}" class="largefont" />
 			</forEach>
 		</x:div>
+		<x:div id="previewLayer" />
 		<x:div id="preview">
 			<if test="@load(not empty vm.preview)">
 				<vlayout>

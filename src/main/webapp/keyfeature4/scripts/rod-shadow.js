@@ -38,8 +38,8 @@ function initPreviewBar(previewBar, totalSize) {
 	var container = previewBar.$f('restaurantList');
 	var preview = previewBar.$f('preview');
 	var $container = jq(container.$n());
-	var $previewBar = jq(previewBar);
-
+	var $previewLayer = jq(previewBar.$f('previewLayer').$n());
+	var binder = zkbind.$(previewBar);
 	var index = 0;
 	for (var w = previewBar.firstChild; w; w = w.nextSibling) {
 		if (w.cityNumber) {
@@ -52,66 +52,51 @@ function initPreviewBar(previewBar, totalSize) {
 			index++;
 		}
 	}
-	preview.hide = function() {
-		preview.shallShow = false;
-		preview.$n().style.display = 'none';
-	};
 
-	var prevY = 0;
-	$previewBar.click(function(evt) {
-		var tg = evt.target;
-		var w = zk.Widget.$(tg.id);
-		if (w.cityNumber) {
-			var y = evt.offsetY;
-			if (y < 0) { 
-				return;
-			}
-			y += jq(tg).offset().top
-			var index = Math.floor(y * totalSize / container.viewHeight);
-			binder.command('scrollIntoView', {loadingIndex: index, direction: prevY < y ? 'down' : 'up'});
-			binder.after('updateScroll', function (begin) {
-				$container.scrollTop(begin * container.rowHeight);
-			});
-			prevY = y;
-		}
-		preview.hide();
-	});
-
-	$previewBar.mouseover(function(evt) {
+	$previewLayer.mouseover(function(evt) {
 		preview.shallShow = true;
 	});
 
-	var binder = zkbind.$(previewBar), prevY = -1;
-	$previewBar.mousemove(function(evt) {
+	var prevIndex = -1;
+	$previewLayer.mousemove(function(evt) {
 		var y = evt.offsetY;
-		if (!preview.shallShow)
+		if (!preview.shallShow || y < 0) {
 			return;
-		if (y < 0)
-			return;
-		if (prevY == y)
-			return;
-		
-		var tg = evt.target;
-		var w = zk.Widget.$(tg.id);
-		if (w.cityNumber) {
-			prevY = y;
-			y += jq(tg).offset().top
-			if (y > container.viewHeight)
-				y = container.viewHeight;
-			var index = Math.floor(y * totalSize / container.viewHeight);
-			binder.command('showPreview', {showIndex: index, position: y});
 		}
+		if (y > container.viewHeight)
+			y = container.viewHeight;
+		var index = Math.floor(y * totalSize / container.viewHeight);
+		if (prevIndex == index)
+			return;
+		prevIndex = index;
+		preview.prevY = y;
+		binder.command('showPreview', {showIndex: index});
 	});
 
-	$previewBar.mouseout(function(evt) {
-		preview.hide();
+	$previewLayer.mouseout(function(evt) {
+		preview.shallShow = false;
+		preview.$n().style.display = 'none';
+	});
+
+	$previewLayer.click(function(evt) {
+		var y = evt.offsetY;
+		if (y < 0) { 
+			return;
+		}
+		var index = Math.floor(y * totalSize / container.viewHeight);
+		if (y > container.viewHeight)
+			y = container.viewHeight;
+		binder.command('scrollIntoView', {loadingIndex: index});
 	});
 
 	binder.after('updatePreview', function(view) {
-		if (view) {
+		if (view && preview.shallShow) {
 			var style = preview.$n().style;
 			style.display = 'block';
-			style.top = view.position + 'px';
+			style.top = preview.prevY + 'px';
 		}
+	});
+	binder.after('updateScroll', function(begin) {
+		$container.scrollTop(begin * container.rowHeight);
 	});
 }

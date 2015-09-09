@@ -35,6 +35,16 @@ body {
 	right: 15px;
 	text-align: center;
 	color: #acacac;
+	z-index: 1;
+}
+#previewLayer {
+	width: 45px;
+	height: 600px;
+	background: transparent;
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	z-index: 2;
 }
 
 #preview {

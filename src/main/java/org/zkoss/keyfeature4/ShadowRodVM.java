@@ -63,7 +63,7 @@ public class ShadowRodVM {
 
 	@Command(SCROLL_INTO_VIEW_COMMAND)
 	@SmartNotifyChange({"begin"})
-	public void scrollIntoView(@BindingParam("loadingIndex") int index, @BindingParam("direction") String direction) {
+	public void scrollIntoView(@BindingParam("loadingIndex") int index) {
 		String cityName = cities.get(index);
 		int loadingIndex = 0;
 		for (RestaurantPreview rp : previewBar) {
@@ -73,12 +73,12 @@ public class ShadowRodVM {
 				loadingIndex += rp.getNumberOfCity();
 			}
 		}
-		loadData(loadingIndex, direction);
+		loadData(loadingIndex, "down");
 	}
 
 	@Command(SHOW_PREVIEW_COMMAND)
 	@SmartNotifyChange({"preview"})
-	public void showPreview(@BindingParam("showIndex") int index, @BindingParam("position") int pos) {
+	public void showPreview(@BindingParam("showIndex") int index) {
 		String cityName = cities.get(index);
 		List<Restaurant> rlist = service.getRestaurantsByCity(cityName);
 		Map<String, Integer> numberOfType = new TreeMap<String, Integer>();
@@ -95,7 +95,6 @@ public class ShadowRodVM {
 			if (cityName.equals(rp.getCityName())) {
 				preview = rp;
 				preview.setNumberOfType(numberOfType);
-				preview.setPosition(pos);
 				break;
 			}
 		}

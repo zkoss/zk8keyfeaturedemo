@@ -8,7 +8,6 @@ public class RestaurantPreview {
 	private int _numberOfCity;
 	private String _cityName;
 	private Map<String, Integer> _numberOfType;
-	private int _position;
 
 	public String getCityInitial() {
 		return _cityInitial;
@@ -40,14 +39,6 @@ public class RestaurantPreview {
 
 	public void setNumberOfType(Map<String, Integer> numberOfType) {
 		_numberOfType = numberOfType;
-	}
-
-	public int getPosition() {
-		return _position;
-	}
-
-	public void setPosition(int position) {
-		_position = position;
 	}
 
 }
