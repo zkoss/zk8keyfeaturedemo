@@ -1,0 +1,16 @@
+<zk xmlns:x="xhtml" xmlns:n="native">
+	<forEach items="@init(catalog.items)" var="item">
+		<div sclass="item-list mix">
+			<n:span sclass="item-thumb">
+				<image sclass="item-icon" src="@load(item.image)" />
+			</n:span>
+			<n:span sclass="item-info">
+				<label sclass="item-name" value="@load(item.title)" />
+			</n:span>
+			<span style="text-align: left" sclass="pull-right">
+				<image sclass="@load(('author-icon ' += item.author.icon))" />
+				<label value="@load(item.author.name)" sclass="author-name" />
+			</span>
+		</div>
+	</forEach>
+</zk>

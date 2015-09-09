@@ -1,0 +1,6 @@
+<zk xmlns:x="xhtml" xmlns:n="native">
+<n:pre>
+Title;Author
+<forEach items="@init(catalog.items)">${each.title};${each.author.name} &#10;</forEach>
+</n:pre>
+</zk>

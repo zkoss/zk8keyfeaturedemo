@@ -17,11 +17,11 @@ public class TemplatingViewModel {
 
 	@Init
 	public void init(){
-		availableTemplates.add(new TemplateInfo("zk grid readonly", "zk-grid.zul"));
-		availableTemplates.add(new TemplateInfo("zk grid editable", "zk-grid-editable.zul"));
-		availableTemplates.add(new TemplateInfo("bootstrap table", "bootstrap-table.zul"));
-		availableTemplates.add(new TemplateInfo("HTML box", "html-box.zul"));
-		availableTemplates.add(new TemplateInfo("HTML list", "html-list.zul"));
+		availableTemplates.add(new TemplateInfo("zk grid readonly", "zk-grid.zul", null));
+		availableTemplates.add(new TemplateInfo("zk grid editable", "zk-grid-editable.zul", null));
+		availableTemplates.add(new TemplateInfo("bootstrap table", "bootstrap-table.zul", null));
+		availableTemplates.add(new TemplateInfo("HTML box", "html-box.zul", null));
+		availableTemplates.add(new TemplateInfo("HTML list", "html-list.zul", null));
 		currentTemplate = availableTemplates.get(0); 
 		
 		loadOrganization();		

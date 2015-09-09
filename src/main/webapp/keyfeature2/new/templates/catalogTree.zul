@@ -1,0 +1,26 @@
+<zk xmlns:x="xhtml" xmlns:n="native">
+	<forEach items="@load(catalog.activeAuthors)" var="author">
+		<n:div sclass="mix" style="display:block">
+			<span sclass="author-outline">
+				<image sclass="@load(('author-icon ' += author.icon))" />
+			</span>
+			<label value="@load(author.name)" sclass="author-name" />
+			<n:div sclass="item-tree-items">
+				<n:div sclass="author-connector pull-left" />
+				<forEach items="@load(author.items)" var="item">
+					<n:div sclass="pull-left">
+						<n:span sclass="item-thumb">
+							<image sclass="item-icon" src="@load(item.image)" />
+						</n:span>
+						<n:span sclass="item-info">
+							<label sclass="item-name" value="@load(item.title)" />
+						</n:span>
+					</n:div>
+				</forEach>
+			</n:div>
+		</n:div>
+	</forEach>
+	<if test="@load(not empty catalog.authors)">
+		<span sclass="author-outline author-empty"></span>
+	</if>
+</zk>
