@@ -1,26 +1,49 @@
-.z-window-content {
-	padding: 0px;
+.viewport {
+	border: 1px solid #cfcfcf;
 	position: relative;
 }
-#userList.list-group {
+
+#restaurantList.list-group {
 	margin: 0px;
+	height: 600px;
 	overflow-y: scroll;
 }
-
-#userList > .topPadding, #userList > .bottomPadding {
+#restaurantList > .topPadding, #restaurantList > .bottomPadding {
 	display: block;
 }
-	
-#userList .list-group-item .user-info {
-	display: inline-block;
-	vertical-align: bottom;
+
+#previewbar {
+	width: 45px;
+	height: 600px;
+	/*border-top: 1px solid #cfcfcf;*/
+	background: #ffffff;
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	text-align: center;
+	color: #acacac;
 }
 
-#userList .list-group-item .user-name {
+#preview {
+	width: 350px;
+	padding: 15px 20px;
+	background: #3c3c3c;
+	position: absolute;
+	top: 0px;
+	right: 60px;
+	display: none;
+	color: #ffffff;
+}
+#preview .number-of-type {
+	padding-left: 10px;
+}
+#preview img {
+	width: 40px;
+	margin: 0 10px 10px 0;
+}
+#preview span {
+	margin: 0 10px 10px 0;
+}
+.bold {
 	font-weight: bold;
-}
-
-#userList .list-group-item .user-picture {
-	border-radius: 50%;
-	width:40px;
 }

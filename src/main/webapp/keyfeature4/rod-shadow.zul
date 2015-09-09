@@ -2,22 +2,59 @@
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client">
 	<style src="./scripts/rod-shadow.css" />
 
-	<window id="win" border="normal" title="shadow rod demo" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')">
-		<x:ul id="userList" class="list-group" style="height: 400px;" 
-				w:onBind="initRodList(this, ${vm.totalSize}, 61);">
+	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" >
+		<x:ul id="restaurantList" class="list-group" w:onBind="initRodList(this, ${vm.totalSize}, 61);">
 			<n:li class="topPadding"/>
-			<forEach items="@load(vm.users)">
+			<forEach items="@load(vm.restaurantList)">
 				<n:li class="list-group-item">
-					<n:img src="${each.picture}" class="user-picture" />
-					<vlayout width="400px" spacing="0" sclass="user-info">
-						<label value="${each.name}" sclass="user-name" />
-						<label value="${each.email}" />
-					</vlayout>
+					<hlayout valign="middle">
+						<div width="150px">
+							<label value="${each.name}" />
+						</div>
+						<div width="80px">
+							<n:img src="./icons/${each.type}.svg" />
+						</div>
+						<div width="325px">
+							<label value="${each.address}" />
+						</div>
+						<div width="150px">
+							<label value="${each.city}" />
+						</div>
+						<div width="80px">
+							<a href="${each.url}" label="Website Link" />
+						</div>
+						<div>
+							<forEach begin="1" end="${each.rating}">
+								<n:img src="./icons/rate_full.svg" />
+							</forEach>
+							<forEach begin="1" end="${5 - each.rating}">
+								<n:img src="./icons/rate_empty.svg" />
+							</forEach>
+						</div>
+					</hlayout>
 				</n:li>
 			</forEach>
 			<n:li class="bottomPadding"/>
 		</x:ul>
-	</window>
+		<x:div id="previewbar" w:onBind="initPreviewBar(this, ${vm.totalNumOfCityInit})">
+			<forEach items="${vm.numOfCityInit}">
+				<x:div w:cityInit="'${each.key}'" w:cityNumber="${each.value}" />
+			</forEach>
+		</x:div>
+		<x:div id="preview">
+			<if test="@load(not empty vm.preview)">
+				<vlayout>
+					<label value="@load(vm.preview.cityName)" sclass="bold" />
+					<x:div class="number-of-type">
+						<forEach items="@load(vm.preview.numberOfType)">
+							<n:img src="./icons/${each.key}.svg" />
+							<n:span>${each.value}</n:span>
+						</forEach>
+					</x:div>
+				</vlayout>
+			</if>
+	    </x:div>
+	</div>
 
 	<script type="text/javascript" src="./scripts/rod-shadow.js"></script>
 </zk>

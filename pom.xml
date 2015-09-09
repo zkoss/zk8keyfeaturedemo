@@ -31,6 +31,10 @@
       		<name>ZK Evaluation Repository</name>
 			<url>http://mavensync.zkoss.org/eval</url>
 		</repository>
+		<repository>
+			<id>SourceForge</id>
+			<url>http://csvjdbc.sourceforge.net/maven2</url>
+		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -66,15 +70,11 @@
 			<artifactId>zuti</artifactId>
 			<version>${zk.version}</version>
 		</dependency>
-		
-		<!-- ZK 5 breeze theme
 		<dependency>
-			<groupId>org.zkoss.theme</groupId>
-			<artifactId>breeze</artifactId>
-			<version>${zk.version}</version>
-			<optional>true</optional>
+			<groupId>net.sourceforge.csvjdbc</groupId>
+			<artifactId>csvjdbc</artifactId>
+			<version>1.0.25</version>
 		</dependency>
-		 -->
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
