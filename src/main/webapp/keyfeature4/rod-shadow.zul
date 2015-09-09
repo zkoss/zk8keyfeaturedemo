@@ -1,7 +1,7 @@
+<!-- <?link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"?> -->
 <?link rel="stylesheet" href="/keyfeature1/scripts/bootstrap.min.css"?>
+<?link rel="stylesheet" href="./scripts/rod-shadow.css"?>
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client">
-	<style src="./scripts/rod-shadow.css" />
-
 	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" >
 		<x:ul id="restaurantList" class="list-group" w:onBind="initRodList(this, ${vm.totalSize}, 61);">
 			<n:li class="topPadding"/>
@@ -9,19 +9,19 @@
 				<n:li class="list-group-item">
 					<hlayout valign="middle">
 						<div width="150px">
-							<label value="${each.name}" />
+							<label value="${each.name}" sclass="largefont" />
 						</div>
 						<div width="80px">
 							<n:img src="./icons/${each.type}.svg" />
 						</div>
 						<div width="325px">
-							<label value="${each.address}" />
+							<label value="${each.address}" sclass="largefont" />
 						</div>
 						<div width="150px">
-							<label value="${each.city}" />
+							<label value="${each.city}" sclass="largefont" />
 						</div>
-						<div width="80px">
-							<a href="${each.url}" label="Website Link" />
+						<div width="120px">
+							<a href="${each.url}" label="Website Link" sclass="largefont" />
 						</div>
 						<div>
 							<forEach begin="1" end="${each.rating}">
@@ -38,14 +38,14 @@
 		</x:ul>
 		<x:div id="previewbar" w:onBind="initPreviewBar(this, ${vm.totalNumOfCityInit})">
 			<forEach items="${vm.numOfCityInit}">
-				<x:div w:cityInit="'${each.key}'" w:cityNumber="${each.value}" />
+				<x:div w:cityInit="'${each.key}'" w:cityNumber="${each.value}" class="largefont" />
 			</forEach>
 		</x:div>
 		<x:div id="preview">
 			<if test="@load(not empty vm.preview)">
 				<vlayout>
-					<label value="@load(vm.preview.cityName)" sclass="bold" />
-					<x:div class="number-of-type">
+					<label value="@load(vm.preview.cityName)" sclass="largefont" />
+					<x:div class="number-of-type largefont">
 						<forEach items="@load(vm.preview.numberOfType)">
 							<n:img src="./icons/${each.key}.svg" />
 							<n:span>${each.value}</n:span>

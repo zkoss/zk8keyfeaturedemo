@@ -1,3 +1,12 @@
+body {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.largefont {
+	font-family: Helvetica;
+	font-size: 14px;
+}
+
 .viewport {
 	border: 1px solid #cfcfcf;
 	position: relative;
@@ -8,11 +17,15 @@
 	height: 600px;
 	overflow-y: scroll;
 }
+#restaurantList .list-group-item a:hover {
+	text-decoration: none;
+}
 #restaurantList > .topPadding, #restaurantList > .bottomPadding {
 	display: block;
 }
 
 #previewbar {
+	font-family: Helvetica;
 	width: 45px;
 	height: 600px;
 	/*border-top: 1px solid #cfcfcf;*/
@@ -43,7 +56,4 @@
 }
 #preview span {
 	margin: 0 10px 10px 0;
-}
-.bold {
-	font-weight: bold;
 }
