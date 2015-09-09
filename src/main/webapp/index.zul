@@ -286,8 +286,10 @@
 
 	<separator bar="true" />
 	
-	<n:h2>More Dynamic UIs in MVVM with Client Binding</n:h2>
+	<n:h2>Seamless Client-Server Messaging with MVVM Client Binding</n:h2>
     <div>
+        Client binding allows us to trigger commands on the server-side and register callbacks on the client-side to ensure effective communication, empowering even AngularJS/ReactJS with Java.
+<br>
 		In this example, we used ZK 8’s Client Binding to render data on demand in a “seamlessly” scrollable view. The principle of View/Logic separation is preserved; while the ViewModel provides the data, the client-side JS handles the positioning and scrolling.
 
 	</div>
