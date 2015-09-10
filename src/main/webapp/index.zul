@@ -19,7 +19,7 @@
 	</div>
 	<hlayout>
 		<div class="well" hflex="3" vflex="1">
-			<iframe src="/keyfeature1/index.zul" width="100%" height="600px"/>
+			<iframe src="/keyfeature1/index.zul" width="100%" height="500px"/>
 		</div>
 		<tabbox hflex="2" vflex="1">
 			<tabs id="tabs">
