@@ -12,19 +12,22 @@ body {
 	position: relative;
 }
 
-#restaurantList.list-group {
+#container.list-group {
 	margin: 0px;
 	height: 600px;
 	overflow-y: scroll;
 }
-#restaurantList .list-group-item a:hover {
+#container .list-group-item {
+	height: 75px;
+}
+#container .list-group-item a:hover {
 	text-decoration: none;
 }
-#restaurantList > .topPadding, #restaurantList > .bottomPadding {
+#container > .topPadding, #container > .bottomPadding {
 	display: block;
 }
 
-#previewbar {
+#previewBar {
 	font-family: Helvetica;
 	width: 45px;
 	height: 600px;

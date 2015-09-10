@@ -16,8 +16,17 @@ import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zul.ListModelList;
 
 @ToServerCommand({ShadowRodVM.LOAD_DATA_COMMAND, ShadowRodVM.SHOW_PREVIEW_COMMAND, ShadowRodVM.SCROLL_INTO_VIEW_COMMAND})
-@ToClientCommand({ShadowRodVM.LOAD_DATA_COMMAND, ShadowRodVM.UPDATE_BEGIN, ShadowRodVM.UPDATE_PREVIEW, ShadowRodVM.UPDATE_SCROLL})
+@ToClientCommand({
+	ShadowRodVM.INIT_DATA,
+	ShadowRodVM.LOAD_DATA_COMMAND,
+	ShadowRodVM.UPDATE_BEGIN,
+	ShadowRodVM.INIT_PREVIEW,
+	ShadowRodVM.UPDATE_PREVIEW,
+	ShadowRodVM.UPDATE_SCROLL
+})
 @NotifyCommands({
+	@NotifyCommand(value = ShadowRodVM.INIT_DATA, onChange="_vm_.totalSize"),
+	@NotifyCommand(value = ShadowRodVM.INIT_PREVIEW, onChange="_vm_.totalCitySize"),
 	@NotifyCommand(value = ShadowRodVM.UPDATE_BEGIN, onChange="_vm_.begin"),
 	@NotifyCommand(value = ShadowRodVM.UPDATE_PREVIEW, onChange="_vm_.preview"),
 	@NotifyCommand(value = ShadowRodVM.UPDATE_SCROLL, onChange="_vm_.begin"),
@@ -25,6 +34,8 @@ import org.zkoss.zul.ListModelList;
 public class ShadowRodVM {
 
 	private RestaurantService service = RestaurantService.getInstance(Sessions.getCurrent());
+	static final String INIT_DATA = "initData";
+	static final String INIT_PREVIEW = "initPreview";
 	static final String LOAD_DATA_COMMAND = "loadData";
 	static final String UPDATE_BEGIN = "updateBegin";
 	static final String SHOW_PREVIEW_COMMAND = "showPreview";
@@ -39,7 +50,7 @@ public class ShadowRodVM {
 	private List<RestaurantPreview> previewBar;
 	private RestaurantPreview preview;
 	private Map<String, Integer> numOfCityInit;
-	private int totalNumOfCityInit;
+	private int totalCitySize;
 
 	@Init
 	public void init() {
@@ -47,7 +58,7 @@ public class ShadowRodVM {
 		restaurantList = new ListModelList<Restaurant>(loadRestaurant(0));
 		previewBar = service.countGroupByCity();
 		cities = service.getAllCities();
-		totalNumOfCityInit = cities.size();
+		totalCitySize = cities.size();
 	}
 
 	@Command(LOAD_DATA_COMMAND)
@@ -126,8 +137,8 @@ public class ShadowRodVM {
 		return numOfCityInit;
 	}
 
-	public int getTotalNumOfCityInit() {
-		return totalNumOfCityInit;
+	public int getTotalCitySize() {
+		return totalCitySize;
 	}
 
 	public int getBegin() {

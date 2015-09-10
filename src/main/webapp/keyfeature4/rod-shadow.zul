@@ -3,7 +3,7 @@
 <?link rel="stylesheet" href="./scripts/rod-shadow.css"?>
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client">
 	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" >
-		<x:ul id="restaurantList" class="list-group" w:onBind="initRodList(this, ${vm.totalSize}, 61);">
+		<x:ul id="container" class="list-group">
 			<n:li class="topPadding"/>
 			<forEach items="@load(vm.restaurantList)">
 				<n:li class="list-group-item">
@@ -36,7 +36,7 @@
 			</forEach>
 			<n:li class="bottomPadding"/>
 		</x:ul>
-		<x:div id="previewbar" w:onBind="initPreviewBar(this, ${vm.totalNumOfCityInit})">
+		<x:div id="previewBar">
 			<forEach items="${vm.numOfCityInit}">
 				<x:div w:cityInit="'${each.key}'" w:cityNumber="${each.value}" class="largefont" />
 			</forEach>
