@@ -1,22 +1,30 @@
-<zk xmlns:x="xhtml" xmlns:n="native">
+<zk xmlns:n="native">
 	<div viewModel="@id('vm') @init('org.zkoss.keyfeature2.EditCatalogViewModel')"
 		 form="@id('catalogForm') @load(catalog) @save(catalog, before='save')">
-		<grid model="@load(catalogForm.items)">
-			<columns>
-				<column label="Title"/>
-				<column label="Author"/>
-			</columns>
-			<template name="model" var="item">
-				<row>
-					<textbox value="@bind(item.title)" maxlength="30"/>
-					<combobox model="@bind(catalog.authors)" selectedItem="@bind(item.author)" readonly="true">
-						<template name="model">
-							<comboitem label="@init(each.name)"/>
-						</template>
-					</combobox>
-				</row>
-			</template>
-		</grid>
-		<button label="save" iconSclass="z-icon-check" onClick="@command('save')"/>
+		<n:table class="table">
+			<n:thead>
+				<n:tr sclass="form-group-lg ">
+					<n:th sclass="form-control-static">Product</n:th>
+					<n:th sclass="form-control-static">Price (USD)</n:th>
+					<n:th sclass="form-control-static">Seller</n:th>
+				</n:tr>
+			</n:thead>
+			<n:tbody>
+				<forEach items="@init(catalogForm.items)" var="item">
+					<n:tr>
+						<n:td><textbox zclass="form-control input-lg" value="@bind(item.title)"/></n:td>
+						<n:td><decimalbox zclass="form-control input-lg" value="@bind(item.price)"/></n:td>
+						<n:td>
+							<selectbox zclass="form-control input-lg" model="@bind(catalog.sellers)" selectedItem="@bind(item.seller)">
+								<template name="model" var="seller">
+									<label value="@init(seller.name)"/>
+								</template>
+							</selectbox>
+						</n:td>
+					</n:tr>
+				</forEach>
+			</n:tbody>
+		</n:table>
+		<button zclass="btn btn-lg btn-primary" onClick="@command('save')" label="Save"/>
 	</div>
 </zk>

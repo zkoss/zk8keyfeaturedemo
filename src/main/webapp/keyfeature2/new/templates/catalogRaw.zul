@@ -1,6 +1,6 @@
 <zk xmlns:x="xhtml" xmlns:n="native">
-<n:pre>
-Title;Author
-<forEach items="@init(catalog.items)">${each.title};${each.author.name} &#10;</forEach>
-</n:pre>
+<n:samp sclass="raw-list">
+Product;Price;Seller<n:br/>
+<forEach items="@init(catalog.items)">${each.title};${each.price};${each.seller.name}<n:br/></forEach>
+</n:samp>
 </zk>

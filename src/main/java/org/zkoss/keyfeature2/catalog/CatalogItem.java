@@ -1,19 +1,25 @@
 package org.zkoss.keyfeature2.catalog;
 
+import java.math.BigDecimal;
+
 import org.zkoss.bind.annotation.Immutable;
 
 
 public class CatalogItem {
 	private String image;
 	private String title;
-	private Author author;
+	private Seller seller;
+	private BigDecimal price;
 	
-	public CatalogItem() {}
+	public CatalogItem() {
+		
+	}
 
-	public CatalogItem(String title, Author author) {
+	public CatalogItem(String title, String image, Seller seller, BigDecimal price) {
 		this.title = title;
-		this.author = author;
-		this.image = "image/Centigrade-Widget-Icons/" + title + "-128x128.png";
+		this.image = image;
+		this.seller = seller;
+		this.price = price;
 	}
 	
 	public String getTitle() {
@@ -24,17 +30,25 @@ public class CatalogItem {
 	}
 	
 	@Immutable
-	public Author getAuthor() {
-		return author;
+	public Seller getSeller() {
+		return seller;
 	}
-	public void setAuthor(Author author) {
-		this.author.getItems().remove(this);
-		this.author = author;
-		this.author.getItems().add(this);
+	public void setSeller(Seller seller) {
+		this.seller.getItems().remove(this);
+		this.seller = seller;
+		this.seller.getItems().add(this);
 	}
 
-	//TODO: use converter
 	public String getImage() {
 		return image;
+	}
+
+	@Immutable
+	public BigDecimal getPrice() {
+		return price;
+	}
+	
+	public void setPrice(BigDecimal price) {
+		this.price = price;
 	}
 }

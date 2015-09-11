@@ -1,22 +1,20 @@
 package org.zkoss.keyfeature2.catalog;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
 public class Catalog {
-	private static String[] ITEMS = new String[] { "Briefcase", "FolderABlue", "Globe", "MailboxFlag", "ReadingGlass", "Spyglass"};
-	private static String[] authors_list = new String[] { "Alien", "Astronauta", "Bombero", "Comisario", "Dreds", "Hiphopper", "Mimo", "Mounstruo"};
 
 	private Random random = new Random();
 
 	private List<CatalogItem> allItems;
-	private List<Author> allAuthors;
+	private List<Seller> allSellers;
 	
 	public Catalog() {
-		loadAuthors();
+		loadSellers();
 		loadItems();
 	}
 
@@ -24,40 +22,48 @@ public class Catalog {
 		return allItems;
 	}
 	
-	public List<Author> getAuthors() {
-		return allAuthors;
+	public List<Seller> getSellers() {
+		return allSellers;
 	}
 
-	public List<Author> getActiveAuthors() {
-		List<Author> activeAuthors = new ArrayList<Author>(allAuthors);
-		Iterator<Author> iterator = activeAuthors.iterator();
+	public List<Seller> getActiveSellers() {
+		List<Seller> activeSellers = new ArrayList<Seller>(allSellers);
+		Iterator<Seller> iterator = activeSellers.iterator();
 		while(iterator.hasNext()) {
-			Author author = iterator.next();
-			if(author.getItems().isEmpty()) {
+			Seller seller = iterator.next();
+			if(seller.getItems().isEmpty()) {
 				iterator.remove();
 			}
 		}
-		return activeAuthors;
+		return activeSellers;
 	}
 	
 	private void loadItems() {
-		allItems = new LinkedList<CatalogItem>();
-		for (String name : ITEMS) {
-			CatalogItem item = new CatalogItem(name, randomAuthor());
-			allItems.add(item);
-			item.getAuthor().getItems().add(item);
-		}
+		allItems = new ArrayList<CatalogItem>();
+		newItem("Briefcase", new BigDecimal("159.99"));
+		newItem("BlueFolder", new BigDecimal("1.50"));
+		newItem("USB", new BigDecimal("20.00"));
+		newItem("Mailbox", new BigDecimal("129.50"));
+		newItem("MagnifyingGlass", new BigDecimal("15.00"));
+		newItem("Binoculars", new BigDecimal("245.30"));
 	}
 	
-	private void loadAuthors() {
-		allAuthors = new ArrayList<Author>();
-		for (String name : authors_list) {
-			allAuthors.add(new Author(name));
-		}
+	private void newItem(String title, BigDecimal price) {
+		CatalogItem item = new CatalogItem(title, "image/" + title + ".svg", randomSeller(), price);
+		item.getSeller().getItems().add(item);
+		allItems.add(item);
+	}
+
+	private void loadSellers() {
+		allSellers = new ArrayList<Seller>();
+		allSellers.add(new Seller("Buzzphilip", "icon/user1.svg")); 
+		allSellers.add(new Seller("Olliejeffery", "icon/user2.svg")); 
+		allSellers.add(new Seller("Claudia41", "icon/user3.svg")); 
+		allSellers.add(new Seller("Kirmorrison", "icon/user4.svg")); 
 	}
 	
-	private Author randomAuthor() {
-		return allAuthors.get(random.nextInt(allAuthors.size()));
+	private Seller randomSeller() {
+		return allSellers.get(random.nextInt(allSellers.size()));
 	}
 }
 

@@ -1,16 +1,16 @@
 <zk xmlns:x="xhtml" xmlns:n="native">
 	<forEach items="@init(catalog.items)" var="item">
-		<x:div sclass="item mix">
-			<x:img sclass="center-block" src="@load(item.image)" />
+		<x:div sclass="item-grid">
+			<n:div sclass="item-seller">
+				<x:img src="@init(item.seller.icon)" />
+				<x:span textContent="@init(item.seller.name)" sclass="seller-name" />
+			</n:div>
+			<n:div sclass="item-image">
+				<x:img src="@load(item.image)" />
+			</n:div>
 			<n:div sclass="item-info">
-				<n:div>
-					<x:label sclass="item-name center-block" textContent="@load(item.title)" />
-					<n:span style="text-align: left" sclass="pull-left">
-						<x:img sclass="@load(('author-icon ' += item.author.icon))"
-							src="~./img/spacer.gif" />
-						<x:label textContent="@load(item.author.name)" sclass="author-name z-label" />
-					</n:span>
-				</n:div>
+				<x:span sclass="item-title" textContent="@load(item.title)" />
+				<x:span sclass="item-price" textContent="@load(('$' += item.price += ' USD'))" />
 			</n:div>
 		</x:div>
 	</forEach>

@@ -2,16 +2,17 @@ package org.zkoss.keyfeature2.catalog;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
-public class Author {
+public class Seller {
 	private String name;
+	private String icon;
 	private List<CatalogItem> items;
 
-	public Author() {}
+	public Seller() {}
 
-	public Author(String name) {
-		setName(name);
+	public Seller(String name, String icon) {
+		this.name = name;
+		this.icon = icon;
 		items = new ArrayList<CatalogItem>();
 	}
 	
@@ -28,6 +29,10 @@ public class Author {
 	}
 	
 	public String getIcon() {
-		return name.toLowerCase(Locale.US);
+		return icon;
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
 	}
 }

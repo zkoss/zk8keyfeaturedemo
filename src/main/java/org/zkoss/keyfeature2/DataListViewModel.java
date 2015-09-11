@@ -12,12 +12,7 @@ Copyright (C) 2015 Potix Corporation. All Rights Reserved.
 package org.zkoss.keyfeature2;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 
 import org.zkoss.bind.BindUtils;
 import org.zkoss.bind.annotation.BindingParam;

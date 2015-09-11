@@ -1,26 +1,21 @@
 <zk xmlns:x="xhtml" xmlns:n="native">
-	<forEach items="@load(catalog.activeAuthors)" var="author">
-		<n:div sclass="mix" style="display:block">
-			<span sclass="author-outline">
-				<image sclass="@load(('author-icon ' += author.icon))" />
-			</span>
-			<label value="@load(author.name)" sclass="author-name" />
-			<n:div sclass="item-tree-items">
-				<n:div sclass="author-connector pull-left" />
-				<forEach items="@load(author.items)" var="item">
-					<n:div sclass="pull-left">
-						<n:span sclass="item-thumb">
-							<image sclass="item-icon" src="@load(item.image)" />
-						</n:span>
-						<n:span sclass="item-info">
-							<label sclass="item-name" value="@load(item.title)" />
-						</n:span>
+	<forEach items="@load(catalog.activeSellers)" var="seller">
+		<n:div sclass="seller-tree">
+			<n:div sclass="seller">
+				<n:div sclass="seller-icon">
+					<image src="@load(seller.icon)" />
+				</n:div>
+				<label zclass="seller-name" value="@load(seller.name)" />
+			</n:div>
+			<n:div sclass="seller-items">
+				<forEach items="@load(seller.items)" var="item">
+					<n:div sclass="item-info">
+						<image zclass="item-image" src="@load(item.image)" />
+						<label zclass="item-title" value="@load(item.title)" />
+						<label zclass="item-price" value="@load(('$' += item.price += ' USD'))" />
 					</n:div>
 				</forEach>
 			</n:div>
 		</n:div>
 	</forEach>
-	<if test="@load(not empty catalog.authors)">
-		<span sclass="author-outline author-empty"></span>
-	</if>
 </zk>
