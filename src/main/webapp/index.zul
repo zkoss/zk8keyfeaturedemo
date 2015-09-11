@@ -78,7 +78,7 @@
 	<n:h2>Clear View/Logic Separation</n:h2>
 	<div>ZK 8’s MVVM pattern cleanly separates view and logic, allowing representation of the same data structure with varying detail, layout or even functionality. </div>
 	<div class="well">
-		<iframe src="/keyfeature2/new/index.zul" width="1000px" height="900px" />
+		<iframe src="/keyfeature2/index.zul" width="1000px" height="900px" />
 	</div>
 	<separator bar="true" />
 	<n:h2>

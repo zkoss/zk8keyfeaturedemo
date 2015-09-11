@@ -1,5 +1,5 @@
 <?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
-<?link rel="stylesheet" type="text/css" href="../../resources/css/bootstrap.min.css"?>
+<?link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.min.css"?>
 <?link rel="stylesheet" type="text/css" href="css/style.css"?>
 
 <zk xmlns:n="native" xmlns:x="xhtml">
