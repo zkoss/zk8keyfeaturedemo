@@ -80,14 +80,12 @@
 		    <script src="/keyfeature3/scripts/chartist/chartist.min.js"></script>
 			<script>
 				function (wgt, dataValue) {
-					var value = wgt.getValue();
-					wgt.setValue('');
-					var node = jq(wgt.$n());
-					new Chartist.Pie(node[0], {series: [parseFloat(value)], labels: [value]}, dataValue);
-					wgt.setOverride("setValue", function(value) {
-						this.$setValue('');
-						new Chartist.Pie(node[0], {series: [parseFloat(value)], labels: [value]}, dataValue);
-					});
+					var renderChart = function(value) {
+						wgt.$setValue('');
+						new Chartist.Pie(wgt.$n(), {series: [parseFloat(value)], labels: [value]}, dataValue); 
+					};
+					wgt.setOverride("setValue", renderChart); 
+					renderChart(wgt.getValue());
 				}
 			</script>
 		</data-handler>
