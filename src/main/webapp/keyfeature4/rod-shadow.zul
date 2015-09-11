@@ -55,6 +55,13 @@
 				</vlayout>
 			</if>
 	    </x:div>
+<!-- 	    <n:div class="loader top">Loading...</n:div> -->
+<!-- 		<n:div class="loader bottom">Loading...</n:div> -->
+		<n:div class="spinner">
+			<n:div class="bounce1"></n:div>
+			<n:div class="bounce2"></n:div>
+			<n:div class="bounce3"></n:div>
+		</n:div>
 	</div>
 
 	<script type="text/javascript" src="./scripts/rod-shadow.js"></script>

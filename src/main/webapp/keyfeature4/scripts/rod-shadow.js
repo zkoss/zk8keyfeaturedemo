@@ -25,13 +25,16 @@ zk.afterMount(function() {
 		}
 		if ($bottomPadding.position().top < $container.height()) {
 			container.loadData(Math.floor($container.scrollTop() / container.rowHeight), 'down');
+			showLoading('bottom');
 		} else if ($topPadding.height() > $container.scrollTop()) {
 			container.loadData(Math.ceil(($container.scrollTop() + $container.height()) / container.rowHeight), 'up');
+			showLoading('top');
 		}
 	});
 	// callback after scrolling
 	binder.after('loadData', function(pos) {
 		container.loadingPosition = null;
+		hideLoading();
 	});
 	// callback after scrolling
 	binder.after('updateBegin', function(begin) {
@@ -40,6 +43,14 @@ zk.afterMount(function() {
 		$topPadding.height(begin * container.rowHeight);
 		$bottomPadding.height((container.totalSize - numLoadedRows - begin) * container.rowHeight);
 	});
+	function showLoading(direction) {
+		var $spinner = jq('.spinner');
+		$spinner.addClass(direction).css('display', 'block');
+	}
+	function hideLoading() {
+		var $spinner = jq('.spinner');
+		$spinner.removeClass('bottom top').css('display', 'none');
+	}
 	
 	/* Preview */
 	var previewBar = zk.Widget.$('$previewBar');
