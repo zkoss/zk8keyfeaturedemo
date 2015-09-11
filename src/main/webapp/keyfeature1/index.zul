@@ -8,34 +8,29 @@
 <?style src="./scripts/bootstrap.css"?>
 <?style src="./scripts/style.css"?>
 <zk xmlns:h="native" xmlns:x="xhtml">
-	<div viewModel="@id('vm')@init('MyViewModel')" sclass="container-fluid">
-		<div sclass="">
-			<div sclass="row">
-				<forEach items="@init(vm.myStats)">
-					<statBox statBlock="@init(each)"
-						detailCommand="@init(MyViewModel.VIEW_DETAIL)"/>
-				</forEach>
-			</div>
-			<div sclass="row" >
-				<div sclass="col-md-6">
-					<customPanel panelTitle="Message"
-						panelButtons="@init(vm.myPanelButtons)"
-						scrollProperty='{"height": "215px", "scrollToEnd": "${MyViewModel.ADD_NEW_MESSAGE}"}'>
-						<template name="panelContent">
-							<messageBoard messages="@init(vm.myMessages)"/>
-						</template>
-						<template name="panelFooter">
-							<messageBoardFooter/>
-						</template>
-					</customPanel>
-				</div>
-				<div sclass="col-md-6">
-				<customPanel panelButtons="@init(vm.myPanelButtons)"
-						panelTitle="User map" bodyStyle="p-0" noFooter="true">
-						<template name="panelContent" src="worldMap.zul"/>
-					</customPanel>
-				</div>
-			</div>
+	<div viewModel="@id('vm')@init('MyViewModel')"
+		sclass="container-fluid">
+		<div sclass="row">
+			<forEach items="@init(vm.myStats)">
+				<statBox statBlock="@init(each)"
+					detailCommand="@init(MyViewModel.VIEW_DETAIL)" />
+			</forEach>
+		</div>
+		<div sclass="row">
+			<customPanel panelTitle="Message"
+				panelButtons="@init(vm.myPanelButtons)"
+				scrollProperty='{"height": "215px", "scrollToEnd": "${MyViewModel.ADD_NEW_MESSAGE}"}'>
+				<template name="panelContent">
+					<messageBoard messages="@init(vm.myMessages)" />
+				</template>
+				<template name="panelFooter">
+					<messageBoardFooter />
+				</template>
+			</customPanel>
+			<customPanel panelButtons="@init(vm.myPanelButtons)"
+				panelTitle="User map" bodyStyle="p-0" noFooter="true">
+				<template name="panelContent" src="worldMap.zul" />
+			</customPanel>
 		</div>
 	</div>
 </zk>

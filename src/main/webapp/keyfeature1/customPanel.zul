@@ -1,31 +1,34 @@
-<h:div class="panel panel-inverse" xmlns:h="native" xmlns:x="xhtml"
-	xmlns:ca="client/attribute">
-	<h:div class="panel-heading">
-		<h:div class="panel-heading-btn">
-			<forEach items="@init(panelButtons)" var="btn">
-				<div onClick="@command(btn.btnCommand,buttonId=btn.btnID)"
-					class="btn btn-xs btn-icon btn-circle ${btn.btnClass}">
-					<h:i class="fa ${btn.btnIcon}" />
-				</div>
-			</forEach>
+<div sclass="col-md-6">
+	<h:div class="panel panel-inverse" xmlns:h="native" xmlns:x="xhtml"
+		xmlns:ca="client/attribute">
+		<h:div class="panel-heading">
+			<h:div class="panel-heading-btn">
+				<forEach items="@init(panelButtons)" var="btn">
+					<div
+						onClick="@command(btn.btnCommand,buttonId=btn.btnID)"
+						class="btn btn-xs btn-icon btn-circle ${btn.btnClass}">
+						<h:i class="fa ${btn.btnIcon}" />
+					</div>
+				</forEach>
+			</h:div>
+			<h:h4 class="panel-title">${panelTitle}</h:h4>
 		</h:div>
-		<h:h4 class="panel-title">${panelTitle}</h:h4>
-	</h:div>
-	<x:div class="panel-body ${bodyStyle}">
-		<choose>
-			<when test="@init(!empty scrollProperty)">
-				<div ca:data-slimscroll="${scrollProperty}">
+		<x:div class="panel-body ${bodyStyle}">
+			<choose>
+				<when test="@init(!empty scrollProperty)">
+					<div ca:data-slimscroll="${scrollProperty}">
+						<apply template="panelContent" />
+					</div>
+				</when>
+				<otherwise>
 					<apply template="panelContent" />
-				</div>
-			</when>
-			<otherwise>
-				<apply template="panelContent" />
-			</otherwise>
-		</choose>
-	</x:div>
-	<if test="@init(!noFooter)">
-		<h:div class="panel-footer">
-			<apply template="panelFooter" />
-		</h:div>
-	</if>
-</h:div>
+				</otherwise>
+			</choose>
+		</x:div>
+		<if test="@init(!noFooter)">
+			<h:div class="panel-footer">
+				<apply template="panelFooter" />
+			</h:div>
+		</if>
+	</h:div>
+</div>
