@@ -12,10 +12,10 @@
 			<n:tbody>
 				<forEach items="@init(catalogForm.items)" var="item">
 					<n:tr>
-						<n:td><textbox zclass="form-control input-lg" value="@bind(item.title)"/></n:td>
-						<n:td><decimalbox zclass="form-control input-lg" value="@bind(item.price)"/></n:td>
+						<n:td><textbox zclass="form-control" sclass="input-lg" value="@bind(item.title)"/></n:td>
+						<n:td><decimalbox zclass="form-control" sclass="input-lg" value="@bind(item.price)"/></n:td>
 						<n:td>
-							<selectbox zclass="form-control input-lg" model="@bind(catalog.sellers)" selectedItem="@bind(item.seller)">
+							<selectbox zclass="form-control" sclass="input-lg" model="@bind(catalog.sellers)" selectedItem="@bind(item.seller)">
 								<template name="model" var="seller">
 									<label value="@init(seller.name)"/>
 								</template>
