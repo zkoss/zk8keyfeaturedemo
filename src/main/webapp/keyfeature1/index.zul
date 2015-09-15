@@ -5,9 +5,9 @@
 <?import org.zkoss.keyfeature1.MyViewModel?>
 <?style src="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"?>
 <?style src="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"?>
-<?style src="./scripts/bootstrap.css"?>
-<?style src="./scripts/style.css"?>
 <zk xmlns:h="native" xmlns:x="xhtml">
+	<style src="/keyfeature1/scripts/bootstrap.css"/>
+	<style src="/keyfeature1/scripts/style.css"/>
 	<div viewModel="@id('vm')@init('MyViewModel')"
 		sclass="container-fluid">
 		<div sclass="row">
@@ -29,7 +29,7 @@
 			</customPanel>
 			<customPanel panelButtons="@init(vm.myPanelButtons)"
 				panelTitle="User map" bodyStyle="p-0" noFooter="true">
-				<template name="panelContent" src="worldMap.zul" />
+				<template name="panelContent" src="/keyfeature1/worldMap.zul" />
 			</customPanel>
 		</div>
 	</div>
