@@ -2,6 +2,8 @@
 <?link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css" ?>
 <?script src="/resources/js/bootstrap.min.js" ?>
 <?link rel="stylesheet" type="text/css" href="/resources/css/demo.css"?>
+<?link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" ?>
+
 	<div>
 		<sh:apply template="demoSection"
 				sectionStyle="demo-section demo-section-light-blue" 
@@ -62,11 +64,12 @@
 					<n:div class="text-content">
 						<n:h2>${title}</n:h2>
 						<sh:apply template="description"/>
+						<n:a class="learn-more" href="${learnMoreLink}">Learn More</n:a>
 					</n:div>
 					<n:div class="demo-content">
-						<n:div class="debug">
+<!-- 						<n:div class="debug"> -->
 							<sh:apply templateURI="${contentURI}"/>
-						</n:div>
+<!-- 						</n:div> -->
 					</n:div>
 				</n:div>
 			</n:section>

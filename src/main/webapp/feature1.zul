@@ -1,8 +1,10 @@
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
-	<hlayout>
-		<div class="well" hflex="3" vflex="1">
-			<iframe src="/keyfeature1/index.zul" width="100%" height="500px"/>
-		</div>
+	<n:div class="demo-panel demo-panel-white demo-feature1">
+		<n:div class="squeeze">
+			<iframe src="/keyfeature1/index.zul"/>
+		</n:div>
+	</n:div>
+	<n:div class="demo-panel demo-panel-white demo-feature1-code shadow20">
 		<tabbox hflex="2" vflex="1">
 			<tabs id="tabs">
 				<tab label="statBoxTemplate.zul" />
@@ -33,16 +35,16 @@
 		</h:div>
 	</h:div>
 </h:div>]]></attribute>
-						</textbox>
-					</vlayout>
-				</tabpanel>
-				<tabpanel>
-					<vlayout>
-						<label
-							value="Defining the statbox element and using it in the main index.zul file" />
-						<textbox ca:data-codeMirror="true" rows="10"
-							multiline="true">
-							<attribute name="value"><![CDATA[<?component name="statBox" templateURI="statBoxTemplate.zul"?>
+					</textbox>
+				</vlayout>
+			</tabpanel>
+			<tabpanel>
+				<vlayout>
+					<label
+						value="Defining the statbox element and using it in the main index.zul file" />
+					<textbox ca:data-codeMirror="true" rows="10"
+						multiline="true">
+						<attribute name="value"><![CDATA[<?component name="statBox" templateURI="statBoxTemplate.zul"?>
 
 ...
 
@@ -55,5 +57,5 @@
 				</tabpanel>
 			</tabpanels>
 		</tabbox>
-	</hlayout>
+	</n:div>
 </zk>	
