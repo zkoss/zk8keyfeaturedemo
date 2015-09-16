@@ -1,7 +1,7 @@
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
 	<n:div class="demo-panel demo-panel-white demo-feature1">
-		<n:div class="squeeze">
-			<iframe src="/keyfeature1/index.zul"/>
+		<n:div class="scale">
+			<iframe src="/keyfeature1/index.zul" width="100%" height="100%"/>
 		</n:div>
 	</n:div>
 	<n:div class="demo-panel demo-panel-white demo-feature1-code shadow20">

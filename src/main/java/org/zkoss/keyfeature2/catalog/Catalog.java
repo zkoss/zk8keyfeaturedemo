@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import org.zkoss.keyfeature2.ResourceLocation;
+
 public class Catalog {
 
 	private Random random = new Random();
@@ -49,17 +51,25 @@ public class Catalog {
 	}
 	
 	private void newItem(String title, BigDecimal price) {
-		CatalogItem item = new CatalogItem(title, "image/" + title + ".svg", randomSeller(), price);
+		CatalogItem item = new CatalogItem(title, imageLocation(title + ".svg"), randomSeller(), price);
 		item.getSeller().getItems().add(item);
 		allItems.add(item);
 	}
 
 	private void loadSellers() {
 		allSellers = new ArrayList<Seller>();
-		allSellers.add(new Seller("Buzzphilip", "icon/user1.svg")); 
-		allSellers.add(new Seller("Olliejeffery", "icon/user2.svg")); 
-		allSellers.add(new Seller("Claudia41", "icon/user3.svg")); 
-		allSellers.add(new Seller("Kirmorrison", "icon/user4.svg")); 
+		allSellers.add(new Seller("Buzzphilip", iconLocation("user1.svg"))); 
+		allSellers.add(new Seller("Olliejeffery", iconLocation("user2.svg"))); 
+		allSellers.add(new Seller("Claudia41", iconLocation("user3.svg"))); 
+		allSellers.add(new Seller("Kirmorrison", iconLocation("user4.svg"))); 
+	}
+	
+	private String iconLocation(String name) {
+		return ResourceLocation.ICON_LOCATION + "/" + name;
+	}
+
+	private String imageLocation(String name) {
+		return ResourceLocation.IMAGE_LOCATION + "/" + name;
 	}
 	
 	private Seller randomSeller() {

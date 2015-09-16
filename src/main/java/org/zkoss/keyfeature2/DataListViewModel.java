@@ -35,25 +35,15 @@ public class DataListViewModel {
 	
 	@Init
 	public void init() {
-		availableTemplates.add(newTemplateInfo("grid", "templates/catalogGrid.zul", "z-icon-th-large"));
-		availableTemplates.add(newTemplateInfo("list", "templates/catalogList.zul", "z-icon-th-list"));
-		availableTemplates.add(newTemplateInfo("tree", "templates/catalogTree.zul", "z-icon-sitemap"));
-		availableTemplates.add(newTemplateInfo("editable", "templates/catalogEditable.zul", "z-icon-edit"));
-		availableTemplates.add(newTemplateInfo("raw data", "templates/catalogRaw.zul", "z-icon-download"));
+		availableTemplates.add(newTemplateInfo("grid", "catalogGrid.zul", "z-icon-th-large"));
+		availableTemplates.add(newTemplateInfo("list", "catalogList.zul", "z-icon-th-list"));
+		availableTemplates.add(newTemplateInfo("tree", "catalogTree.zul", "z-icon-sitemap"));
+		availableTemplates.add(newTemplateInfo("editable", "catalogEditable.zul", "z-icon-edit"));
+		availableTemplates.add(newTemplateInfo("raw data", "catalogRaw.zul", "z-icon-file-text-o"));
 		currentTemplate = availableTemplates.get(0); 
-		
 		catalog = new Catalog();
 	}
 
-	private TemplateInfo newTemplateInfo(String name, String uri, String icon) {
-		return new TemplateInfo(name, uri, icon) {
-			@Override
-			public boolean isActive() {
-				return currentTemplate == this;
-			}
-		};
-	}
-	
 	@Command("changeTemplate")
 	@NotifyChange("currentTemplate")
 	public void changeTemplate(@BindingParam("template") TemplateInfo template) {
@@ -72,5 +62,18 @@ public class DataListViewModel {
 
 	public Catalog getCatalog() {
 		return catalog;
+	}
+	
+	private TemplateInfo newTemplateInfo(String name, String template, String icon) {
+		return new TemplateInfo(name, templateLocation(template), icon) {
+			@Override
+			public boolean isActive() {
+				return currentTemplate == this;
+			}
+		};
+	}
+
+	private String templateLocation(String name) {
+		return ResourceLocation.TEMPLATE_LOCATION + "/" + name;
 	}
 }

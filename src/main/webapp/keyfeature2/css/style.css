@@ -2,12 +2,28 @@ body {
 	background-color: #FBFBFB;
 }
 
-.toolbar .z-a {
-	font-size: 30px;
-	color: #F0F0F0;
+.toolbar {
+	margin: 10px;
 }
-.toolbar .z-a.active {
-	font-size: 30px;
+
+.toolbar .btn-default {
+	border-color: #a7a7a7;
+	padding: 6px 13px 5px 14px;
+}
+
+.toolbar .btn.active, .toolbar .btn:active {
+	background-color: #a7a7a7;
+	box-shadow: none;
+}
+
+.toolbar .btn::before {
+	font-size: 25px;
+	color: #a7a7a7;
+}
+.toolbar .btn.active::before {
+	color: #ffffff;
+}
+.toolbar .btn.active {
 	color: #C0C0C0;
 }
 

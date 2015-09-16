@@ -67,11 +67,14 @@ body {
 
 .demo-panel {
 	border-radius: 6px;
-	padding: 37px 13px 13px 13px;
+	padding: 36px 7px 7px 7px;
 	position: relative; 
+	background-color: #fbfbfb;
+	overflow: hidden;
 }
 
 .demo-panel:before {
+	background-color: #fbfbfb;
     font-family: fontawesome;
     content: '\f111\f111\f111';
 	font-size: 10.5px;
@@ -79,18 +82,31 @@ body {
     display: block;
     position: absolute;
     z-index: 100;
-    top: 10px;
-    left: 15px;
+    top: 0;
+    left: 0;
+    height: 36px;
+    width: 100%;
+	padding: 11px 0 0 15px;
 }
 
-.demo-panel-white {
-	background-color: #fbfbfb;
-}
 .demo-panel-white:before {
     color: #e6e6e6;
 }
+.demo-panel-grey:before {
+	background-color: #e6e6e6;
+    color: #ffffff;
+}
 .shadow20 {
 	box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.45);
+}
+
+.demo-feature1 iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.demo-feature2-code {
+	background-color: #464646;
 }
 
 @media screen and (min-width: 1360px) {
@@ -108,35 +124,52 @@ body {
 	
 	.demo-section .demo-content {
 		width: 970px;
-		padding: 125px 70px;
+		padding: 125px 70px 100px 70px;
 		margin-left: 390px;
 	}
 
 	.demo-feature1 {
 		width: 630px;
 		height: 450px;
-		margin-bottom: 150px;
-		position: relative;
+		margin-bottom: 140px;
 	}
-
+	
 	.demo-feature1-code {
 		position: absolute;
 		width: 500px;
 		height: 380px;
-		top: 320px;
+		bottom: 100px;
 		right: 70px;
 	}
 	
-	.demo-feature1 .squeeze {
+	.demo-feature1 .scale {
 		position: relative;
 		width: 128%;
 		height: 128%;
 		transform-origin: top left;
 		transform: scale(0.78125);
 	}
-	
-	.demo-feature1 iframe {
-		width: 100%;
-		height: 100%;
+
+	.demo-feature2 {
+		width: 740px;
+		height: 600px;
+		margin-bottom: 65px;
 	}
+
+	.demo-feature2 .scale {
+		position: relative;
+		width: 113%;
+		height: 113%;
+		transform-origin: top left;
+		transform: scale(0.88500);
+	}
+
+	.demo-feature2-code {
+		position: absolute;
+		width: 500px;
+		height: 160px;
+		bottom: 100px;
+		right: 70px;
+	}
+	
 }
