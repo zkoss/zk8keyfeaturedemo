@@ -1,11 +1,4 @@
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
-	<n:h2>
-		Easily Integrate Third-Party Javascript Libraries
-	</n:h2>
-	<div>
-		By using ZK 8's Data-handler, you can conveniently incorporate many third-party Javascript libraries.
-
-	</div>
 	<hlayout>
 		<div class="well">
 			<iframe src="/keyfeature3/index.zul" width="650px"

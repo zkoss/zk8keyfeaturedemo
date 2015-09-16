@@ -1,10 +1,4 @@
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
-	<n:h2>Control Bootstrap/HTML Layout in Java</n:h2>
-	<div>
-		Using ZK 8’s UI Templating, you can easily apply a predesigned HTML layout or a Bootstrap template and enliven it in Java.
-
-[bubble]This demo shows how part of a popular WrapBootstrap Admin template was taken and applied as a dynamic ZK page.
-	</div>
 	<hlayout>
 		<div class="well" hflex="3" vflex="1">
 			<iframe src="/keyfeature1/index.zul" width="100%" height="500px"/>

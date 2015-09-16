@@ -1,11 +1,4 @@
 <zk xmlns:n="native">
-	<n:h2>Seamless Client-Server Messaging with MVVM Client Binding</n:h2>
-    <div>
-        Client binding allows you to trigger commands on the server-side and register callbacks on the client-side to ensure effective communication, empowering even AngularJS/ReactJS with Java.
-
-		[bubble]In this example, we used ZK 8’s Client Binding to render data on demand in a “seamlessly” scrollable view. The principle of View/Logic separation is preserved; while the ViewModel provides the data, the client-side JS handles the positioning and scrolling.
-
-	</div>
 	<div class="well">
 		<iframe src="/keyfeature4/rod-shadow.zul" width="100%" height="700px" />
 	</div>

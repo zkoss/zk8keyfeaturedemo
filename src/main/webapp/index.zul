@@ -1,8 +1,71 @@
-<zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
+<zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client" xmlns:sh="shadow">
 <?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"?>
 <?link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.css"?>
-<style src="/keyfeature3/scripts/bootstrap/bootstrap.min.css" />
-<script src="/keyfeature3/scripts/bootstrap/bootstrap.min.js" />
+<?link rel="stylesheet" type="text/css" href="/keyfeature3/scripts/bootstrap/bootstrap.min.css" ?>
+<?script src="/keyfeature3/scripts/bootstrap/bootstrap.min.js" ?>
+	<div>
+		<sh:apply template="demoSection"
+				sectionStyle="demo-section demo-section-light-blue" 
+				title="Control Bootstrap/HTML Layout in Java"
+				contentURI="feature1.zul"
+				learnMoreLink="#">
+			<template name="description">
+				<n:p>Using ZK 8's UI Templating, you can easily apply a predesigned layout or a Bootstrap template and enliven it in Java.</n:p>
+			</template>
+			<template name="tooltip">
+				<n:p>This demo shows how part of a popular WrapBootstrap Admin template was taken and applied as a dynamic ZK Page.</n:p>
+			</template>
+		</sh:apply>
+
+		<sh:apply template="demoSection"
+				sectionStyle="demo-section demo-section-white" 
+				title="Clear View/Logic Separation"
+				contentURI="feature2.zul"
+				learnMoreLink="#">
+			<template name="description">
+				<n:p>ZK 8's MVVM pattern cleanly separates view and logic, allowing representation of the same data structure with varying detail, layout or even functionality.</n:p>
+			</template>
+			<template name="tooltip">
+				<n:p>Choose a template to render the view in different ways</n:p>
+			</template>
+		</sh:apply>
+
+		<sh:apply template="demoSection"
+				sectionStyle="demo-section demo-section-blue" 
+				title="Easily Integrate Third-Party Javascript Libraries"
+				contentURI="feature3.zul"
+				learnMoreLink="#">
+			<template name="description">
+				<n:p>By using ZK 8's Data-handler, you can conveniently incorporate many third-party Javascript libraries.</n:p>
+			</template>
+			<template name="tooltip">
+				<n:p>tooltip</n:p>
+			</template>
+		</sh:apply>
+
+		<sh:apply template="demoSection"
+				sectionStyle="demo-section demo-section-white" 
+				title="Seamless Client-Server Messaging with MVVM Client Binding"
+				contentURI="feature4.zul"
+				learnMoreLink="#">
+			<template name="description">
+				<n:p>Client binding allows you to trigger commands on the server-side and register callbacks on the client-side to ensure effective communication, empowering even AngularJS/ReactJS with Java.</n:p>
+			</template>
+			<template name="tooltip">
+				<n:p>In this example, we used ZK 8’s Client Binding to render data on demand in a “seamlessly” scrollable view.</n:p>
+				<n:p>The principle of View/Logic separation is preserved; while the ViewModel provides the data, the client-side JS handles the positioning and scrolling.</n:p>
+			</template>
+		</sh:apply>
+		
+		<template name="demoSection">
+			<n:section class="${sectionStyle}">
+				<n:h2>${title}</n:h2>
+				<sh:apply template="description"/>
+				<sh:apply templateURI="${contentURI}"/>
+			</n:section>
+		</template>
+	</div>
+
 <script defer="true">
 	jq('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 	  var target = jq(e.target).attr("href");
@@ -11,14 +74,27 @@
       });
 	});
 </script>
-
-	<div>
-		<sh:apply templateURI="feature1.zul"/>
-		<separator bar="true" />
-		<sh:apply templateURI="feature2.zul"/>
-		<separator bar="true" />
-		<sh:apply templateURI="feature3.zul"/>
-		<separator bar="true" />
-		<sh:apply templateURI="feature4.zul"/>
-	</div>
+<style>
+body {
+	padding: 0px;
+	margin: 0px;
+}
+.demo-section {
+	padding-top: 20px;
+}
+ 
+.demo-section-blue {
+	background-color: #12579b; 
+	color: #ffffff; 
+}
+.demo-section-light-blue {
+	background-color: #1686c8; 
+	color: #ffffff; 
+}
+.demo-section-white {
+	background-color: #ffffff; 
+	color: #373737; 
+}
+</style>
+	
 </zk>
