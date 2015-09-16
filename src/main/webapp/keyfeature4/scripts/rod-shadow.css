@@ -116,3 +116,7 @@ body {
 		transform: scale(1.0);
 	}
 }
+
+.z-loading {
+	display: none;
+}

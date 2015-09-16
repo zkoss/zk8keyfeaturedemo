@@ -1,4 +1,3 @@
-<!-- <?link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"?> -->
 <?link rel="stylesheet" href="/resources/css/bootstrap.min.css"?>
 <?link rel="stylesheet" href="./scripts/rod-shadow.css"?>
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client">
@@ -55,8 +54,6 @@
 				</vlayout>
 			</if>
 	    </x:div>
-<!-- 	    <n:div class="loader top">Loading...</n:div> -->
-<!-- 		<n:div class="loader bottom">Loading...</n:div> -->
 		<n:div class="spinner">
 			<n:div class="bounce1"></n:div>
 			<n:div class="bounce2"></n:div>

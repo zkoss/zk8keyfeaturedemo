@@ -8,7 +8,7 @@ zk.afterMount(function() {
 	var binder = zkbind.$('$container');
 	// initialize necessary information
 	container.viewHeight = $container.height();
-	container.rowHeight = $container.find('> .list-group-item').outerHeight();
+	container.rowHeight = $container.find('> .list-group-item').outerHeight(true);
 	container.loadData = function (index, direction) {
 		container.loadingPosition = $container.scrollTop();
 		binder.command('loadData', {loadingIndex: index, direction: direction});
@@ -19,6 +19,8 @@ zk.afterMount(function() {
 	});
 	// register scroll event
 	$container.on('scroll', function(evt) {
+		if (previewBar.scrollToView)
+			return;
 		if (container.loadingPosition) {
 			$container.scrollTop(container.loadingPosition);
 			return;
@@ -92,6 +94,7 @@ zk.afterMount(function() {
 	});
 	$previewLayer.mouseout(function(evt) {
 		preview.shallShow = false;
+		previewBar.scrollToView = false;
 		preview.$n().style.display = 'none';
 	});
 	$previewLayer.click(function(evt) {
@@ -102,6 +105,7 @@ zk.afterMount(function() {
 		var index = Math.floor(y * previewBar.totalCitySize / container.viewHeight);
 		if (y > container.viewHeight)
 			y = container.viewHeight;
+		previewBar.scrollToView = true;
 		binder.command('scrollIntoView', {loadingIndex: index});
 	});
 	// callback after click on preview layer
@@ -114,6 +118,7 @@ zk.afterMount(function() {
 	});
 	// callback after click on preview layer
 	binder.after('updateScroll', function(begin) {
-		$container.scrollTop(begin * container.rowHeight);
+		if (previewBar.scrollToView)
+			$container.scrollTop(begin * container.rowHeight);
 	});
 });
