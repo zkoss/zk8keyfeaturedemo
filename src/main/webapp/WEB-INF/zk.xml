@@ -138,7 +138,6 @@
 					if(tabPane.length == 1) {
 						var tab = jq('a[data-toggle=tab][href=#' + tabPane.attr('id') + ']')
 						tab.on('shown.bs.tab', function() {
-							console.log('refresh', editor);
 							editor.refresh();
 						});
 					}

@@ -58,9 +58,17 @@
 		
 		<template name="demoSection">
 			<n:section class="${sectionStyle}">
-				<n:h2>${title}</n:h2>
-				<sh:apply template="description"/>
-				<sh:apply templateURI="${contentURI}"/>
+				<n:div class="section-content">
+					<n:div class="text-content">
+						<n:h2>${title}</n:h2>
+						<sh:apply template="description"/>
+					</n:div>
+					<n:div class="demo-content">
+						<n:div class="debug">
+							<sh:apply templateURI="${contentURI}"/>
+						</n:div>
+					</n:div>
+				</n:div>
 			</n:section>
 		</template>
 	</div>	

@@ -1,20 +1,58 @@
 body {
 	padding: 0px;
 	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .demo-section {
-	padding-top: 20px;
 }
- 
-.demo-section-blue {
-	background-color: #12579b; 
-	color: #ffffff; 
-}
+
 .demo-section-light-blue {
 	background-color: #1686c8; 
+	color: #ffffff; 
+}
+.demo-section-blue {
+	background-color: #12579b; 
 	color: #ffffff; 
 }
 .demo-section-white {
 	background-color: #ffffff; 
 	color: #373737; 
+}
+
+/*Responsive styles*/
+
+.debug {
+	outline: 3px solid orange;
+	outline-style: dashed;
+}
+
+.demo-section {
+	width: 100%;
+}
+
+.demo-section .section-content {
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+}
+
+@media screen and (min-width: 1360px) {
+	.demo-section .section-content {
+		width: 1360px;
+	}
+
+	.demo-section .text-content {
+		width: 390px;
+		padding: 125px 35px;
+		display: block;
+		position: absolute;
+	}
+	
+	.demo-section .demo-content {
+		display: block;
+		width: 970px;
+		padding: 125px 70px;
+		margin-left: 390px;
+	}
 }
