@@ -1,8 +1,7 @@
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client" xmlns:sh="shadow">
-<?link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"?>
-<?link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.css"?>
-<?link rel="stylesheet" type="text/css" href="/keyfeature3/scripts/bootstrap/bootstrap.min.css" ?>
-<?script src="/keyfeature3/scripts/bootstrap/bootstrap.min.js" ?>
+<?link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css" ?>
+<?script src="/resources/js/bootstrap.min.js" ?>
+<?link rel="stylesheet" type="text/css" href="/resources/css/demo.css"?>
 	<div>
 		<sh:apply template="demoSection"
 				sectionStyle="demo-section demo-section-light-blue" 
@@ -43,7 +42,7 @@
 			</template>
 		</sh:apply>
 
-		<sh:apply template="demoSection"
+ 		<sh:apply template="demoSection" 
 				sectionStyle="demo-section demo-section-white" 
 				title="Seamless Client-Server Messaging with MVVM Client Binding"
 				contentURI="feature4.zul"
@@ -64,37 +63,5 @@
 				<sh:apply templateURI="${contentURI}"/>
 			</n:section>
 		</template>
-	</div>
-
-<script defer="true">
-	jq('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-	  var target = jq(e.target).attr("href");
-	  jq(target + ' .CodeMirror').each(function (i, el) {
-    	el.CodeMirror.refresh();
-      });
-	});
-</script>
-<style>
-body {
-	padding: 0px;
-	margin: 0px;
-}
-.demo-section {
-	padding-top: 20px;
-}
- 
-.demo-section-blue {
-	background-color: #12579b; 
-	color: #ffffff; 
-}
-.demo-section-light-blue {
-	background-color: #1686c8; 
-	color: #ffffff; 
-}
-.demo-section-white {
-	background-color: #ffffff; 
-	color: #373737; 
-}
-</style>
-	
+	</div>	
 </zk>

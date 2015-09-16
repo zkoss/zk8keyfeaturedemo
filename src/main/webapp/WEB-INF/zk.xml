@@ -122,16 +122,28 @@
 		</data-handler>
 	    <data-handler>
 			<name>codeMirror</name>
-            <script src="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.js"/>
-       		<script src="https://cdn.rawgit.com/codemirror/CodeMirror/master/mode/xml/xml.js"/>
+			<link rel="stylesheet" type="text/css" href="/resources/css/codemirror.css"/>
+            <script src="/resources/js/codemirror.js"/>
+       		<script src="/resources/js/xml.js"/>
             <script>
-            function(wgt, dataValue) {
+	            function(wgt, dataValue) {
             		var myTextArea = wgt.$n();
-					editor = CodeMirror.fromTextArea(myTextArea, 
+					var editor = CodeMirror.fromTextArea(myTextArea, 
 						{lineNumbers: true, mode: "xml", textWrapping: true, readOnly:true}
 					);
 					editor.setSize("auto","auto");
-			}
+
+					/*integrate with bs-tabs*/
+					var tabPane = jq(wgt).closest('.tab-pane');
+					if(tabPane.length == 1) {
+						var tab = jq('a[data-toggle=tab][href=#' + tabPane.attr('id') + ']')
+						tab.on('shown.bs.tab', function() {
+							console.log('refresh', editor);
+							editor.refresh();
+						});
+					}
+					/*integrate with bs-tabs*/
+				}
    			 </script>
 	    </data-handler>
 	</client-config>

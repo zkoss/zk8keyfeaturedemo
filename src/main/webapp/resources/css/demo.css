@@ -1,0 +1,20 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+.demo-section {
+	padding-top: 20px;
+}
+ 
+.demo-section-blue {
+	background-color: #12579b; 
+	color: #ffffff; 
+}
+.demo-section-light-blue {
+	background-color: #1686c8; 
+	color: #ffffff; 
+}
+.demo-section-white {
+	background-color: #ffffff; 
+	color: #373737; 
+}
