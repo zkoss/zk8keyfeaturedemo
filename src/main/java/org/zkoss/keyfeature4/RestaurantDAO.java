@@ -104,15 +104,16 @@ public class RestaurantDAO {
 	public List<RestaurantPreview> getCountGroupByCity() {
 		List<RestaurantPreview> results = null;
 		try {
-			String sql = "SELECT SUBSTRING(city, 1, 1) as cityInit, city, COUNT(*) AS count FROM " + TABLE + " GROUP BY city ORDER BY city ASC";
+			String sql = "SELECT city, COUNT(*) AS count FROM " + TABLE + " GROUP BY city ORDER BY city ASC";
 			PreparedStatement pstmt = dbconn.getConnection().prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			results = new ArrayList<RestaurantPreview>();
 			while (rs.next()) {
+				String cityName = rs.getString("city");
 				RestaurantPreview p = new RestaurantPreview();
-				p.setCityInitial(rs.getString("cityInit"));
+				p.setCityInitial(cityName.substring(0, 1));
 				p.setNumberOfCity(rs.getInt("count"));
-				p.setCityName(rs.getString("city"));
+				p.setCityName(cityName);
 				results.add(p);
 			}	
 		} catch (SQLException e) {

@@ -18,11 +18,7 @@ public class DBConnection {
 			Class.forName("org.relique.jdbc.csv.CsvDriver");
 			if (conn == null || conn.isClosed()) {
 				WebApp wapp = WebApps.getCurrent();
-				File f = null;
-				if (wapp == null)
-					f = new File("D://Git//zk8keyfeaturedemo//src//main//webapp//keyfeature4//data");
-				else
-					f = new File(wapp.getRealPath(FOLDER_PATH));
+				File f = new File(wapp.getRealPath(FOLDER_PATH));
 				conn = DriverManager.getConnection("jdbc:relique:csv:" + f.getAbsolutePath());
 			}
 		} catch (ClassNotFoundException e) {
