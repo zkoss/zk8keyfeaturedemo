@@ -1,5 +1,5 @@
 <zk xmlns:ca="client/attribute">
-	<style>.ct-label {fill: white; font-size: 3em}</style>
+	<style >.ct-label {fill: white; font-size: 3em}</style>
 	<vlayout hflex="1">
 		<hlayout hflex="1">
 			<label value="DEFAULT" hflex="1"/>
