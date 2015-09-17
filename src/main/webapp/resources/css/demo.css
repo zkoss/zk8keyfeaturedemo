@@ -163,6 +163,43 @@ body {
 		transform-origin: top left;
 		transform: scale(0.78125);
 	}
+	.demo-feature1-code .z-tabpanels {
+		background-color: #ffffff;
+	}
+	.demo-feature1-code .z-tabpanel {
+		padding: 0px;
+	}
+	.demo-feature1-code .z-tab {
+		font-family: "Helvetica";
+		font-style: normal;
+		font-size: 9.5px;
+		color: #3c3c3c;
+		background:none;
+		background-color: #ececec;
+		border-top: 1px solid #dadada;
+		border-left: 1px solid #dadada;
+		border-right: 1px solid #dadada;
+		border-bottom: none;
+		border-radius-top-left: 5px;
+		border-radius-top-right: 5px;
+	}
+	.demo-feature1-code .z-tab:hover {
+		background-color: #ececec;
+	}
+	.demo-feature1-code .z-tab a:hover {
+		text-decoration: none;
+	}
+	.demo-feature1-code .z-tab-selected {
+		background-color: #ffffff;
+	}
+	.demo-feature1-code .z-tab-selected:hover {
+		background-color: #ffffff;
+	}
+	
+	.CodeMirror-gutter .CodeMirror-linenumbers{
+		background-color: #ffffff;
+		font-size: 10px;
+	}
 
 	.demo-feature2 {
 		width: 740px;

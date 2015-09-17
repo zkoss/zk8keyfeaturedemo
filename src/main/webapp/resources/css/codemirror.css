@@ -2,7 +2,9 @@
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: monospace;
+  font-family: "Hack";
+  font-size:10px;
+  line-height:1.45em;
   height: 300px;
   color: black;
 }
@@ -24,16 +26,21 @@
 
 .CodeMirror-gutters {
   border-right: 1px solid #ddd;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   white-space: nowrap;
+  
 }
-.CodeMirror-linenumbers {}
+.CodeMirror-linenumbers {
+	
+}
+
 .CodeMirror-linenumber {
-  padding: 0 3px 0 5px;
-  min-width: 20px;
-  text-align: right;
-  color: #999;
-  white-space: nowrap;
+	font-size: 10px;
+	padding: 0 3px 0 5px;
+	min-width: 20px;
+	text-align: right;
+	color: #999;
+	white-space: nowrap;
 }
 
 .CodeMirror-guttermarker { color: black; }

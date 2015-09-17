@@ -10,14 +10,15 @@
 				<tab label="statBoxTemplate.zul" />
 				<tab label="index.zul" />
 			</tabs>
-			<tabpanels>
-				<tabpanel renderdefer="100" >
+			<tabpanels vflex="1">
+				<tabpanel renderdefer="100"  >
 					<vlayout vflex="1" hflex="1">
-						<label
-							value="the statBoxTemplate.zul file will be used as the structure for each stat box, based on the box values" />
 						<textbox ca:data-codeMirror="true" 
 							multiline="true">
-							<attribute name="value"><![CDATA[<!-- has 2 parameters statBlock and detailCommand -->
+							<attribute name="value"><![CDATA[<!-- the statBoxTemplate.zul file will be used as the structure for each
+stat box, based on the box values -->
+							
+<!-- has 2 parameters statBlock and detailCommand -->
 <h:div class="col-md-3 col-sm-6" xmlns:h="native">
 	<h:div class="widget widget-stats bg-${statBlock.style}">
 		<h:div class="stats-icon">
@@ -40,11 +41,10 @@
 			</tabpanel>
 			<tabpanel>
 				<vlayout>
-					<label
-						value="Defining the statbox element and using it in the main index.zul file" />
 					<textbox ca:data-codeMirror="true" rows="10"
 						multiline="true">
-						<attribute name="value"><![CDATA[<?component name="statBox" templateURI="statBoxTemplate.zul"?>
+						<attribute name="value"><![CDATA[<!--Defining the statbox element and using it in the main index.zul file-->
+<?component name="statBox" templateURI="statBoxTemplate.zul"?>
 
 ...
 

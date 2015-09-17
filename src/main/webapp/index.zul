@@ -3,6 +3,7 @@
 <?script src="/resources/js/bootstrap.min.js" ?>
 <?link rel="stylesheet" type="text/css" href="/resources/css/demo.css"?>
 <?link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" ?>
+<?link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/font-hack/2.013/css/hack.min.css" ?>
 
 	<div>
 		<sh:apply template="demoSection"

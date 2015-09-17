@@ -129,7 +129,7 @@
 	            function(wgt, dataValue) {
             		var myTextArea = wgt.$n();
 					var editor = CodeMirror.fromTextArea(myTextArea, 
-						{lineNumbers: true, mode: "xml", textWrapping: true, readOnly:true}
+						{lineNumbers: true, mode: "xml", textWrapping: true, lineWrapping: true, scrollbarStyle: "native", readOnly:true}
 					);
 					editor.setSize("auto","auto");
 
