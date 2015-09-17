@@ -1,26 +1,57 @@
-body {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.largefont {
-	font-family: Helvetica;
-	font-size: 14px;
-}
-
 .viewport {
 	border: 1px solid #cfcfcf;
 	position: relative;
 }
+.head {
+	height: 31px;
+	padding: 6px;
+	border-bottom: 1px solid #dadada;
+}
+.head .header {
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #3c3c3c;
+}
 
-#container.list-group {
+#container {
 	margin: 0px;
-	height: 600px;
+	padding: 0px;
+	height: 400px;
 	overflow-y: scroll;
 }
-#container .list-group-item {
-	height: 75px;
+#container li:nth-child(2) {
+	border-top: none;
 }
-#container .list-group-item a:hover {
+#container li:nth-child(31) {
+	border-bottom: none;
+}
+#container .list-item {
+	box-sizing: border-box;
+	display: inline-block;
+	height: 50px;
+	padding: 6px;
+	border-bottom: 1px solid #dadada;
+}
+#container .list-item .content {
+	font-family: Helvetica;
+	font-weight: normal;
+	font-size: 14px;
+	color: #3c3c3c;
+}
+#container .list-item .cuisine-icon {
+	width: 33px;
+	height: 33px;
+}
+#container .list-item .link {
+	font-family: Helvetica;
+	font-weight: normal;
+	font-size: 14px;
+	color: #7bb340;
+	text-decoration: none;
+}
+#container .list-item .link:hover {
 	text-decoration: none;
 }
 #container > .topPadding, #container > .bottomPadding {
@@ -29,46 +60,66 @@ body {
 
 #previewBar {
 	font-family: Helvetica;
-	width: 45px;
-	height: 600px;
-	/*border-top: 1px solid #cfcfcf;*/
-	background: #ffffff;
+	font-weight: bold;
+	font-size: 12px;
+	width: 20px;
+	height: 400px;
+	background: #e3f1fc;
 	position: absolute;
-	top: 0px;
+	top: 31px;
 	right: 15px;
 	text-align: center;
-	color: #acacac;
+	color: #50a3b1;
 	z-index: 1;
 }
 #previewLayer {
-	width: 45px;
-	height: 600px;
+	width: 20px;
+	height: 400px;
 	background: transparent;
 	position: absolute;
-	top: 0px;
+	top: 31px;
 	right: 15px;
 	z-index: 2;
 }
 
 #preview {
-	width: 350px;
-	padding: 15px 20px;
+	font-family: Helvetica;
+	color: #50a3b1;
+	width: 230px;
+	padding: 15px;
+	border-radius: 10px;
 	background: #3c3c3c;
 	position: absolute;
 	top: 0px;
-	right: 60px;
+	right: 50px;
 	display: none;
-	color: #ffffff;
 }
-#preview .number-of-type {
+#preview:before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 0 10px 20px;
+	border-color: transparent transparent transparent #3c3c3c;
+	position: absolute;
+	right: -15px;
+}
+#preview .title {
+	font-weight: bold;
+	font-size: 13px;
+}
+#preview .cuisine-icon {
+	width: 28px;
+	height: 28px;
+	margin-right: 5px;
+}
+#preview .list {
+	font-size: 12px;
 	padding-left: 10px;
 }
-#preview img {
-	width: 40px;
-	margin: 0 10px 10px 0;
-}
-#preview span {
-	margin: 0 10px 10px 0;
+#preview .number-of-type {
+	display: inline-block;
+	margin-right: 10px;
 }
 
 .spinner {
@@ -81,7 +132,7 @@ body {
 	display: none;
 }
 .spinner.top {
-	top: 30px;
+	top: 60px;
 }
 .spinner.bottom {
 	bottom: 30px;

@@ -1,3 +1,4 @@
+zk.loadCSS('/zk8keyfeaturedemo/keyfeature4/scripts/rod-shadow.css');
 zk.afterMount(function() {
 	/* Data List */
 	var container = zk.Widget.$('$container');
@@ -8,7 +9,7 @@ zk.afterMount(function() {
 	var binder = zkbind.$('$container');
 	// initialize necessary information
 	container.viewHeight = $container.height();
-	container.rowHeight = $container.find('> .list-group-item').outerHeight(true);
+	container.rowHeight = $container.find('> .list-item').outerHeight(true);
 	container.loadData = function (index, direction) {
 		container.loadingPosition = $container.scrollTop();
 		binder.command('loadData', {loadingIndex: index, direction: direction});
@@ -63,13 +64,13 @@ zk.afterMount(function() {
 		previewBar.totalCitySize = totalCitySize;
 		for (var w = previewBar.firstChild; w; w = w.nextSibling) {
 			if (w.cityNumber) {
-				w.$n().innerHTML = index % 2 == 0 ? w.cityInit : '';
 				var h = Math.round(container.viewHeight * w.cityNumber / totalCitySize);
 				h = h == 0 ? 1 : h;
 				var style = w.$n().style;
-				style.height = h + 'px';
-				style.lineHeight = h + 'px';
-				index++;
+				style.height = jq.px(h);
+				style.lineHeight = jq.px(h);
+				if (h >= 10)
+					w.$n().innerHTML = w.cityInit;
 			}
 		}
 	});
@@ -112,8 +113,10 @@ zk.afterMount(function() {
 	binder.after('updatePreview', function(view) {
 		if (view && preview.shallShow) {
 			var style = preview.$n().style;
+			var top = jq(previewBar).position().top;
+			var height = jq(preview).height();
 			style.display = 'block';
-			style.top = preview.prevY + 'px';
+			style.top = (top + preview.prevY - height/2) + 'px';
 		}
 	});
 	// callback after click on preview layer

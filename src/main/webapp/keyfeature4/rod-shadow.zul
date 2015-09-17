@@ -1,34 +1,36 @@
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client">
-	<style src="/keyfeature4/scripts/rod-shadow.css"/>
-	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" >
-		<x:ul id="container" class="list-group">
+	<script type="text/javascript" src="/keyfeature4/scripts/rod-shadow.js"></script>
+	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" width="820px">
+		<hlayout valign="middle" spacing="0" sclass="head">
+			<n:div style="width: 158px" class="header">name</n:div>
+			<n:div style="width: 64px" class="header">cuisine</n:div>
+			<n:div style="width: 223px" class="header">address</n:div>
+			<n:div style="width: 131px" class="header">suburb/town</n:div>
+			<n:div style="width: 111px" class="header">url</n:div>
+			<n:div style="width: 100px" class="header">ranking</n:div>
+		</hlayout>
+		<x:ul id="container">
 			<n:li class="topPadding"/>
 			<forEach items="@load(vm.restaurantList)">
-				<n:li class="list-group-item">
-					<hlayout valign="middle">
-						<div width="150px">
-							<label value="${each.name}" sclass="largefont" />
-						</div>
-						<div width="80px">
-							<image src="/keyfeature4/icons/${each.type}.svg" />
-						</div>
-						<div width="135px">
-							<label value="${each.address}" sclass="largefont" />
-						</div>
-						<div width="150px">
-							<label value="${each.city}" sclass="largefont" />
-						</div>
-						<div width="120px">
-							<a href="${each.url}" label="Website Link" sclass="largefont" />
-						</div>
-						<div>
+				<n:li class="list-item">
+					<hlayout valign="middle" spacing="0">
+						<n:div style="width: 158px" sclass="content">${each.name}</n:div>
+						<n:div style="width: 64px">
+							<image src="/keyfeature4/icons/${each.type}.svg" sclass="cuisine-icon" />
+						</n:div>
+						<n:div style="width: 223px" sclass="content">${each.address}</n:div>
+						<n:div style="width: 131px" sclass="content">${each.city}</n:div>
+						<n:div style="width: 111px">
+							<a href="${each.url}" label="Website Link" sclass="link" />
+						</n:div>
+						<n:div style="width: 100px" sclass="rating">
 							<forEach begin="1" end="${each.rating}">
 								<image src="/keyfeature4/icons/rate_full.svg" />
 							</forEach>
 							<forEach begin="1" end="${5 - each.rating}">
 								<image src="/keyfeature4/icons/rate_empty.svg" />
 							</forEach>
-						</div>
+						</n:div>
 					</hlayout>
 				</n:li>
 			</forEach>
@@ -43,11 +45,13 @@
 		<x:div id="preview">
 			<if test="@load(not empty vm.preview)">
 				<vlayout>
-					<label value="@load(vm.preview.cityName)" sclass="largefont" />
-					<x:div class="number-of-type largefont">
+					<label value="@load(vm.preview.cityName)" sclass="title" />
+					<x:div class="list">
 						<forEach items="@load(vm.preview.numberOfType)">
-							<image src="/keyfeature4/icons/${each.key}.svg" />
-							<n:span>${each.value}</n:span>
+							<n:div class="number-of-type">
+								<image src="/keyfeature4/icons/${each.key}.svg" sclass="cuisine-icon" />
+								<n:span>${each.value}</n:span>
+							</n:div>
 						</forEach>
 					</x:div>
 				</vlayout>
@@ -59,6 +63,4 @@
 			<n:div class="bounce3"></n:div>
 		</n:div>
 	</div>
-
-	<script type="text/javascript" src="/keyfeature4/scripts/rod-shadow.js"></script>
 </zk>
