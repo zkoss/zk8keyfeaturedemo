@@ -1,5 +1,3 @@
 <zk xmlns:n="native">
-	<div class="well">
-		<iframe src="/keyfeature4/rod-shadow.zul" width="100%" height="700px" />
-	</div>
+	<include zclass="demo-feature4" src="/keyfeature4/rod-shadow.zul" />
 </zk>

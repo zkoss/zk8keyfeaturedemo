@@ -1,6 +1,5 @@
-<?link rel="stylesheet" href="/resources/css/bootstrap.min.css"?>
-<?link rel="stylesheet" href="./scripts/rod-shadow.css"?>
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client">
+	<style src="/keyfeature4/scripts/rod-shadow.css"/>
 	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" >
 		<x:ul id="container" class="list-group">
 			<n:li class="topPadding"/>
@@ -11,9 +10,9 @@
 							<label value="${each.name}" sclass="largefont" />
 						</div>
 						<div width="80px">
-							<n:img src="./icons/${each.type}.svg" />
+							<image src="/keyfeature4/icons/${each.type}.svg" />
 						</div>
-						<div width="325px">
+						<div width="135px">
 							<label value="${each.address}" sclass="largefont" />
 						</div>
 						<div width="150px">
@@ -24,10 +23,10 @@
 						</div>
 						<div>
 							<forEach begin="1" end="${each.rating}">
-								<n:img src="./icons/rate_full.svg" />
+								<image src="/keyfeature4/icons/rate_full.svg" />
 							</forEach>
 							<forEach begin="1" end="${5 - each.rating}">
-								<n:img src="./icons/rate_empty.svg" />
+								<image src="/keyfeature4/icons/rate_empty.svg" />
 							</forEach>
 						</div>
 					</hlayout>
@@ -47,7 +46,7 @@
 					<label value="@load(vm.preview.cityName)" sclass="largefont" />
 					<x:div class="number-of-type largefont">
 						<forEach items="@load(vm.preview.numberOfType)">
-							<n:img src="./icons/${each.key}.svg" />
+							<image src="/keyfeature4/icons/${each.key}.svg" />
 							<n:span>${each.value}</n:span>
 						</forEach>
 					</x:div>
@@ -61,5 +60,5 @@
 		</n:div>
 	</div>
 
-	<script type="text/javascript" src="./scripts/rod-shadow.js"></script>
+	<script type="text/javascript" src="/keyfeature4/scripts/rod-shadow.js"></script>
 </zk>
