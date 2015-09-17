@@ -7307,3 +7307,7 @@ body .bootstrap-datetimepicker-widget table td {
 	width: 32px;
 	line-height: 32px
 }
+
+.container-fluid{
+	margin-top:20px;
+}
