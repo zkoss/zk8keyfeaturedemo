@@ -1,11 +1,11 @@
 <zk xmlns:ca="client/attribute">
-	<style >.ct-label {fill: white; font-size: 3em}</style>
+<!-- 	<style>.ct-label {fill: white; font-size: 3em}</style> -->
 	<vlayout hflex="1">
 		<hlayout hflex="1">
-			<label value="DEFAULT" hflex="1"/>
-			<label value="INTEGRATED" hflex="1"/>
+			<label zclass="title" value="DEFAULT" hflex="1"/>
+			<label zclass="title" value="INTEGRATED" hflex="1"/>
 		</hlayout>
-		<hlayout hflex="1">
+		<hlayout hflex="1" height="160px">
 			<textbox ca:data-codeMirror="true" multiline="true" hflex="1">
 				<attribute name="value"><![CDATA[<label value="@load(vm.chartist_percentage)" 
 	style="font-size: 100px"/>]]></attribute>
@@ -16,7 +16,7 @@
 		"height": "200", "total": "100"}' />]]></attribute>
 			</textbox>
 		</hlayout>
-		<hlayout hflex="1">
+		<hlayout hflex="1" height="270px">
 			<vlayout  hflex="1">
 				<label value="@load(vm.chartist_percentage)" style="font-size: 100px"/>
 				<textbox value="@bind(vm.chartist_percentage)" instant="true"/>

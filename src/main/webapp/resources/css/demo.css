@@ -152,15 +152,9 @@ body {
 	background-color: #464646;
 }
 
-.demo-feature3 .nav-tabs li a {
-	background-color: #ededed;
-}
-.demo-feature3 .nav-tabs li.active a {
-	background-color: #ffffff;
-}
 .demo-feature3 .tab-content {
 	background-color: #ffffff;
-	border-radius: 0 0 6px 6px;
+	border-radius: 6px 6px 6px 6px;
 	border: 1px solid #ddd;
 	border-top: none;
 	overflow: hidden;
