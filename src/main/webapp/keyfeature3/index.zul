@@ -1,11 +1,8 @@
 <?component name="display" templateURI="display.zul" ?>
 <zk xmlns:h="native">
 	<style src="/keyfeature3/scripts/auty/custom-style.css" />
-	<style src="/keyfeature3/scripts/bootstrap/bootstrap.min.css" />
-	<script src="/keyfeature3/scripts/bootstrap/bootstrap.min.js" />
 
-	<div sclass="container"
-		viewModel="@id('vm') @init('org.zkoss.keyfeature3.IntegrationShowcaseViewModel')">
+	<div viewModel="@id('vm') @init('org.zkoss.keyfeature3.IntegrationShowcaseViewModel')">
 		<h:div>
 			<h:ul class="nav nav-tabs">
 				<h:li class="active">
@@ -38,7 +35,6 @@
 					</h:a>
 				</h:li>
 			</h:ul>
-
 
 			<h:div class="tab-content">
 				<h:div class="tab-pane active" id="chartist">

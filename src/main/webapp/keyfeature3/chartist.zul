@@ -1,0 +1,29 @@
+<zk xmlns:ca="client/attribute">
+	<style>.ct-label {fill: white; font-size: 3em}</style>
+	<vlayout hflex="1">
+		<hlayout hflex="1">
+			<label value="DEFAULT" hflex="1"/>
+			<label value="INTEGRATED" hflex="1"/>
+		</hlayout>
+		<hlayout hflex="1">
+			<textbox ca:data-codeMirror="true" multiline="true" hflex="1">
+				<attribute name="value"><![CDATA[<label value="@load(vm.chartist_percentage)" 
+	style="font-size: 100px"/>]]></attribute>
+			</textbox>
+			<textbox ca:data-codeMirror="true" multiline="true" hflex="1">
+				<attribute name="value"><![CDATA[<label value="@load(vm.chartist_percentage)" 
+	ca:data-chartist-pie='{"width": "200", 
+		"height": "200", "total": "100"}' />]]></attribute>
+			</textbox>
+		</hlayout>
+		<hlayout hflex="1">
+			<vlayout  hflex="1">
+				<label value="@load(vm.chartist_percentage)" style="font-size: 100px"/>
+				<textbox value="@bind(vm.chartist_percentage)" instant="true"/>
+			</vlayout>
+			<label value="@load(vm.chartist_percentage)"
+				ca:data-chartist-pie='{"width": "200", 
+					"height": "200", "total": "100"}'  hflex="1"/>
+		</hlayout>
+	</vlayout>
+</zk>

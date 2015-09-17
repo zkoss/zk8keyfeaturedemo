@@ -1,77 +1,27 @@
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
-	<hlayout>
-		<div class="well">
-			<iframe src="/keyfeature3/index.zul" width="650px"
-				height="300px" />
-		</div>
-		<window>
-			<n:div>
-				<n:ul class="nav nav-tabs">
-					<n:li class="active">
-						<n:a href="#chartist" data-toggle="tab">
-							chartist
-						</n:a>
-					</n:li>
-					<n:li>
-						<n:a href="#labelauty" aria-controls="labelauty"
-							role="tab" data-toggle="tab">
-							labelauty
-						</n:a>
-					</n:li>
-					<n:li>
-						<n:a href="#highlight" aria-controls="highlight"
-							role="tab" data-toggle="tab">
-							highlight
-						</n:a>
-					</n:li>
-					<n:li>
-						<n:a href="#markdown" aria-controls="markdown"
-							role="tab" data-toggle="tab">
-							markdown
-						</n:a>
-					</n:li>
-					<n:li>
-						<n:a href="#mask" aria-controls="mask"
-							role="tab" data-toggle="tab">
-							mask
-						</n:a>
-					</n:li>
-				</n:ul>
+	<div zclass="demo-feature3"
+		viewModel="@id('vm') @init('org.zkoss.keyfeature3.IntegrationShowcaseViewModel')">
+		<n:ul class="nav nav-tabs">	
+			<sh:apply template="tab" tabId="chartist" sclass="active"/>
+			<sh:apply template="tab" tabId="labelauty"/>
+			<sh:apply template="tab" tabId="highlight"/>
+			<sh:apply template="tab" tabId="markdown"/>
+			<sh:apply template="tab" tabId="mask"/>
+			
+			<template name="tab">
+				<n:li class="${sclass}">
+					<n:a href="#${tabId}" aria-controls="${tabId}" role="tab" data-toggle="tab">
+						${tabId}
+					</n:a>
+				</n:li>
+			</template>
+		</n:ul>
 
-
-				<n:div class="tab-content">
-					<n:div class="tab-pane active" id="chartist">
-						<vlayout>
-							<label
-								value="in the zul file" />
-							<textbox ca:data-codeMirror="true"
-								multiline="true">
-<attribute name="value"><![CDATA[<label value="@load(vm.chartist_percentage)" 
-			ca:data-chartist-pie='{"width": "100", "height": "100", "total": "100"}' />]]></attribute>
-							</textbox>
-							<label
-								value="in zk.xml" />
-							<textbox ca:data-codeMirror="true"
-								multiline="true">
-<attribute name="value"><![CDATA[<data-handler>
-	<name>chartist-pie</name>
-    <link rel="stylesheet" href="/keyfeature3/scripts/chartist/chartist.min.css"/>
-    <script src="/keyfeature3/scripts/chartist/chartist.min.js"></script>
-	<script>
-		function (wgt, dataValue) {
-			var renderChart = function(value) {
-				wgt.$setValue('');
-				new Chartist.Pie(wgt.$n(), {series: [parseFloat(value)], labels: [value]}, dataValue); 
-			};
-			wgt.setOverride("setValue", renderChart); 
-			renderChart(wgt.getValue());
-		}
-	</script>
-</data-handler>]]></attribute>
-							</textbox>
-						</vlayout>
-					</n:div>
-					<n:div class="tab-pane" id="labelauty">
+		<n:div class="tab-content">
+			<n:div class="tab-pane active" id="chartist">
+				<sh:apply templateURI="/keyfeature3/chartist.zul"/>
+			</n:div>
+			<n:div class="tab-pane" id="labelauty">
 						<vlayout>
 							<label
 								value="in the zul file" />
@@ -187,11 +137,9 @@
 		}
 	</script>
 </data-handler>]]></attribute>
-							</textbox>
-						</vlayout>
-					</n:div>
-				</n:div>
+					</textbox>
+				</vlayout>
 			</n:div>
-		</window>
-	</hlayout>
+		</n:div>
+	</div>
 </zk>
