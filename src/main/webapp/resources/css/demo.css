@@ -73,10 +73,9 @@ body {
 	overflow: hidden;
 }
 
-.demo-panel:before {
+.demo-panel .demo-panel-header {
 	background-color: #fbfbfb;
     font-family: fontawesome;
-    content: '\f111\f111\f111';
 	font-size: 10.5px;
     letter-spacing: 0.6em;
     display: block;
@@ -88,13 +87,18 @@ body {
 	padding: 11px 0 0 15px;
 }
 
-.demo-panel-white:before {
+.demo-panel-white .demo-panel-header {
     color: #e6e6e6;
 }
-.demo-panel-grey:before {
+.demo-panel-grey .demo-panel-header {
 	background-color: #e6e6e6;
     color: #ffffff;
 }
+
+.demo-panel .demo-panel-header:before {
+	content: '\f111\f111\f111';
+}
+
 .shadow20 {
 	box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.45);
 }

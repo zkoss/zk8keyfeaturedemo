@@ -1,10 +1,19 @@
+<?component name="demoPanel" templateURI="/templates/demoPanel.zul"?>
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
-	<n:div class="demo-panel demo-panel-white demo-feature1">
-		<n:div class="scale">
-			<iframe src="/keyfeature1/index.zul" width="100%" height="100%"/>
-		</n:div>
-	</n:div>
-	<div zclass="demo-panel" sclass="demo-panel-white demo-feature1-code shadow20" ca:data-draggable-panel="true">
+
+<!-- TODO debug why this happens and post a bug -->
+<div><!-- workaround div - shadow element doesn't work when it is a root -->
+
+	<demoPanel sclass="demo-panel-white demo-feature1">
+		<template name="panelContent">
+			<div class="scale">
+				<iframe src="/keyfeature1/index.zul" width="100%" height="100%"/>
+			</div>
+		</template>
+	</demoPanel>
+
+	<demoPanel sclass="demo-panel-white demo-feature1-code shadow20" draggable="true">
+		<template name="panelContent">
 		<tabbox hflex="2" vflex="1">
 			<tabs id="tabs">
 				<tab label="statBoxTemplate.zul" />
@@ -57,5 +66,7 @@ stat box, based on the box values -->
 				</tabpanel>
 			</tabpanels>
 		</tabbox>
-	</div>
+		</template>
+	</demoPanel>
+</div>
 </zk>	

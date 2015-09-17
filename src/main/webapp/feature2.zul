@@ -1,12 +1,24 @@
+<?component name="demoPanel" templateURI="/templates/demoPanel.zul"?>
 <zk xmlns:n="native" xmlns:sh="shadow" xmlns:ca="client/attribute">
-	<n:div class="demo-panel demo-panel-grey demo-feature2">
-		<n:div class="scale">
-			<apply templateURI="/keyfeature2/index.zul" />
-		</n:div>
-	</n:div>
-	<div zclass="demo-panel" sclass="demo-panel-white demo-feature2-code shadow20" ca:data-draggable-panel="true">
-		<n:div style="height: 100%;">
-			some code
-		</n:div>
-	</div>
+
+<!-- TODO debug why this happens and post a bug -->
+<div><!-- workaround div - shadow element doesn't work when it is a root -->
+
+	<demoPanel sclass="demo-panel-grey demo-feature2">
+		<template name="panelContent">
+			<n:div class="scale">
+				<apply templateURI="/keyfeature2/index.zul" />
+			</n:div>
+		</template>
+	</demoPanel>
+	
+	<demoPanel sclass="demo-panel-white demo-feature2-code shadow20" draggable="true">
+		<template name="panelContent">
+			<n:div style="height: 100%;">
+				some code
+			</n:div>
+		</template>
+	</demoPanel>
+
+</div><!-- workaround div - shadow element doesn't work when it is a root -->
 </zk>
