@@ -2,14 +2,16 @@
 <zk xmlns:n="native" xmlns:x="xhtml">
 	<style src="/keyfeature2/css/style.css"/>
 	<div viewModel="@id('vm') @init('org.zkoss.keyfeature2.DataListViewModel')">
-		<n:div sclass="btn-group toolbar">
-			<forEach items="@init(vm.availableTemplates)" >
-				<x:div sclass="@load(('btn btn-lg btn-default ' += each.icon += (each.active ? ' active' : '')))" 
-					title="@init(each.name)" 
-					onClick="@command('changeTemplate', template=each)">
-					<x:text sclass="@init(each.icon)" value=" " />
-				</x:div>
-			</forEach>
+		<n:div style="text-align: right">		
+			<n:div sclass="btn-group toolbar">
+				<forEach items="@init(vm.availableTemplates)" >
+					<x:div sclass="@load(('btn btn-lg btn-default ' += each.icon += (each.active ? ' active' : '')))" 
+						title="@init(each.name)" 
+						onClick="@command('changeTemplate', template=each)">
+						<x:text sclass="@init(each.icon)" value=" " />
+					</x:div>
+				</forEach>
+			</n:div>
 		</n:div>
 		<x:div class="data-container">	
 			<apply templateURI="@load(vm.currentTemplate.uri)" catalog="@load(vm.catalog)"/>
