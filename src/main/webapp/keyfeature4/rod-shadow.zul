@@ -5,7 +5,7 @@
 			<n:div style="width: 158px" class="header">name</n:div>
 			<n:div style="width: 64px" class="header">cuisine</n:div>
 			<n:div style="width: 223px" class="header">address</n:div>
-			<n:div style="width: 131px" class="header">suburb/town</n:div>
+			<n:div style="width: 131px" class="header">city/town</n:div>
 			<n:div style="width: 111px" class="header">url</n:div>
 			<n:div style="width: 100px" class="header">ranking</n:div>
 		</hlayout>

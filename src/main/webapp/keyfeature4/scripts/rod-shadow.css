@@ -21,15 +21,9 @@
 	height: 400px;
 	overflow-y: scroll;
 }
-#container li:nth-child(2) {
-	border-top: none;
-}
-#container li:nth-child(31) {
-	border-bottom: none;
-}
 #container .list-item {
 	box-sizing: border-box;
-	display: inline-block;
+	display: block;
 	height: 50px;
 	padding: 6px;
 	border-bottom: 1px solid #dadada;
