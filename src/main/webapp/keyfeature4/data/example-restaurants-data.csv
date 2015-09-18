@@ -71,7 +71,7 @@ BBQ Express,American,398 Green Lanes,PalmersGreen,N13,5PD,http://www.just-eat.co
 BBQ Xpress,American,65 Barking Road,London,E16,4HB,http://www.just-eat.co.uk/restaurants-bbqxpresse16/menu,4
 BBQ Xpress Peri Peri,American,59C Bellegrove Road,Welling,DA16,3PB,http://www.just-eat.co.uk/restaurants-bbq-xpress-da16/menu,4
 BBQ Xpress Piri Piri,American,243 Linthorpe Road Cleveland,Middlesbrough,TS1,4AT,http://www.just-eat.co.uk/restaurants-bbqexpress-piripiri-ts1/menu,4
-Bear's Boutique Bowling - Collection Only,American,Unit B 1-3 Star Lane,Ipswich,IP4,1JN,http://www.just-eat.co.uk/restaurants-bearsboutiquebowling-ip4/menu,0
+Bear's Boutique Bowling,American,Unit B 1-3 Star Lane,Ipswich,IP4,1JN,http://www.just-eat.co.uk/restaurants-bearsboutiquebowling-ip4/menu,0
 Bellissimo,American,31 Melbourne Place,Sunderland,SR4,8LN,http://www.just-eat.co.uk/restaurants-bellissimo-sr4/menu,5
 Best Favourite Chicken,American,3 Market Street,Trowbridge,BA14,8EY,http://www.just-eat.co.uk/restaurants-best-favourite-chicken-ba14/menu,4
 Best Kebab & Pizza House,American,18 Gloucester Street,Gloucester,GL5,1QG,http://www.just-eat.co.uk/restaurants-bestkebab-gl5/menu,5
@@ -149,12 +149,12 @@ Bennett's Caribbean Restaurant & Takeaway,Caribbean,11 Orphanage Road,Erdington,
 Best Taste Caribbean Takeaway,Caribbean,335 Caledonian Road,London,N1,1DW,http://www.just-eat.co.uk/restaurants-realtaste-n1/menu,4
 Best Taste Caribbean Takeaway,Caribbean,335 Caledonian Road,London,N1,1DW,http://www.just-eat.co.uk/restaurants-realtaste-n1/menu,4
 Big Mike's Calypso Kitchen,Caribbean,1 Wisen Road,Surrey,CR8,2NQ,http://www.just-eat.co.uk/restaurants-big-mikes-calypso-kitchen/menu,5
-Biggapot Caribbean - Collection Only,Caribbean,15 College Road,Birmingham,B20,2HY,http://www.just-eat.co.uk/restaurants-biggapotcaribbean-b20/menu,5
+Biggapot Caribbean,Caribbean,15 College Road,Birmingham,B20,2HY,http://www.just-eat.co.uk/restaurants-biggapotcaribbean-b20/menu,5
 Bikkle Island,Caribbean,402 Stapleton Road,Bristol,BS5,6NQ,http://www.just-eat.co.uk/restaurants-bikkleisland-bs5/menu,3
 Bikkle Island,Caribbean,402 Stapleton Road,Bristol,BS5,6NQ,http://www.just-eat.co.uk/restaurants-bikkleisland-bs5/menu,3
 Bishops Caribbean,Caribbean,1 Rustlings Road,Sheffield,S11,7AB,http://www.just-eat.co.uk/restaurants-fbishopscaribbean-s11/menu,5
-Blaka Jacks - Collection Only,Caribbean,406 Coldharbour Lane,London,SW9,8LF,http://www.just-eat.co.uk/restaurants-blakajacks-sw9/menu,0
-Blaka Jacks - Collection Only,Caribbean,406 Coldharbour Lane,London,SW9,8LF,http://www.just-eat.co.uk/restaurants-blakajacks-sw9/menu,0
+Blaka Jacks,Caribbean,406 Coldharbour Lane,London,SW9,8LF,http://www.just-eat.co.uk/restaurants-blakajacks-sw9/menu,0
+Blaka Jacks,Caribbean,406 Coldharbour Lane,London,SW9,8LF,http://www.just-eat.co.uk/restaurants-blakajacks-sw9/menu,0
 Blessed West Indian Takeaway,Caribbean,203 Coldharbour Lane,London,SW9,8RZ,http://www.just-eat.co.uk/restaurants-blessedwestindian-sw9/menu,4
 Blessed West Indian Takeaway,Caribbean,203 Coldharbour Lane,London,SW9,8RZ,http://www.just-eat.co.uk/restaurants-blessedwestindian-sw9/menu,4
 Blessed West Indian Takeaway,Caribbean,203 Coldharbour Lane,London,SW9,8RZ,http://www.just-eat.co.uk/restaurants-blessedwestindian-sw9/menu,4
@@ -399,7 +399,7 @@ Blue Bell,Chinese,126 Duke Street,Birkenhead,CH41,8BT,http://www.just-eat.co.uk/
 3 In 1 Xtra,Curry,67-69 Elmbank Street,Glasgow,G2,4PQ,http://www.just-eat.co.uk/restaurants-3in1xtra/menu,4
 3 In 1 Xtra,Curry,67-69 Elmbank Street,Glasgow,G2,4PQ,http://www.just-eat.co.uk/restaurants-3in1xtra/menu,4
 4500 Miles From Delhi,Curry,8 Colston Avenue,Bristol,BS1,4ST,http://www.just-eat.co.uk/restaurants-4500-miles-from-delhi-bristol/menu,4
-4550 Miles From Delhi - Collection Only,Curry,41 Mount Street,Nottinghamshire,NG1,6HE,http://www.just-eat.co.uk/restaurants-4550milesfromdelhi-ng1/menu,0
+4550 Miles From Delhi,Curry,41 Mount Street,Nottinghamshire,NG1,6HE,http://www.just-eat.co.uk/restaurants-4550milesfromdelhi-ng1/menu,0
 5 In 1 Takeaway,Curry,23 Berry Lane,Longridge,PR3,3JA,http://www.just-eat.co.uk/restaurants-5in1-pr3/menu,5
 5 'N' 1,Curry,126 Castle Street,Forfar,DD8,2HS,http://www.just-eat.co.uk/restaurants-5n1-dd8/menu,4
 555 Hot Curry,Curry,17-19 Northwood Road,Kent,CT12,6RR,http://www.just-eat.co.uk/restaurants-555hotcurry-ct12/menu,4
@@ -506,7 +506,7 @@ Ahmed's,Curry,Unit 4 Parkside Shopping Centre,Sheffield,S21,1FY,http://www.just-
 Ahmeds Curry Cafe,Curry,1E Chandos Road Redland,Bristol,BS6,6PG,http://www.just-eat.co.uk/restaurants-ahmeds-curry-cafe/menu,5
 Ahmeds Masala Cafe,Curry,2 Jacobs Wells Road Hotwells,Clifton,BS8,1EA,http://www.just-eat.co.uk/restaurants-ahmeds-masala-cafe/menu,5
 Ahmeds Tandoori,Curry,100 Newhaven Road,Edinburgh,EH6,4BS,http://www.just-eat.co.uk/restaurants-ahmedstandoori-eh6/menu,5
-Airlink Restaurant - Collection Only,Curry,Airlink House,Hayes,UB3,3NB,http://www.just-eat.co.uk/restaurants-airlink-ub3/menu,0
+Airlink Restaurant,Curry,Airlink House,Hayes,UB3,3NB,http://www.just-eat.co.uk/restaurants-airlink-ub3/menu,0
 Aishah Tandoori,Curry,197 Main Street,Ayrshire,KA18,2BA,http://www.just-eat.co.uk/restaurants-aishahtandoori-ka18/menu,5
 Aisha's,Curry,57 Bank Street,Ossett,WF5,8PR,http://www.just-eat.co.uk/restaurants-aishas-wf5/menu,4
 Ajanta Indian Cuisine,Curry,717 Ormskirk Road,Wigan,WN5,8AQ,http://www.just-eat.co.uk/restaurants-ajantaindian-wn5/menu,5
@@ -531,7 +531,7 @@ Akash Tandoori,Curry,21 South Street,Elgin,IV30,1JZ,http://www.just-eat.co.uk/re
 Akash Tandoori,Curry,9 Granville Road,Wandsworth,SW18,5SB,http://www.just-eat.co.uk/restaurants-akashtandoori/menu,5
 Akash Tandoori,Curry,21 High Street,Slough,SL1,7JD,http://www.just-eat.co.uk/restaurants-akashtandoori-SL1/menu,5
 Akash Tandoori Restaurant,Curry,1425 Pershore Road,WestMidlands,B30,2JL,http://www.just-eat.co.uk/restaurants-akashtandoori-b30/menu,5
-Akash Tandoori Restaurant - Collection Only,Curry,10 North Street,York,YO1,6JD,http://www.just-eat.co.uk/restaurants-akashtandoorirestaurant-yo1/menu,0
+Akash Tandoori Restaurant,Curry,10 North Street,York,YO1,6JD,http://www.just-eat.co.uk/restaurants-akashtandoorirestaurant-yo1/menu,0
 Akbar Balti,Curry,139a Derby Road,Nottingham,NG9,7AS,http://www.just-eat.co.uk/restaurants-akbar-balti-ng9/menu,5
 Akbar Balti,Curry,139a Derby Road,Nottingham,NG9,7AS,http://www.just-eat.co.uk/restaurants-akbar-balti-ng9/menu,5
 Akbar Tandoori Restaurant,Curry,54 Richmond Road,Kingston,KT2,5EH,http://www.just-eat.co.uk/restaurants-akbartandoorirestaurant-kt2/menu,4
@@ -695,14 +695,14 @@ Amritsar Tandoori Restaurant,Curry,274 High Street,Kirkcaldy,KY1,1LB,http://www.
 Amro's Tandoori,Curry,1228 Royston Road,Glasgow,G33,1EX,http://www.just-eat.co.uk/restaurants-amrostandoori/menu,4
 Amro's Tandoori,Curry,1228 Royston Road,Glasgow,G33,1EX,http://www.just-eat.co.uk/restaurants-amrostandoori/menu,4
 Anaarkali Restaurant,Curry,42 Heath Road,Sheffield,S42,5RA,http://www.just-eat.co.uk/restaurants-anaarkali-s42/menu,5
-Anamika - Collection Only,Curry,111 Watling Street,Gillingham,ME7,2YX,http://www.just-eat.co.uk/restaurants-anamikame7/menu,5
+Anamika,Curry,111 Watling Street,Gillingham,ME7,2YX,http://www.just-eat.co.uk/restaurants-anamikame7/menu,5
 Anarkali,Curry,101 High Street South,Dunstable,LU6,3SQ,http://www.just-eat.co.uk/restaurants-anarkali-lu6/menu,3
 Anarkali,Curry,47 The Tything,Worcester,WR1,1JT,http://www.just-eat.co.uk/restaurants-anarkali-wr1/menu,5
 Anaya's Kilbirnie,Curry,13 Bridgend,Ayrshire,KA25,7DJ,http://www.just-eat.co.uk/restaurants-anayas-kilbirnie-ka25/menu,5
 Anaya's Kilbirnie,Curry,13 Bridgend,Ayrshire,KA25,7DJ,http://www.just-eat.co.uk/restaurants-anayas-kilbirnie-ka25/menu,5
 Anaz Indian Takeaway,Curry,69A St. Johns,Worcester,WR2,5AG,http://www.just-eat.co.uk/restaurants-anaz-indian-takeawayWR2/menu,5
-Andover Tandoori - Collection Only,Curry,1 Atholl Court,Andover,SP10,4BB,http://www.just-eat.co.uk/restaurants-blueginger-rg28/menu,5
-Andover Tandoori - Collection Only,Curry,1 Atholl Court,Andover,SP10,4BB,http://www.just-eat.co.uk/restaurants-blueginger-rg28/menu,5
+Andover Tandoori,Curry,1 Atholl Court,Andover,SP10,4BB,http://www.just-eat.co.uk/restaurants-blueginger-rg28/menu,5
+Andover Tandoori,Curry,1 Atholl Court,Andover,SP10,4BB,http://www.just-eat.co.uk/restaurants-blueginger-rg28/menu,5
 Angeethi Indian Express,Curry,168 Kells Lane,Tyne&Wear,NE9,5HY,http://www.just-eat.co.uk/restaurants-angeethi-indian-express-wrekenton/menu,5
 Angel Curry Centre,Curry,5 Chapel Market,Islington,N1,9EZ,http://www.just-eat.co.uk/restaurants-angelcurrycentre/menu,5
 Angel Curry Centre,Curry,5 Chapel Market,Islington,N1,9EZ,http://www.just-eat.co.uk/restaurants-angelcurrycentre/menu,5
@@ -744,7 +744,7 @@ Anokha Indian Bar & Restaurant,Curry,4 Burgon Street,London,EC4V,5DR,http://www.
 Anokha Indian Restaurant & Takeaway,Curry,7 The Precinct,BognorRegis,PO21,5SB,http://www.just-eat.co.uk/restaurants-anokhaindian-po21/menu,5
 Anoki Burton,Curry,38 Eggington,Derby,DE65,6GZ,http://www.just-eat.co.uk/restaurants-anokiburton-de65/menu,5
 Anoki Derby,Curry,129 London Road,Derby,DE1,2QN,http://www.just-eat.co.uk/restaurants-anokiderby-de1/menu,5
-Anoki Nottingham - Collection Only,Curry,Barker Gate,Nottingham,NG1,1JU,http://www.just-eat.co.uk/restaurants-anokinottingham-ng1/menu,5
+Anoki Nottingham,Curry,Barker Gate,Nottingham,NG1,1JU,http://www.just-eat.co.uk/restaurants-anokinottingham-ng1/menu,5
 Antalya Food Express,Curry,39 Boglemart Street,Stevenston,KA20,3EL,http://www.just-eat.co.uk/restaurants-antalyafoodexpress-ka20/menu,5
 Anuraag Tandoori Restaurant,Curry,3 Station Parade,London,EN4,0DL,http://www.just-eat.co.uk/restaurants-anuraagtandoori-en4/menu,5
 Anuraag Tandoori Restaurant,Curry,3 Station Parade,London,EN4,0DL,http://www.just-eat.co.uk/restaurants-anuraagtandoori-en4/menu,5
@@ -778,8 +778,8 @@ Aroma,Curry,113 High Street,Golborne,WA3,3TG,http://www.just-eat.co.uk/restauran
 Aroma,Curry,35C Nottingham Road,Nottingham,NG5,6JW,http://www.just-eat.co.uk/restaurants-aroma-ng5/menu,5
 Aroma,Curry,32 Middlewich Street,Crewe,CW1,4BS,http://www.just-eat.co.uk/restaurants-aroma-cw1-1/menu,5
 Aroma,Curry,87 Burton Road,BurtonOnTrent,DE14,3DW,http://www.just-eat.co.uk/restaurants-aroma-de14-1/menu,5
-Aroma Bar Restaurant Takeaway - Collection Only,Curry,1 Zetland Street,Northallerton,DL6,1NB,http://www.just-eat.co.uk/restaurants-aroma-dl6/menu,5
-Aroma Bar Restaurant Takeaway - Collection Only,Curry,1 Zetland Street,Northallerton,DL6,1NB,http://www.just-eat.co.uk/restaurants-aroma-dl6/menu,5
+Aroma Bar Restaurant Takeaway,Curry,1 Zetland Street,Northallerton,DL6,1NB,http://www.just-eat.co.uk/restaurants-aroma-dl6/menu,5
+Aroma Bar Restaurant Takeaway,Curry,1 Zetland Street,Northallerton,DL6,1NB,http://www.just-eat.co.uk/restaurants-aroma-dl6/menu,5
 Aroma Contemporary Indian Takeaway,Curry,6 Battlers Green Drive,Radlett,WD7,8NF,http://www.just-eat.co.uk/restaurants-aroma-contemporary-indian/menu,5
 Aroma Contemporary Indian Takeaway,Curry,6 Battlers Green Drive,Radlett,WD7,8NF,http://www.just-eat.co.uk/restaurants-aroma-contemporary-indian/menu,5
 Aroma Indian Cuisine,Curry,80 Bruntisfield Place,Edinburgh,EH10,4HG,http://www.just-eat.co.uk/restaurants-aromaindian-eh10/menu,5
@@ -849,7 +849,7 @@ Asia Indian Takeaway,Curry,17 Reddicap Industrial Estate,Westmidlands,B75,7BU,ht
 Asia Lounge,Curry,136 Rochdale Road,Bury,BL9,7BD,http://www.just-eat.co.uk/restaurants-asialounge-bl9/menu,4
 Asia Lounge,Curry,136 Rochdale Road,Bury,BL9,7BD,http://www.just-eat.co.uk/restaurants-asialounge-bl9/menu,4
 Asia Tandoori,Curry,Unit 1,Nottingham,NG4,3BP,http://www.just-eat.co.uk/restaurants-asia-tandoori/menu,4
-Asia Tandoori Restaurant - Collection Only,Curry,19 London Road,Surrey,SM6,7HW,http://www.just-eat.co.uk/restaurants-asiatandoori-sm6/menu,0
+Asia Tandoori Restaurant,Curry,19 London Road,Surrey,SM6,7HW,http://www.just-eat.co.uk/restaurants-asiatandoori-sm6/menu,0
 Asian Delight,Curry,67 Market Street OMAGH,CountyTyrone,BT79,0AA,http://www.just-eat.co.uk/restaurants-asiandelight-bt79/menu,5
 Asian Flavaz,Curry,16 Broxtowe Lane,Nottingham,NG8,5NP,http://www.just-eat.co.uk/restaurants-AsianFlavasNG8/menu,5
 Asian Gate,Curry,Unit 2 563 Inglemire Lane,Hull,HU6,8SW,http://www.just-eat.co.uk/restaurants-asiangate-hu6/menu,5
@@ -891,8 +891,8 @@ Azaad Takeaway,Curry,12 Leslie Street,Blairgowrie,PH10,6AH,http://www.just-eat.c
 AzaadDundee - Poppadoms,Curry,4 The Hawthorns,Dundee,DD4,0XS,http://www.just-eat.co.uk/restaurants-azaad-dundee/menu,5
 Azad Manzil,Curry,493-495 Barlow Moor Road,Manchester,M21,8AG,http://www.just-eat.co.uk/restaurants-azadmanzil-m21/menu,5
 Azad Tandoori Indian Restauarant,Curry,2B Shillinghill,Alloa,FK10,1JT,http://www.just-eat.co.uk/restaurants-azadtandoori-fk10/menu,5
-Azaro Indian Dining - Collection Only,Curry,115 Church Road,Hove,BN3,2AF,http://www.just-eat.co.uk/restaurants-azaro-bn3/menu,5
-Azaro Indian Dining - Collection Only,Curry,115 Church Road,Hove,BN3,2AF,http://www.just-eat.co.uk/restaurants-azaro-bn3/menu,5
+Azaro Indian Dining,Curry,115 Church Road,Hove,BN3,2AF,http://www.just-eat.co.uk/restaurants-azaro-bn3/menu,5
+Azaro Indian Dining,Curry,115 Church Road,Hove,BN3,2AF,http://www.just-eat.co.uk/restaurants-azaro-bn3/menu,5
 Azeem Cafe Balti,Curry,20 Station Road,Sheffield,S9,4JU,http://www.just-eat.co.uk/restaurants-azeem-cafe-balti-sheffield/menu,5
 Azeem Indian Takeaway,Curry,191 Radley Road,Abingdon,OX14,3SG,http://www.just-eat.co.uk/restaurants-azeemindian-ox14/menu,5
 Azeem's,Curry,89-91 South Street,Keighley,BD21,1AD,http://www.just-eat.co.uk/restaurants-azeems-bd21/menu,5
@@ -1297,7 +1297,7 @@ Ai Sushi,Japanese,335 Caledonian Road,London,N1,1DW,http://www.just-eat.co.uk/re
 Ai Sushi,Japanese,335 Caledonian Road,London,N1,1DW,http://www.just-eat.co.uk/restaurants-aisushi-n1/menu,5
 Ai Sushi,Japanese,335 Caledonian Road,London,N1,1DW,http://www.just-eat.co.uk/restaurants-aisushi-n1/menu,5
 Ai Sushi,Japanese,335 Caledonian Road,London,N1,1DW,http://www.just-eat.co.uk/restaurants-aisushi-n1/menu,5
-Aji - Collection Only,Japanese,23 New Rents,Ashford,TN23,2JJ,http://www.just-eat.co.uk/restaurants-aji-tn23/menu,5
+Aji,Japanese,23 New Rents,Ashford,TN23,2JJ,http://www.just-eat.co.uk/restaurants-aji-tn23/menu,5
 Arigato Sushi & Thai,Japanese,741 Green Lanes,London,N21,3RX,http://www.just-eat.co.uk/restaurants-arigatosushiandthai-n21/menu,4
 Arigato Sushi & Thai,Japanese,741 Green Lanes,London,N21,3RX,http://www.just-eat.co.uk/restaurants-arigatosushiandthai-n21/menu,4
 Ayame Sushi,Japanese,55 Newinton Green Road,London,N1,4QU,http://www.just-eat.co.uk/restaurants-ayamesushi-n1/menu,5
@@ -1592,7 +1592,7 @@ Adams,Pizza,66 Lincoln Green Road,Leeds,LS9,7SU,http://www.just-eat.co.uk/restau
 Adams,Pizza,66 Lincoln Green Road,Leeds,LS9,7SU,http://www.just-eat.co.uk/restaurants-adams-ls9/menu,5
 Adams & Lily's,Pizza,195 Carlton Road,Nottingham,NG3,2FX,http://www.just-eat.co.uk/restaurants-adamsandlillys-ng3/menu,5
 Adams Alsabti Pizzeria & Grill House,Pizza,613 Holderness Road,Hull,HU8,9AL,http://www.just-eat.co.uk/restaurants-adamsalsabti-hu8/menu,5
-Adam's Cafe - Collection Only,Pizza,46 Laughton Road,Dinnington,S25,2PS,http://www.just-eat.co.uk/restaurants-adamscafe-s25/menu,5
+Adam's Cafe,Pizza,46 Laughton Road,Dinnington,S25,2PS,http://www.just-eat.co.uk/restaurants-adamscafe-s25/menu,5
 Adam's Diner,Pizza,239 Paisley Road West,Glasgow,G51,1NE,http://www.just-eat.co.uk/restaurants-adams-diner-govan/menu,0
 Adam's Fast Food,Pizza,56 Saltaire Road,Shipley,BD18,3HN,http://www.just-eat.co.uk/restaurants-adams-fast-food-shipley/menu,5
 Adam's Hot & Spicy,Pizza,154 Main Road,Sheffield,S9,5HQ,http://www.just-eat.co.uk/restaurants-adamshotnspicy/menu,3
@@ -1851,7 +1851,7 @@ Barbican Express Pizza,Pizza,131 Whitecross Street,London,EC1Y,8JL,http://www.ju
 Bar-B-Q Mania,Pizza,346 Nacton Road,Ipswich,IP3,9NA,http://www.just-eat.co.uk/restaurants-barbq-ip3/menu,4
 Bar-B-Q-King,Pizza,31 Whytescauseway,Kirkcaldy,KY1,1XF,http://www.just-eat.co.uk/restaurants-barbqkingky1/menu,4
 Barcelona Pizza,Pizza,265a Bilston Road,Wolverhampton,WV2,2JN,http://www.just-eat.co.uk/restaurants-barcelona-pizza/menu,5
-Barista House Restaurant & Cafe - Collection Only,Pizza,24 Ballards Lane,London,N3,2BJ,http://www.just-eat.co.uk/restaurants-barista-n3/menu,5
+Barista House Restaurant & Cafe,Pizza,24 Ballards Lane,London,N3,2BJ,http://www.just-eat.co.uk/restaurants-barista-n3/menu,5
 Barnsley Kebab & Pizza House,Pizza,154 Sheffield Road,Barnsley,S70,1JH,http://www.just-eat.co.uk/restaurants-barnsleykebabandpizzahouse/menu,4
 Barolo Restaurant,Pizza,586-588 Wimborne Road,Dorset,BH9,2ER,http://www.just-eat.co.uk/restaurants-barolorestaurant-bh9/menu,5
 Barons BBQ,Pizza,90 Abbey Street,Bangor,BT20,4JB,http://www.just-eat.co.uk/restaurants-baron-bbq-bt20/menu,5
@@ -2037,7 +2037,7 @@ Blue Bay Mediterranean,Pizza,1 Freehold Street,Blyth,NE24,2BA,http://www.just-ea
 @ Thai,Thai,376 Rayleigh Road,Essex,SS9,5PT,http://www.just-eat.co.uk/restaurants-atthai-ss9/menu,5
 @ Thai Restaurant,Thai,30 Greyhound Road Hammersmith,London,W6,8NX,http://www.just-eat.co.uk/restaurants-atthairestaurant/menu,4
 @ Thai Restaurant,Thai,30 Greyhound Road Hammersmith,London,W6,8NX,http://www.just-eat.co.uk/restaurants-atthairestaurant/menu,4
-All Siam Thai Restaurant - Collection Only,Thai,639 Ecclesall Road,Sheffield,S11,8PT,http://www.just-eat.co.uk/restaurants-allsiam-s11/menu,5
+All Siam Thai Restaurant,Thai,639 Ecclesall Road,Sheffield,S11,8PT,http://www.just-eat.co.uk/restaurants-allsiam-s11/menu,5
 Anna's Thai Restaurant,Thai,235-241 High Street,Croydon,CR0,1QR,http://www.just-eat.co.uk/restaurants-annasthai-cr0/menu,4
 Anna's Thai Restaurant,Thai,235-241 High Street,Croydon,CR0,1QR,http://www.just-eat.co.uk/restaurants-annasthai-cr0/menu,4
 Ann's Thai@ The Bulls Head,Thai,27 Bilston Street,Dudley,DY3,1JA,http://www.just-eat.co.uk/restaurants-annsthai-thebullshead/menu,5
@@ -2105,8 +2105,8 @@ Amigos,Turkish,3 Beacon Road,Crowborough,TN6,1AF,http://www.just-eat.co.uk/resta
 Anatolia Kebabs - Since 1993,Turkish,51 Upper High Street,Surrey,KT17,4RA,http://www.just-eat.co.uk/restaurants-anatolia-kt17/menu,5
 Anatolia Kebabs - Since 1993,Turkish,51 Upper High Street,Surrey,KT17,4RA,http://www.just-eat.co.uk/restaurants-anatolia-kt17/menu,5
 Antalya,Turkish,92 Bond Street,Blackpool,FY4,1EX,http://www.just-eat.co.uk/restaurants-antalya-blackpool-and-fylde-industrial-estate/menu,5
-Antalya BBQ Restaurant - Collection Only,Turkish,72 Rose Lane,Liverpool,L18,8AG,http://www.just-eat.co.uk/restaurants-antalyabbqrestaurant-l18/menu,4
-Antalya BBQ Restaurant - Collection Only,Turkish,72 Rose Lane,Liverpool,L18,8AG,http://www.just-eat.co.uk/restaurants-antalyabbqrestaurant-l18/menu,4
+Antalya BBQ Restaurant,Turkish,72 Rose Lane,Liverpool,L18,8AG,http://www.just-eat.co.uk/restaurants-antalyabbqrestaurant-l18/menu,4
+Antalya BBQ Restaurant,Turkish,72 Rose Lane,Liverpool,L18,8AG,http://www.just-eat.co.uk/restaurants-antalyabbqrestaurant-l18/menu,4
 Antalya Kebab House,Turkish,3 Marsh Lane Redfield,Bristol,BS5,9SB,http://www.just-eat.co.uk/restaurants-antalyakebab/menu,5
 Antalya Kebab House,Turkish,3 Marsh Lane Redfield,Bristol,BS5,9SB,http://www.just-eat.co.uk/restaurants-antalyakebab/menu,5
 Antep Durum,Turkish,34 Sterling Way,London,N18,2XZ,http://www.just-eat.co.uk/restaurants-antep-durum-upper-edmonton/menu,5
