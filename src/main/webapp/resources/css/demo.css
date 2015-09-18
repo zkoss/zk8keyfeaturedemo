@@ -39,6 +39,46 @@ body {
 	position: relative;
 }
 
+.demo-section .tooltip-anchor {
+	position: relative;
+	height: 0px;
+	width: 0px;
+}
+.demo-section .tooltip-toggle {
+	position: absolute;
+	display: block;
+	left: -7px;
+	top: -7px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #e95d22;
+	animation: flashing 1.5s infinite;
+	z-index: 1;
+}
+.demo-section .popover {
+	max-width: 500px;
+	color: #373737; 
+}
+.demo-section .tooltip-content {
+	display: none;
+}
+
+@keyframes flashing {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0.0;
+  }
+}
+
 .demo-section .text-content h2 {
 	margin: 0px;
 	margin-bottom: 50px;

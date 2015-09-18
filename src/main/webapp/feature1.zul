@@ -3,7 +3,9 @@
 
 <!-- TODO debug why this happens and post a bug -->
 <div><!-- workaround div - shadow element doesn't work when it is a root -->
-
+	
+	<sh:apply template="tooltipToggle" offsetStyle="left: 30px;"/>
+	
 	<demoPanel sclass="demo-panel-white demo-feature1">
 		<template name="panelContent">
 			<div class="scale">
@@ -11,7 +13,7 @@
 			</div>
 		</template>
 	</demoPanel>
-
+	
 	<demoPanel sclass="demo-panel-white demo-feature1-code shadow20" draggable="true">
 		<template name="panelContent">
 		<tabbox hflex="2" vflex="1">

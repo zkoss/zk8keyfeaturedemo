@@ -6,6 +6,7 @@
 
 	<demoPanel sclass="demo-panel-grey demo-feature2">
 		<template name="panelContent">
+			<sh:apply template="tooltipToggle" offsetStyle="float: right; right: 200px;"/>
 			<n:div class="scale">
 				<apply templateURI="/keyfeature2/index.zul" />
 			</n:div>
