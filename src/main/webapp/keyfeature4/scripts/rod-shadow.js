@@ -60,7 +60,6 @@ zk.afterMount(function() {
 	var $previewLayer = jq(previewBar.$f('previewLayer'));
 	var preview = previewBar.$f('preview');
 	binder.after('initPreview', function(totalCitySize) {
-		var index = 0;
 		previewBar.totalCitySize = totalCitySize;
 		for (var w = previewBar.firstChild; w; w = w.nextSibling) {
 			if (w.cityNumber) {

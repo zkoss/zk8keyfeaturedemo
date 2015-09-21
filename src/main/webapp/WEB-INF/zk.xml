@@ -78,6 +78,8 @@
 			<name>chartist-pie</name>
 		    <link rel="stylesheet" href="/keyfeature3/scripts/chartist/chartist.min.css"/>
 		    <script src="/keyfeature3/scripts/chartist/chartist.min.js"></script>
+		    <script src="/keyfeature3/scripts/chartist/matchMedia.js"></script>
+		    <script src="/keyfeature3/scripts/chartist/matchMedia.addListener.js"></script>
 			<script>
 				function (wgt, dataValue) {
 					var renderChart = function(value) {
