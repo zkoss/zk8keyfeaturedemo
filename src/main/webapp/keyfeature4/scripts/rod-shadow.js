@@ -35,7 +35,7 @@ zk.afterMount(function() {
 		}
 	});
 	// callback after scrolling
-	binder.after('loadData', function(pos) {
+	binder.after('loadData', function() {
 		container.loadingPosition = null;
 		hideLoading();
 	});
