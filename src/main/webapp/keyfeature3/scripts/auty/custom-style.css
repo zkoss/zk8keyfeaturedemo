@@ -60,6 +60,8 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	font-style: normal;
 	color: #878787;
 	text-transform: uppercase;
+	backgound-color: white;
+	margin: 0.5px;
 }
 
 .ct-series-a .ct-slice-pie {

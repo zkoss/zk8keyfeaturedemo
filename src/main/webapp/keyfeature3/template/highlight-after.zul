@@ -1,6 +1,4 @@
 <zk xmlns:ca="client/attribute" xmlns:n="native">
-	<n:pre style="margin: 0px">
-		<label ca:data-syntax-highlight="{useBR: true}"
-			value="@load(vm.syntax)" />
-	</n:pre>
+	<label pre="true" ca:data-syntax-highlight="{useBR: true}"
+		value="@load(vm.syntax)" />
 </zk>
