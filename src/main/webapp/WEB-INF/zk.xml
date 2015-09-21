@@ -131,7 +131,7 @@
 					var editor = CodeMirror.fromTextArea(myTextArea, 
 						{lineNumbers: true, mode: "xml", textWrapping: true, lineWrapping: true, scrollbarStyle: "native", readOnly:true}
 					);
-					editor.setSize("auto","auto");
+					editor.setSize("auto", dataValue.height);
 
 					/*integrate with bs-tabs*/
 					var tabPane = jq(wgt).closest('.tab-pane');

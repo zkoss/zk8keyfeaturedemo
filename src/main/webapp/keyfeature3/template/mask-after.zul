@@ -1,34 +1,31 @@
 <zk xmlns:ca="client/attribute">
-	<tablelayout columns="2">
-		<tablechildren>
-			<label value="Collection Time: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox ca:data-mask="99:99:99.99" value="21143513" />
-		</tablechildren>
-		<tablechildren>
-			<label value="Delivery Date: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox ca:data-mask="99/99/9999" value="10122015" />
-		</tablechildren>
-		<tablechildren>
-			<label value="Tracking No.: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox ca:data-mask="AAA-999999" value="AAA000000" />
-		</tablechildren>
-		<tablechildren>
-			<label value="Price: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox ca:data-mask="99,999.99" value="999999" />
-		</tablechildren>
-		<tablechildren>
-			<label value="Contact No.: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox ca:data-mask="+9(99)999-9999" value="12153333333" />
-		</tablechildren>
-	</tablelayout>
+<grid>
+	<rows>
+	<row>
+		<label value="Collection Time: " />
+		<textbox ca:data-mask="99:99:99.99" 
+			value="21143513" />
+	</row>
+	<row>
+		<label value="Delivery Date: " />
+		<textbox ca:data-mask="99/99/9999" 
+			value="10122015" />
+	</row>
+	<row>
+		<label value="Tracking No.: " />
+		<textbox ca:data-mask="AAA-999999" 
+			value="AAA000000" />
+	</row>
+	<row>
+		<label value="Price: " />
+		<textbox ca:data-mask="99,999.99" 
+			value="999999" />
+	</row>
+	<row>
+		<label value="Contact No.: " />
+		<textbox ca:data-mask="+9(99)999-9999" 
+			value="12153333333" />
+	</row>
+	</rows>
+</grid>
 </zk>

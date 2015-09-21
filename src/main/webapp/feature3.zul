@@ -1,4 +1,4 @@
-<!-- <?component name="layout" templateURI="/keyfeature3/layout.zul" ?> -->
+<?component name="layout" templateURI="/keyfeature3/layout.zul" ?>
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client"
 	xmlns:sh="shadow">
 	<style src="/keyfeature3/scripts/auty/custom-style.css" />
@@ -30,33 +30,28 @@
 
 		<n:div class="tab-content" style="height: 500px">
 			<n:div class="tab-pane active" id="chartist">
-<!-- 				<layout -->
-<!-- 					before="/keyfeature3/template/chartist-before.zul" -->
-<!-- 					after="/keyfeature3/template/chartist-after.zul" /> -->
-				<sh:apply templateURI="/keyfeature3/chartist.zul" />
+				<layout
+					before="/keyfeature3/template/chartist-before.zul"
+					after="/keyfeature3/template/chartist-after.zul" />
 			</n:div>
 			<n:div class="tab-pane" id="labelauty">
-<!-- 				<layout -->
-<!-- 					before="/keyfeature3/template/labelauty-before.zul" -->
-<!-- 					after="/keyfeature3/template/labelauty-after.zul" /> -->
-				<sh:apply templateURI="/keyfeature3/labelauty.zul" />
+				<layout
+					before="/keyfeature3/template/labelauty-before.zul"
+					after="/keyfeature3/template/labelauty-after.zul" />
 			</n:div>
 			<n:div class="tab-pane" id="highlight">
-<!-- 				<layout -->
-<!-- 					before="/keyfeature3/template/highlight-before.zul" -->
-<!-- 					after="/keyfeature3/template/highlight-after.zul" /> -->
-				<sh:apply templateURI="/keyfeature3/highlight.zul" />
+				<layout
+					before="/keyfeature3/template/highlight-before.zul"
+					after="/keyfeature3/template/highlight-after.zul" />
 			</n:div>
 			<n:div class="tab-pane" id="markdown">
-<!-- 				<layout -->
-<!-- 					before="/keyfeature3/template/markdown-before.zul" -->
-<!-- 					after="/keyfeature3/template/markdown-after.zul" /> -->
-				<sh:apply templateURI="/keyfeature3/markdown.zul" />
+				<layout
+					before="/keyfeature3/template/markdown-before.zul"
+					after="/keyfeature3/template/markdown-after.zul" />
 			</n:div>
 			<n:div class="tab-pane" id="mask">
-<!-- 				<layout before="/keyfeature3/template/mask-before.zul" -->
-<!-- 					after="/keyfeature3/template/mask-after.zul" /> -->
-				<sh:apply templateURI="/keyfeature3/mask.zul" />
+				<layout before="/keyfeature3/template/mask-before.zul"
+					after="/keyfeature3/template/mask-after.zul" />
 			</n:div>
 		</n:div>
 	</div>

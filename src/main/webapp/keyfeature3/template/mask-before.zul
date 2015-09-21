@@ -1,34 +1,26 @@
 <zk>
-	<tablelayout columns="2">
-		<tablechildren>
-			<label value="Collection Time: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox value="21143513" />
-		</tablechildren>
-		<tablechildren>
-			<label value="Delivery Date: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox value="10122015" />
-		</tablechildren>
-		<tablechildren>
-			<label value="Tracking No.: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox value="AAA000000" />
-		</tablechildren>
-		<tablechildren>
-			<label value="Price: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox value="999999" />
-		</tablechildren>
-		<tablechildren>
-			<label value="Contact No.: " />
-		</tablechildren>
-		<tablechildren>
-			<textbox value="12153333333" />
-		</tablechildren>
-	</tablelayout>
+<grid>
+	<rows>
+	<row>
+		<label value="Collection Time: " />
+		<textbox value="21143513" />
+	</row>
+	<row>
+		<label value="Delivery Date: " />
+		<textbox value="10122015" />
+	</row>
+	<row>
+		<label value="Tracking No.: " />
+		<textbox value="AAA000000" />
+	</row>
+	<row>
+		<label value="Price: " />
+		<textbox value="999999" />
+	</row>
+	<row>
+		<label value="Contact No.: " />
+		<textbox value="12153333333" />
+	</row>
+	</rows>
+</grid>
 </zk>
