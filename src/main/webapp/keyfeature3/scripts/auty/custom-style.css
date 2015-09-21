@@ -33,29 +33,29 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	opacity: 0.5;
 }
 
-.nav-tabs li {
+.demo-feature3 .nav-tabs li {
 	font-style: normal;
 	color: #3c3c3c;
 	background-color: #ececec;
-	border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0 0;
 }
 
-.nav-tabs li a {
-	margin: 0px;
-	border-radius: 5px 5px 0px 0px;
-}
-
-.nav-tabs .active {
+.demo-feature3 .nav-tabs li a {
 	font-family: "Helvetica";
-	font-weight: bold;
 	font-size: 10.5;
 	color: #3c3c3c;
-	background-color: #ffffff;
+	margin: 0px;
 	border: 1px solid #dadada;
-	border-radius: 5px;
+	border-bottom: none;
 }
 
-.tab-pane .title {
+	
+.demo-feature3 .nav-tabs li.active a {
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+.demo-feature3 .tab-pane .title {
 	font-size: 11px;
 	font-style: normal;
 	color: #878787;

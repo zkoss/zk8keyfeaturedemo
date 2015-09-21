@@ -1,0 +1,5 @@
+<zk xmlns:ca="client/attribute">
+<label value="@load(vm.chartist_percentage)"
+	ca:data-chartist-pie='{"width": "200", 
+		"height": "200", "total": "100"}'  hflex="1"/>
+</zk>

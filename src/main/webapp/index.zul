@@ -45,7 +45,7 @@
 			</template>
 		</sh:apply>
 
- 		<sh:apply template="demoSection" 
+  		<sh:apply template="demoSection"
 				sectionStyle="demo-section demo-section-white" 
 				title="Seamless Client-Server Messaging with MVVM Client Binding"
 				contentURI="feature4.zul"
