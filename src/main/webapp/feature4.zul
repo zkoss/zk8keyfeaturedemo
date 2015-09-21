@@ -1,3 +1,4 @@
-<zk xmlns:n="native">
+<zk xmlns:n="native" xmlns:sh="shadow">
+	<sh:apply template="tooltipToggle"/>
 	<include zclass="demo-feature4" src="/keyfeature4/rod-shadow.zul" />
 </zk>

@@ -7,21 +7,21 @@
 		<hlayout hflex="1" height="160px">
 			<div hflex="1">
 				<textbox ca:data-codeMirror="true" multiline="true"
-					value="@init(vm.loadSource('/keyfeature3/template/chartist-before.zul'))" />
+					value="@init(vm.loadSource('/keyfeature3/template/highlight-before.zul'))" />
 			</div>
 			<div hflex="1">
 				<textbox ca:data-codeMirror="true" multiline="true"
-					value="@init(vm.loadSource('/keyfeature3/template/chartist-after.zul'))" />
+					value="@init(vm.loadSource('/keyfeature3/template/highlight-after.zul'))" />
 			</div>
 		</hlayout>
 		<hlayout hflex="1" height="270px">
 			<vlayout hflex="1">
 				<sh:apply
-					templateURI="/keyfeature3/template/chartist-before.zul" />
+					templateURI="/keyfeature3/template/highlight-before.zul" />
 			</vlayout>
 			<vlayout hflex="1">
 				<sh:apply
-					templateURI="/keyfeature3/template/chartist-after.zul" />
+					templateURI="/keyfeature3/template/highlight-after.zul" />
 			</vlayout>
 		</hlayout>
 	</vlayout>

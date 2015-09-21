@@ -45,7 +45,7 @@
 			</template>
 		</sh:apply>
 
- 		<sh:apply template="demoSection" 
+  		<sh:apply template="demoSection"
 				sectionStyle="demo-section demo-section-white" 
 				title="Seamless Client-Server Messaging with MVVM Client Binding"
 				contentURI="feature4.zul"
@@ -68,12 +68,29 @@
 						<n:a class="learn-more" href="${learnMoreLink}">Learn More</n:a>
 					</n:div>
 					<n:div class="demo-content">
+						<n:div class="tooltip-content">
+							<sh:apply template="tooltip"/>
+						</n:div>
 <!-- 						<n:div class="debug"> -->
-							<sh:apply templateURI="${contentURI}"/>
+						<sh:apply templateURI="${contentURI}"/>
 <!-- 						</n:div> -->
 					</n:div>
 				</n:div>
 			</n:section>
+		</template>
+		
+		<template name="tooltipToggle">
+			<n:div class="tooltip-anchor" style="${offsetStyle}">
+				<div zclass="tooltip-toggle" 
+					w:onBind="var tooltipContent = jq(this).closest('.demo-content').find('.tooltip-content')[0];
+						jq(this).popover({
+							placement: 'top', 
+							content: tooltipContent.innerHTML, 
+							html: true,
+							container: '.section-content'
+							});
+						jq(tooltipContent).remove();"/>
+			</n:div>
 		</template>
 	</div>	
 </zk>

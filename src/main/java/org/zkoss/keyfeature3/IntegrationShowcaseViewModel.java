@@ -1,7 +1,12 @@
 package org.zkoss.keyfeature3;
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.commons.io.IOUtils;
 import org.zkoss.bind.annotation.NotifyCommand;
 import org.zkoss.bind.annotation.ToClientCommand;
+import org.zkoss.zk.ui.WebApps;
 
 @NotifyCommand(value = "easypiechart$clientUpdate", onChange = "_vm_.percentage")
 @ToClientCommand({ "easypiechart$clientUpdate" })
@@ -12,8 +17,7 @@ public class IntegrationShowcaseViewModel {
 	private String percentage = "33%";
 	private String chartist_percentage = "55%";
 	private String syntax = "var int i = 0; \n\n for(var i=0; i<10; i++) { \n \tconsole.log('Hello');\n }\n";
-	private String markdown = "This is a normal paragraph: \n\n" + "    System.out.println('code block') \n\n"
-			+ "#Large#";
+	private String markdown = "#Attendtion \n The team made some adjustments in the **style.css** file. \n Please remember to remove ~~italic~~, and changethe style to: \n \t font-style: normal; \n\n For more information, please read the [style guide](https://example.com).";
 
 	public boolean isLike() {
 		return like;
@@ -63,4 +67,11 @@ public class IntegrationShowcaseViewModel {
 		this.chartist_percentage = chartist_percentage;
 	}
 
+	
+	public String loadSource(String path) throws IOException {
+		InputStream inputStream = WebApps.getCurrent().getResourceAsStream(path);
+		String rawSource = IOUtils.toString(inputStream);
+		String[] lines = rawSource.split("[\r\n]{1,2}");
+		return rawSource;
+	}
 }

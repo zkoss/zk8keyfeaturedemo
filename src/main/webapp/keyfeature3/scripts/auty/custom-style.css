@@ -28,6 +28,49 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	padding: 10px;
 }
 
-.z-checkbox input[type=checkbox][disabled=disabled]+label.z-checkbox-content{
+.z-checkbox input[type=checkbox][disabled=disabled]+label.z-checkbox-content
+	{
 	opacity: 0.5;
+}
+
+.demo-feature3 .nav-tabs li {
+	font-style: normal;
+	color: #3c3c3c;
+	background-color: #ececec;
+	border-radius: 5px 5px 0 0;
+}
+
+.demo-feature3 .nav-tabs li a {
+	font-family: "Helvetica";
+	font-size: 10.5;
+	color: #3c3c3c;
+	margin: 0px;
+	border: 1px solid #dadada;
+	border-bottom: none;
+}
+
+	
+.demo-feature3 .nav-tabs li.active a {
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+.demo-feature3 .tab-pane .title {
+	font-size: 11px;
+	font-style: normal;
+	color: #878787;
+	text-transform: uppercase;
+}
+
+.ct-series-a .ct-slice-pie {
+	fill: #ea5351;
+	stroke: white;
+	stroke-width: 4px;
+}
+
+.ct-label {
+	fill: rgba(255, 255, 255, 0.9);
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 2.3em;
+	line-height: 1
 }

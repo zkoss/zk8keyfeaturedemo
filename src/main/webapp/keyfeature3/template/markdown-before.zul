@@ -1,0 +1,4 @@
+<zk>
+	<textbox rows="5" cols="30" value="@bind(vm.markdown)"
+		instant="true" />
+</zk>
