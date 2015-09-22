@@ -46,12 +46,12 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	color: #3c3c3c;
 	margin: 0px;
 	border: 1px solid #dadada;
-	border-bottom: none;
 }
 
 .demo-feature3 .nav-tabs li.active a {
 	font-weight: bold;
 	background-color: #ffffff;
+	border-bottom-color: transparent;
 }
 
 .demo-feature3 .tab-pane .title {

@@ -85,12 +85,22 @@
 					w:onBind="var tooltipContent = jq(this).closest('.demo-content').find('.tooltip-content')[0];
 						jq(this).popover({
 							placement: 'top', 
-							content: tooltipContent.innerHTML, 
+							content: tooltipContent.innerHTML,
+							trigger: 'manual',
 							html: true,
 							container: '.section-content'
 							});
-						jq(tooltipContent).remove();"/>
+						jq(tooltipContent).remove();"
+					w:onClick="jq(this).popover('show')"/>
 			</n:div>
 		</template>
+		<script>
+			$(document).on('click', function(evt) {
+				console.log(arguments);
+				if(!jq(evt.target).hasClass('tooltip-toggle')) {
+					jq('.tooltip-toggle').popover('hide');
+				}
+			});
+		</script>
 	</div>	
 </zk>

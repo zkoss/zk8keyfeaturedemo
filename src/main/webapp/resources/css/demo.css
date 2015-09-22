@@ -1,4 +1,4 @@
-body {
+﻿body {
 	font-family: 'Open Sans';
 	font-weight: 400;
 	padding: 0px;
@@ -56,6 +56,7 @@ body {
 	animation: flashing 1.5s infinite;
 	z-index: 1;
 }
+
 .ie9 .demo-section .tooltip-toggle {
 	left: -14px;
 	top: -14px;
@@ -68,7 +69,8 @@ body {
 }
 .demo-section .popover {
 	max-width: 500px;
-	color: #373737; 
+	color: #6f6f6f;
+	box-shadow: none; 
 }
 .demo-section .tooltip-content {
 	display: none;
