@@ -28,7 +28,7 @@
 			zUtl.fireSized(zk.$('.demo-feature3')); });
 		</script>
 
-		<n:div class="tab-content" style="height: 515px;">
+		<n:div class="tab-content">
 			<n:div class="tab-pane active" id="chartist">
 				<layout
 					before="/keyfeature3/template/chartist-before.zul"

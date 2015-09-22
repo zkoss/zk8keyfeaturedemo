@@ -1,4 +1,4 @@
-<zk xmlns:ca="client/attribute" xmlns:sh="shadow">
+<zk xmlns:ca="client/attribute" xmlns:sh="shadow" xmlns:n="native">
 	<vlayout hflex="1" spacing="0px" sclass="bgColor">
 		<hlayout hflex="1" height="30px" spacing="0px"
 			style="background-color: white;">
@@ -33,8 +33,8 @@
 				</vlayout>
 			</div>
 		</hlayout>
-		<vlayout height="50px">
-			<a sclass="viewSource" label="&lt;/&gt; View Source" />
-		</vlayout>
+		<n:div class="view-source">
+			<n:a href="#"><n:i class="z-icon-file-code-o"></n:i> View Source</n:a>
+		</n:div>
 	</vlayout>
 </zk>
