@@ -1,4 +1,4 @@
 <zk xmlns:ca="client/attribute">
-	<label ca:data-markdown="true" multiline="true"
-		value="@load(vm.markdown)" />
+<label ca:data-markdown="true" multiline="true"
+	value="@load(vm.markdown)" />
 </zk>

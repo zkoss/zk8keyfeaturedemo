@@ -2,11 +2,14 @@ package org.zkoss.keyfeature3;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.IOUtils;
 import org.zkoss.bind.annotation.NotifyCommand;
 import org.zkoss.bind.annotation.ToClientCommand;
 import org.zkoss.zk.ui.WebApps;
+import org.zkoss.zsoup.helper.StringUtil;
 
 @NotifyCommand(value = "easypiechart$clientUpdate", onChange = "_vm_.percentage")
 @ToClientCommand({ "easypiechart$clientUpdate" })
@@ -67,11 +70,16 @@ public class IntegrationShowcaseViewModel {
 		this.chartist_percentage = chartist_percentage;
 	}
 
-	
 	public String loadSource(String path) throws IOException {
 		InputStream inputStream = WebApps.getCurrent().getResourceAsStream(path);
 		String rawSource = IOUtils.toString(inputStream);
 		String[] lines = rawSource.split("[\r\n]{1,2}");
-		return rawSource;
+		List<String> codes = new ArrayList<String>();
+		for (String line : lines) {
+			if (!line.contains("<zk") && !line.contains("/zk")) {
+				codes.add(line);
+			}
+		}
+		return StringUtil.join(codes, "\r\n");
 	}
 }

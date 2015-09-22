@@ -1,4 +1,4 @@
 <zk>
-	<textbox rows="10" cols="50" value="@bind(vm.markdown)"
-		instant="true" />
+<textbox rows="10" cols="45" value="@bind(vm.markdown)"
+	instant="true" />
 </zk>

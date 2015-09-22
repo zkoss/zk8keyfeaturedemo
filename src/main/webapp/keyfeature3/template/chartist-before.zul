@@ -1,5 +1,5 @@
 <zk>
-	<label value="@load(vm.chartist_percentage)"
-		style="font-size: 100px" />
-	<textbox value="@bind(vm.chartist_percentage)" instant="true" />
+<label value="@load(vm.chartist_percentage)"
+	style="font-size: 100px" />
+<textbox value="@bind(vm.chartist_percentage)" instant="true" />
 </zk>

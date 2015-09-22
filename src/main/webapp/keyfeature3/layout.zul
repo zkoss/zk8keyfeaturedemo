@@ -1,35 +1,40 @@
 <zk xmlns:ca="client/attribute" xmlns:sh="shadow">
-	<vlayout hflex="1">
-		<hlayout hflex="1">
+	<vlayout hflex="1" spacing="0px" sclass="bgColor">
+		<hlayout hflex="1" height="30px" spacing="0px"
+			style="background-color: white;">
 			<label zclass="title" value="DEFAULT" hflex="1" />
+			<separator width="8px" orient="vertical" height="30px"
+				sclass="bgColor" />
 			<label zclass="title" value="INTEGRATED" hflex="1" />
 		</hlayout>
-		<separator height="0.5px"
-			style="background-color: #f5f5f5; border: 0.5 0 0.5 0 solid #dcdcdc;" />
-		<hlayout hflex="1">
-			<div hflex="1">
+		<separator height="1px" sclass="codeSeparator" />
+		<hlayout hflex="1" height="161px" spacing="0px">
+			<div hflex="1" sclass="codeBox">
 				<textbox ca:data-codeMirror='{"height": 160}'
 					multiline="true" value="@init(vm.loadSource(before))" />
 			</div>
-			<div hflex="1">
+			<separator width="8px" orient="vertical" height="161px" />
+			<div hflex="1" sclass="codeBox">
 				<textbox ca:data-codeMirror='{"height": 160}'
 					multiline="true" value="@init(vm.loadSource(after))" />
 			</div>
 		</hlayout>
-		<separator height="10px"
-			style="background-color: #f5f5f5; border: 0.5 0 0.5 0 solid #dcdcdc;" />
-		<hlayout hflex="1" height="270px">
-			<vlayout height="270px" hflex="1"
-				style="background-color: white;">
-				<sh:apply templateURI="${before}" />
-			</vlayout>
-			<vlayout height="270px" hflex="1"
-				style="background-color: white;">
-				<sh:apply templateURI="${after}" />
-			</vlayout>
+		<separator height="10px" />
+		<hlayout hflex="1" height="271px" spacing="0px">
+			<div height="270px" hflex="1" sclass="exampleBox">
+				<vlayout>
+					<sh:apply templateURI="${before}" />
+				</vlayout>
+			</div>
+			<separator width="8px" orient="vertical" height="271px" />
+			<div height="270px" hflex="1" sclass="exampleBox">
+				<vlayout>
+					<sh:apply templateURI="${after}" />
+				</vlayout>
+			</div>
 		</hlayout>
-		<vlayout height="30px" style="background-color: #f5f5f5;">
-			<a style="float: right;" label="&lt;/&gt; View Source" />
+		<vlayout height="50px">
+			<a sclass="viewSource" label="&lt;/&gt; View Source" />
 		</vlayout>
 	</vlayout>
 </zk>
