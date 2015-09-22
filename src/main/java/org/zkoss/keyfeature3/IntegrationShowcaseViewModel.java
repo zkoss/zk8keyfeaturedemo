@@ -76,10 +76,14 @@ public class IntegrationShowcaseViewModel {
 		String[] lines = rawSource.split("[\r\n]{1,2}");
 		List<String> codes = new ArrayList<String>();
 		for (String line : lines) {
-			if (!line.contains("<zk") && !line.contains("/zk")) {
+			if (notContainedSpecificString(line)) {
 				codes.add(line);
 			}
 		}
 		return StringUtil.join(codes, "\r\n");
+	}
+
+	private boolean notContainedSpecificString(String line) {
+		return !line.contains("<zk") && !line.contains("/zk") && !line.contains("vlayout");
 	}
 }

@@ -1,3 +1,5 @@
 <zk>
-<textbox rows="6" cols="40" value="@bind(vm.syntax)" instant="true" />
+<vlayout sclass="highlightContent">
+<textbox rows="15" cols="50" value="@bind(vm.syntax)" instant="true" />
+</vlayout>
 </zk>

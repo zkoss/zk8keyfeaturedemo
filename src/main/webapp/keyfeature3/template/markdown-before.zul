@@ -1,4 +1,6 @@
 <zk>
-<textbox rows="10" cols="45" value="@bind(vm.markdown)"
+<vlayout sclass="markdownContent">
+<textbox rows="15" cols="50" value="@bind(vm.markdown)"
 	instant="true" />
+</vlayout>
 </zk>

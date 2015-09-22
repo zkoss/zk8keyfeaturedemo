@@ -1,13 +1,13 @@
 <zk xmlns:ca="client/attribute" xmlns:sh="shadow" xmlns:n="native">
 	<vlayout hflex="1" spacing="0px" sclass="bgColor">
-		<hlayout hflex="1" height="30px" spacing="0px"
+		<hlayout hflex="1" height="24px" spacing="0px"
 			style="background-color: white;">
 			<label zclass="title" value="DEFAULT" hflex="1" />
 			<separator width="8px" orient="vertical" height="30px"
 				sclass="bgColor" />
 			<label zclass="title" value="INTEGRATED" hflex="1" />
 		</hlayout>
-		<separator height="1px" sclass="codeSeparator" />
+		<separator height="1px" hflex="1" sclass="codeSeparator" />
 		<hlayout hflex="1" height="161px" spacing="0px">
 			<div hflex="1" sclass="codeBox">
 				<textbox ca:data-codeMirror='{"height": 160}'
@@ -22,19 +22,18 @@
 		<separator height="10px" />
 		<hlayout hflex="1" height="271px" spacing="0px">
 			<div height="270px" hflex="1" sclass="exampleBox">
-				<vlayout>
-					<sh:apply templateURI="${before}" />
-				</vlayout>
+				<sh:apply templateURI="${before}" />
 			</div>
 			<separator width="8px" orient="vertical" height="271px" />
 			<div height="270px" hflex="1" sclass="exampleBox">
-				<vlayout>
-					<sh:apply templateURI="${after}" />
-				</vlayout>
+				<sh:apply templateURI="${after}" />
 			</div>
 		</hlayout>
 		<n:div class="view-source">
-			<n:a href="#"><n:i class="z-icon-file-code-o"></n:i> View Source</n:a>
+			<n:a href="#">
+				<n:i class="z-icon-file-code-o"></n:i>
+				View Source
+			</n:a>
 		</n:div>
 	</vlayout>
 </zk>

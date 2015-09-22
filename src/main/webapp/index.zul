@@ -96,7 +96,6 @@
 		</template>
 		<script>
 			$(document).on('click', function(evt) {
-				console.log(arguments);
 				if(!jq(evt.target).hasClass('tooltip-toggle')) {
 					jq('.tooltip-toggle').popover('hide');
 				}

@@ -1,5 +1,7 @@
 input.labelauty+label {
 	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 input.labelauty.disable-icon+label>span.labelauty-checked-image {
@@ -81,13 +83,45 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	border-style: solid;
 }
 
-.demo-feature3 .exampleBox>div {
+.demo-feature3 .chartistContent {
 	margin: 0 auto;
-	width: 75%;
+	width: 55%;
+}
+
+.demo-feature3 .labelautyContent {
+	margin: 0 auto;
+	width: 55%;
+}
+
+.demo-feature3 .highlightContent {
+	margin: 0 auto 0px auto;
+	width: 90%;
+	height: 220px;
+}
+
+.demo-feature3 .markdownContent {
+	margin: 0 auto 0px auto;
+	width: 90%;
+	height: 220px;
+}
+
+.demo-feature3 .maskContent {
+	margin: 0 auto 0px auto;
+	width: 330px;
+	height: 160px;
+}
+
+.demo-feature3 .maskContent .z-label {
+	font-size: 14px;
 }
 
 .demo-feature3 .view-source {
 	padding-right: 10px;
+}
+
+.demo-feature3 .z-checkbox-content {
+	font-size: 19px;
+	margin-left: 5px;
 }
 
 .ct-series-a .ct-slice-pie {
@@ -101,4 +135,15 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	color: rgba(255, 255, 255, 0.9);
 	font-size: 2.3em;
 	line-height: 1
+}
+.demo-feature3 .CodeMirror-gutters {
+	width: 15px !important;
+}
+
+.demo-feature3 .CodeMirror-sizer {
+	margin-left: 15px !important;
+}
+
+.demo-feature3 .CodeMirror-gutter-wrapper {
+	left: -30px !important;
 }
