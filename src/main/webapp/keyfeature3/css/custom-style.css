@@ -49,7 +49,6 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	border-bottom: none;
 }
 
-	
 .demo-feature3 .nav-tabs li.active a {
 	font-weight: bold;
 	background-color: #ffffff;
@@ -61,7 +60,31 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	color: #878787;
 	text-transform: uppercase;
 	backgound-color: white;
-	margin: 0.5px;
+	margin: 1px;
+}
+
+.demo-feature3 .codeBox {
+	border-color: #dcdcdc;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+}
+
+.demo-feature3 .codeSeparatorVertical {
+	
+}
+
+.demo-feature3 .exampleBox {
+	background-color: white;
+	display: table-cell;
+	vertical-align: middle;
+	border-color: #dcdcdc;
+	border-width: 1px 0 0 0;
+	border-style: solid;
+}
+
+.demo-feature3 .exampleBox>div {
+	margin: 0 auto;
+	width: 75%;
 }
 
 .ct-series-a .ct-slice-pie {
