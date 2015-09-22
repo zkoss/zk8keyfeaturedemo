@@ -59,8 +59,7 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	font-style: normal;
 	color: #878787;
 	text-transform: uppercase;
-	backgound-color: white;
-	margin: 1px;
+	margin-left: 10px;
 }
 
 .demo-feature3 .codeBox {
@@ -69,22 +68,33 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	border-style: solid;
 }
 
-.demo-feature3 .codeSeparatorVertical {
-	
+.demo-feature3 .bgColor {
+	background-color: #f5f5f5;
 }
 
 .demo-feature3 .exampleBox {
-	background-color: white;
 	display: table-cell;
 	vertical-align: middle;
 	border-color: #dcdcdc;
-	border-width: 1px 0 0 0;
+	border-width: 1px 0 2px 0;
+	background-color: white;
+	border-radius: 0 0 5px 5px;
 	border-style: solid;
 }
 
 .demo-feature3 .exampleBox>div {
 	margin: 0 auto;
 	width: 75%;
+}
+
+.demo-feature3 .viewSource {
+	font-family: Helvetica;
+	font-weight: 300;
+	font-size: 11px;
+	text-decoration: underline;
+	color: #565656;
+	margin: 10px;
+	float: right;
 }
 
 .ct-series-a .ct-slice-pie {
