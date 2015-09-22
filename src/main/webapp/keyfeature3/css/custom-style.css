@@ -3,19 +3,19 @@ input.labelauty+label {
 }
 
 input.labelauty.disable-icon+label>span.labelauty-checked-image {
-	background-image: url(images/input-disabled.png);
+	background-image: url(../scripts/auty/images/input-disabled.png);
 }
 
 input.labelauty.disable-icon+label>span.labelauty-unchecked-image {
-	background-image: url(images/input-disabled.png);
+	background-image: url(../scripts/auty/images/input-disabled.png);
 }
 
 input.labelauty.terms-icon+label>span.labelauty-checked-image {
-	background-image: url(images/terms-checked.png);
+	background-image: url(../scripts/auty/images/terms-checked.png);
 }
 
 input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
-	background-image: url(images/terms-unchecked.png);
+	background-image: url(../scripts/auty/images/terms-unchecked.png);
 }
 
 .statement {
@@ -42,7 +42,7 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 
 .demo-feature3 .nav-tabs li a {
 	font-family: "Helvetica";
-	font-size: 10.5;
+	font-size: 10.5px;
 	color: #3c3c3c;
 	margin: 0px;
 	border: 1px solid #dadada;

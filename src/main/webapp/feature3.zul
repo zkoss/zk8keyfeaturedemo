@@ -23,9 +23,9 @@
 
 		<!-- TODO transfer into a data-handler -->
 		<script defer="true">
-			jq('.demo-feature3 .nav-tabs a').on('shown.bs.tab',
-			function() { console.log('resize')
-			zUtl.fireSized(zk.$('.demo-feature3')); });
+			jq('.demo-feature3 .nav-tabs a').on('shown.bs.tab', function() {
+				zUtl.fireSized(zk.$('.demo-feature3'));
+			});
 		</script>
 
 		<n:div class="tab-content">
