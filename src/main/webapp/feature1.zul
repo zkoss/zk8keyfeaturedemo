@@ -16,17 +16,18 @@
 	
 	<demoPanel sclass="demo-panel-white demo-feature1-code shadow20" draggable="true">
 		<template name="panelContent">
-		<tabbox hflex="2" vflex="1">
-			<tabs id="tabs">
-				<tab label="statBoxTemplate.zul" />
-				<tab label="index.zul" />
-			</tabs>
-			<tabpanels vflex="1">
-				<tabpanel renderdefer="100"  >
-					<vlayout vflex="1" hflex="1">
-						<textbox ca:data-codeMirror="true" 
-							multiline="true">
-							<attribute name="value"><![CDATA[<!-- the statBoxTemplate.zul file will be used as the structure for each
+		<vlayout hflex="1" vflex="1" spacing="0">
+			<tabbox hflex="1" vflex="1">
+				<tabs id="tabs">
+					<tab label="statBoxTemplate.zul" />
+					<tab label="index.zul" />
+				</tabs>
+				<tabpanels vflex="1">
+					<tabpanel renderdefer="100"  >
+						<vlayout vflex="1" hflex="1">
+							<textbox ca:data-codeMirror="true" 
+								multiline="true">
+								<attribute name="value"><![CDATA[<!-- the statBoxTemplate.zul file will be used as the structure for each
 stat box, based on the box values -->
 							
 <!-- has 2 parameters statBlock and detailCommand -->
@@ -47,14 +48,14 @@ stat box, based on the box values -->
 		</h:div>
 	</h:div>
 </h:div>]]></attribute>
-					</textbox>
-				</vlayout>
-			</tabpanel>
-			<tabpanel>
-				<vlayout>
-					<textbox ca:data-codeMirror="true" rows="10"
-						multiline="true">
-						<attribute name="value"><![CDATA[<!--Defining the statbox element and using it in the main index.zul file-->
+						</textbox>
+					</vlayout>
+				</tabpanel>
+				<tabpanel>
+					<vlayout>
+						<textbox ca:data-codeMirror="true" rows="10"
+							multiline="true">
+							<attribute name="value"><![CDATA[<!--Defining the statbox element and using it in the main index.zul file-->
 <?component name="statBox" templateURI="statBoxTemplate.zul"?>
 
 ...
@@ -63,11 +64,15 @@ stat box, based on the box values -->
 	<statBox statBlock="@init(each)" 
 		detailCommand="@init(MyViewModel.VIEW_DETAIL)"/>
 </forEach> ]]></attribute>
-						</textbox>
-					</vlayout>
-				</tabpanel>
-			</tabpanels>
-		</tabbox>
+							</textbox>
+						</vlayout>
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+			<n:div class="view-source">
+				<n:a href="#"><n:i class="z-icon-file-code-o"></n:i> View Source</n:a>
+			</n:div>
+		</vlayout>
 		</template>
 	</demoPanel>
 </div>

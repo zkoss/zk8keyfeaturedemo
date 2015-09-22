@@ -15,9 +15,20 @@
 	
 	<demoPanel sclass="demo-panel-white demo-feature2-code shadow20" draggable="true">
 		<template name="panelContent">
-			<n:div style="height: 100%;">
-				some code
-			</n:div>
+			<vlayout hflex="1" vflex="1" spacing="0">
+				<n:div style="height: 100%;">
+					<textbox ca:data-codeMirror="true" rows="5" multiline="true">
+						<attribute name="value"><![CDATA[<!--Show the same catalog object with different ways by changing the template uri-->
+<x:div class="data-container">	
+	<apply templateURI="@load(vm.currentTemplate.uri)"
+		catalog="@load(vm.catalog)" />
+</x:div> ]]></attribute>
+					</textbox>
+				</n:div>
+				<n:div class="view-source">
+					<n:a href="#"><n:i class="z-icon-file-code-o"></n:i> View Source</n:a>
+				</n:div>
+			</vlayout>
 		</template>
 	</demoPanel>
 

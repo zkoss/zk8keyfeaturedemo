@@ -65,7 +65,7 @@
 					<n:div class="text-content">
 						<n:h2>${title}</n:h2>
 						<sh:apply template="description"/>
-						<n:a class="learn-more" href="${learnMoreLink}">Learn More</n:a>
+<!-- 						<n:a class="learn-more" href="${learnMoreLink}">Learn More</n:a> -->
 					</n:div>
 					<n:div class="demo-content">
 						<n:div class="tooltip-content">

@@ -34,8 +34,7 @@ body {
 }
 
 .demo-section .section-content {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	position: relative;
 }
 
@@ -53,12 +52,19 @@ body {
 	height: 14px;
 	border-radius: 50%;
 	background-color: #e95d22;
+	-webkit-animation: flashing 1.5s infinite;
 	animation: flashing 1.5s infinite;
 	z-index: 1;
 }
 .ie9 .demo-section .tooltip-toggle {
-	-ms-transform: scale(1.5);
-    opacity: 0.75;
+	left: -14px;
+	top: -14px;
+	width: 28px;
+	height: 28px;
+	border: 8px solid #ee7931;
+	border-radius: 50%;
+	background-color: #e6510e;
+	opacity: 0.9;
 }
 .demo-section .popover {
 	max-width: 500px;
@@ -67,7 +73,20 @@ body {
 .demo-section .tooltip-content {
 	display: none;
 }
-
+@-webkit-keyframes flashing {
+  from {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+    opacity: 0.0;
+  }
+}
 @keyframes flashing {
   from {
     transform: scale(0.8);
@@ -78,7 +97,7 @@ body {
     opacity: 1;
   }
   to {
-    transform: scale(3);
+    transform: scale(2);
     opacity: 0.0;
   }
 }
@@ -88,7 +107,6 @@ body {
 	margin-bottom: 50px;
 	font-weight: 700;
 	font-size: 36px;
-	line-height: 1.2em;
 }
 
 .demo-section .text-content p {
@@ -151,9 +169,24 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
+.view-source {
+	font-family: Helvetica;
+	font-weight: 300;
+	font-size: 10.5px;
+	line-height: 22px;
+	height: 22px;
+	text-align: right;
+}
+.view-source a {
+	text-decoration: underline;
+	color: #565656;
+}
 .demo-feature2-code {
 	background-color: #464646;
+}
+.demo-feature2-code .view-source a {
+	text-decoration: underline;
+	color: #ffffff;
 }
 
 .demo-feature3 .tab-content {
@@ -165,26 +198,52 @@ body {
 	color: #373737; 
 }
 
+/* Code Mirror customization */
+.CodeMirror-gutter .CodeMirror-linenumbers{
+	background-color: #ffffff;
+	font-size: 10px;
+}
+.demo-feature2-code .CodeMirror {
+	height: 95px;
+	background-color: #464646;
+	color: #ffffff;
+}
+.demo-feature2-code .CodeMirror-gutters {
+	background-color: #464646;
+	color: #999999;
+}
+.demo-feature2-code .cm-s-default .cm-comment {
+	color: #b5a79a;
+}
+.demo-feature2-code .cm-s-default .cm-tag,
+.demo-feature2-code .cm-s-default .cm-attribute {
+	color: #ffffff;
+}
+.demo-feature2-code .cm-s-default .cm-string {
+	color: #de7d80;
+}
+
 @media screen and (min-width: 1360px) {
 	.demo-section .section-content {
-		width: 1360px;
+		width: 1340px; /* prevent horizontal scrollbar */
 	}
-
+	
 	.demo-section .text-content {
-		width: 390px;
+		width: 384px;
 		padding: 125px 35px;
 		position: absolute;
 		top: 50%;
 		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
 	
 	.demo-section .demo-content {
-		width: 970px;
+		width: 956px;
 		padding: 125px 70px 100px 70px;
 		margin-left: 390px;
 	}
-
+	
 	.demo-feature1 {
 		width: 630px;
 		height: 450px;
@@ -204,8 +263,10 @@ body {
 		width: 128%;
 		height: 128%;
 		-ms-transform-origin: top left;
+		-webkit-transform-origin: top left;
 		transform-origin: top left;
 		-ms-transform: scale(0.78125);
+		-webkit-transform: scale(0.78125);
 		transform: scale(0.78125);
 	}
 	.demo-feature1-code .z-tabpanels {
@@ -241,11 +302,6 @@ body {
 		background-color: #ffffff;
 	}
 	
-	.CodeMirror-gutter .CodeMirror-linenumbers{
-		background-color: #ffffff;
-		font-size: 10px;
-	}
-
 	.demo-feature2 {
 		width: 740px;
 		height: 600px;
@@ -257,8 +313,10 @@ body {
 		width: 113%;
 		height: 113%;
 		-ms-transform-origin: top left;
+		-webkit-transform-origin: top left;
 		transform-origin: top left;
 		-ms-transform: scale(0.88500);
+		-webkit-transform: scale(0.88500);
 		transform: scale(0.88500);
 	}
 
