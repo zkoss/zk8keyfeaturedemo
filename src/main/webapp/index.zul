@@ -2,6 +2,7 @@
 <?link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css" ?>
 <?script src="/resources/js/bootstrap.min.js" ?>
 <?link rel="stylesheet" type="text/css" href="/resources/css/demo.css"?>
+<?link rel="stylesheet" type="text/css" href="/resources/css/demo-tooltips.css"?>
 <?link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" ?>
 <?link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/font-hack/2.013/css/hack.min.css" ?>
 
@@ -71,9 +72,7 @@
 						<n:div class="tooltip-content">
 							<sh:apply template="tooltip"/>
 						</n:div>
-<!-- 						<n:div class="debug"> -->
 						<sh:apply templateURI="${contentURI}"/>
-<!-- 						</n:div> -->
 					</n:div>
 				</n:div>
 			</n:section>
@@ -82,16 +81,17 @@
 		<template name="tooltipToggle">
 			<n:div class="tooltip-anchor" style="${offsetStyle}">
 				<div zclass="tooltip-toggle" 
-					w:onBind="var tooltipContent = jq(this).closest('.demo-content').find('.tooltip-content')[0];
+					w:onBind="
+						var tooltipContent = jq(this).closest('.demo-content').find('.tooltip-content')[0];
 						jq(this).popover({
 							placement: 'top', 
 							content: tooltipContent.innerHTML,
 							trigger: 'manual',
 							html: true,
-							container: '.section-content'
+							container: 'body'
 							});
 						jq(tooltipContent).remove();"
-					w:onClick="jq(this).popover('show')"/>
+					w:onClick="jq(this).popover('show');"/>
 			</n:div>
 		</template>
 		<script>
