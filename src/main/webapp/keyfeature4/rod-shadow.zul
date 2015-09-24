@@ -1,29 +1,29 @@
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client">
 	<script type="text/javascript" src="/keyfeature4/scripts/rod-shadow.js"></script>
-	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" width="820px">
+	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" width="100%">
 		<hlayout valign="middle" spacing="0" sclass="head">
-			<n:div style="width: 158px" class="header">name</n:div>
-			<n:div style="width: 64px" class="header">cuisine</n:div>
-			<n:div style="width: 223px" class="header">address</n:div>
-			<n:div style="width: 131px" class="header">city/town</n:div>
-			<n:div style="width: 111px" class="header">url</n:div>
-			<n:div style="width: 100px" class="header">ranking</n:div>
+			<n:div class="header name">name</n:div>
+			<n:div class="header cuisine">cuisine</n:div>
+			<n:div class="header address">address</n:div>
+			<n:div class="header city">city/town</n:div>
+			<n:div class="header url">url</n:div>
+			<n:div class="header ranking">ranking</n:div>
 		</hlayout>
 		<x:ul id="container">
 			<n:li class="topPadding"/>
 			<forEach items="@load(vm.restaurantList)">
 				<n:li class="list-item">
 					<hlayout valign="middle" spacing="0">
-						<n:div style="width: 158px" sclass="content">${each.name}</n:div>
-						<n:div style="width: 64px">
+						<n:div class="content name">${each.name}</n:div>
+						<n:div class="content cuisine">
 							<image src="/keyfeature4/icons/${each.type}.svg" sclass="cuisine-icon" />
 						</n:div>
-						<n:div style="width: 223px" sclass="content">${each.address}</n:div>
-						<n:div style="width: 131px" sclass="content">${each.city}</n:div>
-						<n:div style="width: 111px">
+						<n:div class="content address">${each.address}</n:div>
+						<n:div class="content city">${each.city}</n:div>
+						<n:div class="content url">
 							<a href="${each.url}" label="Website Link" sclass="link" />
 						</n:div>
-						<n:div style="width: 100px" sclass="rating">
+						<n:div class="content rating">
 							<forEach begin="1" end="${each.rating}">
 								<image src="/keyfeature4/icons/rate_full.svg" />
 							</forEach>
