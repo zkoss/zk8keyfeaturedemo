@@ -5,7 +5,7 @@
 	<artifactId>zk8keyfeaturedemo</artifactId>
 	<version>0.0.1</version>
 	<properties>
-		<zk.version>8.0.0.FL.20150917-Eval</zk.version>
+		<zk.version>8.0.0.FL.20150923-Eval</zk.version>
 		<commons-io>2.4</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>

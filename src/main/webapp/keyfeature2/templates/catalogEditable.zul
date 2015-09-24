@@ -15,7 +15,7 @@
 						<n:td><textbox zclass="form-control" sclass="input-lg" value="@bind(item.title)"/></n:td>
 						<n:td><decimalbox zclass="form-control" sclass="input-lg" value="@bind(item.price)"/></n:td>
 						<n:td>
-							<selectbox zclass="form-control" sclass="input-lg" model="@bind(catalog.sellers)" selectedItem="@bind(item.seller)">
+							<selectbox zclass="form-control" sclass="input-lg" model="@init(catalog.sellers)" selectedItem="@bind(item.seller)">
 								<template name="model" var="seller">
 									<label value="@init(seller.name)"/>
 								</template>
@@ -26,5 +26,6 @@
 			</n:tbody>
 		</n:table>
 		<button zclass="btn btn-lg btn-primary" onClick="@command('save')" label="Save"/>
+		<label value="@load(vm.message)"/>
 	</div>
 </zk>

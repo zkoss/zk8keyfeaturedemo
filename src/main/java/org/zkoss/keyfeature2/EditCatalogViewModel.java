@@ -1,16 +1,19 @@
 package org.zkoss.keyfeature2;
 
-import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
-import org.zkoss.keyfeature2.catalog.Catalog;
-import org.zkoss.keyfeature2.catalog.CatalogItem;
-import org.zkoss.zk.ui.util.Clients;
+import org.zkoss.bind.annotation.NotifyChange;
 
 public class EditCatalogViewModel {
 
-	@Command
-	public void save() {
-		Clients.showNotification("catalog updated");
-	}
+	private String message;
 	
+	@Command
+	@NotifyChange("message")
+	public void save() {
+		message = "Catalog updated ...";
+	}
+
+	public String getMessage() {
+		return message;
+	}
 }

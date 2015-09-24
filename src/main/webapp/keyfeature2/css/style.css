@@ -89,56 +89,65 @@ body {
 /*list*/
 
 .item-list {
-	height: 90px;
 	border-top: 2px solid #E6E6E6;
 	line-height: 90px;
 	position: relative;
-/*	padding-left: 110px;*/
+	display: inline-block;
+	white-space: nowrap;
+	width: 100%;
 }
 
 .item-list:first-child {
 	border: none;  
 }
 
-.item-list .item-title {
+.item-list > * {
+	vertical-align: top;
 	display: inline-block;
-	font-size: 25px;
-	font-weight: bold;
-	width: 290px;
-}
-.item-list .item-price {
-	display: inline-block;
-	font-size: 21px;
-	width: 200px;
 }
 
 .item-list .item-image,
 .item-list .seller-icon {
 	position: relative;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.item-list .item-image {
-	width: 60px;
-	height: 60px;
-	margin: 15px 15px 15px 25px;
-}
-.item-list .seller-icon {
-	width: 54px;
-	height: 54px;
-	margin: 18px 23px 18px 0px;
+	box-sizing: border-box;
 }
 .item-list .item-image img, .item-list .seller-icon img {
-	position: absolute;
+	vertical-align: top;
+	position: relative;
 	width: 100%;
 	height: 100%;
 }
+
+.item-list .item-image {
+	width: 100px;
+	height: 90px;
+	padding: 15px 15px 15px 25px;
+}
+
+.item-list .item-title {
+	font-size: 25px;
+	font-weight: bold;
+	width: 35%;
+	min-width: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.item-list .item-price {
+	font-size: 21px;
+	min-width: 150px;
+	width: 25%;
+}
+
+.item-list .seller-icon {
+	width: 77px;
+	height: 90px;
+	padding: 18px 23px 18px 0px;
+}
 .item-list .seller-name {
-	display: inline-block;
 	font-size: 18px;
 	font-weight: 300;
-	width: auto;
+	width: 150px;
+	overflow: hidden;
 }
 
 /*tree*/
