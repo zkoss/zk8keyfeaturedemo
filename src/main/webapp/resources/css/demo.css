@@ -14,7 +14,7 @@ body {
 }
 .top-header .logo {
 	background: url('../image/zk8_logo.svg') center center no-repeat;
-	background-size: contain;
+	background-size: 59px auto;
 	width: 60px;
 	height: 60px;
 	margin-left: 15px;
@@ -446,11 +446,11 @@ body {
 		margin-right: 360px;
 	}
 	.demo-feature1 .scale {
-		width: 100%;
-		height: 100%;
-		-ms-transform: scale(1);
-		-webkit-transform: scale(1);
-		transform: scale(1);
+		width: 140%;
+		height: 140%;
+		-ms-transform: scale(0.715);
+		-webkit-transform: scale(0.715);
+		transform: scale(0.715);
 	}
 	.demo-feature1-code {
 		position: absolute;

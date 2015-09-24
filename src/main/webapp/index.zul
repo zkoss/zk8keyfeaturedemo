@@ -120,7 +120,7 @@
 					w:onClick="jq(this).popover('show');"/>
 			</n:div>
 		</template>
-		<script defer="true">
+		<script defer="true"><![CDATA[
 			$(document).on('click', function(evt) {
 				if(!jq(evt.target).hasClass('tooltip-toggle')) {
 					jq('.tooltip-toggle').popover('hide');
@@ -137,12 +137,12 @@
 				if (body[0].scrollWidth > body.width()) {
 					padding += jq.scrollbarWidth();
 				}
-				$headerContent.css('padding-bottom', padding + 'px');
+				$headerContent.css('padding-bottom', (padding < 0 ? 0 : padding) + 'px');
 			}
 			calculateHeaderHeight();
 			jq(window).resize(function() {
 				calculateHeaderHeight();
 			});
-		</script>
+		]]></script>
 	</div>
 </zk>

@@ -81,6 +81,12 @@
 	right: 16px;
 	z-index: 2;
 }
+.mobile #previewBar,
+.mobile #previewLayer,
+.ie9 #previewBar,
+.ie9 #previewLayer {
+	display: none;
+}
 
 #preview {
 	font-family: Helvetica;
@@ -173,9 +179,9 @@
 .head.z-hlayout {
 	display: block;
 }
-.z-loading {
+/*.z-loading {
 	display: none;
-}
+}*/
 .head .header.name {
 	width: 158px;
 }
