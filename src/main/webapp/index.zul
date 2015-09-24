@@ -15,7 +15,7 @@
 		<n:div class="demo-header">
 			<n:div class="text-content">
 				<n:h2>Harvest JavaScript From Java Roots</n:h2>
-				<n:p>Stay true to your Java roots and effortless keep up with <n:br/> front-end innovations.</n:p>
+				<n:p>Stay true to your Java roots and effortlessly keep up with <n:br/> front-end innovations.</n:p>
 				<n:div>
 					<n:a class="button learn-more" href="#">Learn More</n:a>
 					<n:a class="button download" href="#">Download</n:a>
@@ -68,7 +68,7 @@
 				contentURI="feature4.zul"
 				learnMoreLink="#">
 			<template name="description">
-				<n:p>Client binding allows you to trigger commands on the server-side and register callbacks on the client-side to ensure effective communication, empowering even AngularJS/ReactJS with Java.</n:p>
+				<n:p>ZK 8's Client binding allows you to trigger commands on the server-side and register callbacks on the client-side to ensure effective communication, empowering even AngularJS/ReactJS with Java.</n:p>
 			</template>
 			<template name="tooltip">
 				<n:p>In this example, we used ZK 8’s Client Binding to render data on demand in a “seamlessly” scrollable view.</n:p>

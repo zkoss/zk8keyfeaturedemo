@@ -2,6 +2,7 @@ input.labelauty+label {
 	display: inline-block;
 	font-size: 15px;
 	font-weight: bold;
+	padding: 10px 12px 15px 12px;
 }
 
 input.labelauty.disable-icon+label>span.labelauty-checked-image {
@@ -30,8 +31,7 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	padding: 10px;
 }
 
-.z-checkbox input[type=checkbox][disabled=disabled]+label.z-checkbox-content
-	{
+.z-checkbox input[type=checkbox][disabled=disabled]+label.z-checkbox-content {
 	opacity: 0.5;
 }
 
@@ -105,10 +105,18 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	height: 220px;
 }
 
+.demo-feature3 .markdownContent h1 {
+	margin-top: 0px;
+}
+
 .demo-feature3 .maskContent {
 	margin: 0 auto 0px auto;
-	width: 330px;
+	width: 350px;
 	height: 160px;
+}
+
+.demo-feature3 .maskContent input[type="text"] {
+	font-size: 13px;
 }
 
 .demo-feature3 .maskContent .z-label {
@@ -122,6 +130,10 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 .demo-feature3 .z-checkbox-content {
 	font-size: 19px;
 	margin-left: 5px;
+}
+
+.demo-feature3 .z-checkbox > input {
+	margin-bottom: 7px;
 }
 
 .ct-series-a .ct-slice-pie {
