@@ -34,6 +34,9 @@
 	font-size: 14px;
 	color: #3c3c3c;
 }
+#container .list-item .content.cuisine {
+	padding-left: 7px;
+}
 #container .list-item .cuisine-icon {
 	width: 33px;
 	height: 33px;
@@ -164,4 +167,194 @@
 
 .z-loading {
 	display: none;
+}
+@media screen and (min-width: 760px) and (max-width: 959px) {
+	.head .header.name {
+		width: 145px;
+	}
+	.head .header.cuisine {
+		width: 59px;
+	}
+	.head .header.address {
+		width: 185px;
+	}
+	.head .header.city {
+		display: none;
+	}
+	.head .header.url {
+		width: 102px;
+	}
+	.head .header.ranking {
+		width: 92px;
+	}
+	.list-item .content.name {
+		width: 145px;
+	}
+	.list-item .content.cuisine {
+		width: 59px;
+	}
+	.list-item .content.address {
+		width: 185px;
+	}
+	.list-item .content.city {
+		display: none;
+	}
+	.list-item .content.url {
+		width: 102px;
+	}
+	.list-item .content.ranking {
+		width: 92px;
+	}
+}
+@media screen and (min-width: 960px) and (max-width: 1159px) {
+	.head .header.name {
+		width: 158px;
+	}
+	.head .header.cuisine {
+		width: 64px;
+	}
+	.head .header.address {
+		width: 223px;
+	}
+	.head .header.city {
+		width: 131px;
+	}
+	.head .header.url {
+		width: 111px;
+	}
+	.head .header.ranking {
+		width: 100px;
+	}
+	.list-item .content.name {
+		width: 158px;
+	}
+	.list-item .content.cuisine {
+		width: 64px;
+	}
+	.list-item .content.address {
+		width: 223px;
+	}
+	.list-item .content.city {
+		width: 131px;
+	}
+	.list-item .content.url {
+		width: 111px;
+	}
+	.list-item .content.ranking {
+		width: 100px;
+	}
+}
+@media screen and (min-width: 1160px) {
+	.head .header.name {
+		width: 145px;
+	}
+	.head .header.cuisine {
+		width: 59px;
+	}
+	.head .header.address {
+		width: 205px;
+	}
+	.head .header.city {
+		width: 121px;
+	}
+	.head .header.url {
+		width: 102px;
+	}
+	.head .header.ranking {
+		width: 92px;
+	}
+	.list-item .content.name {
+		width: 145px;
+	}
+	.list-item .content.cuisine {
+		width: 59px;
+	}
+	.list-item .content.address {
+		width: 205px;
+	}
+	.list-item .content.city {
+		width: 121px;
+	}
+	.list-item .content.url {
+		width: 102px;
+	}
+	.list-item .content.ranking {
+		width: 92px;
+	}
+}
+@media screen and (min-width: 1275px) {
+	.head .header.name {
+		width: 158px;
+	}
+	.head .header.cuisine {
+		width: 64px;
+	}
+	.head .header.address {
+		width: 223px;
+	}
+	.head .header.city {
+		width: 131px;
+	}
+	.head .header.url {
+		width: 111px;
+	}
+	.head .header.ranking {
+		width: 100px;
+	}
+	.list-item .content.name {
+		width: 158px;
+	}
+	.list-item .content.cuisine {
+		width: 64px;
+	}
+	.list-item .content.address {
+		width: 223px;
+	}
+	.list-item .content.city {
+		width: 131px;
+	}
+	.list-item .content.url {
+		width: 111px;
+	}
+	.list-item .content.ranking {
+		width: 100px;
+	}
+}
+@media screen and (min-width: 1360px) {
+	.head .header.name {
+		width: 158px;
+	}
+	.head .header.cuisine {
+		width: 64px;
+	}
+	.head .header.address {
+		width: 223px;
+	}
+	.head .header.city {
+		width: 131px;
+	}
+	.head .header.url {
+		width: 111px;
+	}
+	.head .header.ranking {
+		width: 100px;
+	}
+	.list-item .content.name {
+		width: 158px;
+	}
+	.list-item .content.cuisine {
+		width: 64px;
+	}
+	.list-item .content.address {
+		width: 223px;
+	}
+	.list-item .content.city {
+		width: 131px;
+	}
+	.list-item .content.url {
+		width: 111px;
+	}
+	.list-item .content.ranking {
+		width: 100px;
+	}
 }

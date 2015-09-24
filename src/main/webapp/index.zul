@@ -6,6 +6,22 @@
 <?link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/font-hack/2.013/css/hack.min.css" ?>
 
 	<div>
+		<n:div class="top-header">
+			<n:div class="logo">
+				<n:a href="http://www.zkoss.org"></n:a>
+			</n:div>
+		</n:div>
+		<n:div class="demo-header">
+			<n:div class="text-content">
+				<n:h2>Harvest JavaScript From Java Roots</n:h2>
+				<n:p>Stay true to your Java roots and effortless keep up with <n:br/> front-end innovations.</n:p>
+				<n:div>
+					<n:a class="button learn-more" href="#">Learn More</n:a>
+					<n:a class="button download" href="#">Download</n:a>
+				</n:div>
+			</n:div>
+		</n:div>
+		
 		<sh:apply template="demoSection" 
 				sectionStyle="demo-section demo-section-light-blue" 
 				title="Control Bootstrap/HTML Layout in Java"
@@ -59,13 +75,23 @@
 			</template>
 		</sh:apply>
 		
+		<n:div class="demo-footer">
+			<n:div class="text-content">
+				<n:p>Cultivate with ZK 8 now!</n:p>
+				<n:div>
+					<n:a class="button learn-more" href="#">Learn More</n:a>
+					<n:a class="button download" href="#">Download</n:a>
+					<n:a class="button demo" href="#">View All Demos</n:a>
+				</n:div>
+			</n:div>
+		</n:div>
+		
 		<template name="demoSection">
 			<n:section class="${sectionStyle}">
 				<n:div class="section-content">
 					<n:div class="text-content">
 						<n:h2>${title}</n:h2>
 						<sh:apply template="description"/>
-<!-- 						<n:a class="learn-more" href="${learnMoreLink}">Learn More</n:a> -->
 					</n:div>
 					<n:div class="demo-content">
 						<n:div class="tooltip-content">
@@ -94,12 +120,28 @@
 					w:onClick="jq(this).popover('show')"/>
 			</n:div>
 		</template>
-		<script>
+		<script defer="true">
 			$(document).on('click', function(evt) {
-				console.log(arguments);
 				if(!jq(evt.target).hasClass('tooltip-toggle')) {
 					jq('.tooltip-toggle').popover('hide');
 				}
+			});
+			function calculateHeaderHeight() {
+				var $headerContent = jq('.demo-header .text-content');
+				var $topBanner = jq('.top-header');
+				var body = jq('body');
+				var paddingTop = zk.parseInt($headerContent.css('padding-top'));
+				var paddingBottom = zk.parseInt($headerContent.css('padding-bottom'));
+				var innerHeight = $headerContent.innerHeight() - paddingTop - paddingBottom;
+				var padding = body.height() - $topBanner.outerHeight(true) - innerHeight - paddingTop;
+				if (body[0].scrollWidth > body.width()) {
+					padding += jq.scrollbarWidth();
+				}
+				$headerContent.css('padding-bottom', padding + 'px');
+			}
+			calculateHeaderHeight();
+			jq(window).resize(function() {
+				calculateHeaderHeight();
 			});
 		</script>
 	</div>	
