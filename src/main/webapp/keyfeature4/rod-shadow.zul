@@ -8,12 +8,13 @@
 			<n:div class="header city">city/town</n:div>
 			<n:div class="header url">url</n:div>
 			<n:div class="header ranking">ranking</n:div>
+			<n:div class="header fakebar">fakebar</n:div>
 		</hlayout>
 		<x:ul id="container">
 			<n:li class="topPadding"/>
 			<forEach items="@load(vm.restaurantList)">
 				<n:li class="list-item">
-					<hlayout valign="middle" spacing="0">
+					<hlayout valign="middle" spacing="0" hflex="min">
 						<n:div class="content name">${each.name}</n:div>
 						<n:div class="content cuisine">
 							<image src="/keyfeature4/icons/${each.type}.svg" sclass="cuisine-icon" />

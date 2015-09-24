@@ -22,7 +22,7 @@
 				</n:div>
 			</n:div>
 		</n:div>
-		
+
 		<sh:apply template="demoSection" 
 				sectionStyle="demo-section demo-section-light-blue" 
 				title="Control Bootstrap/HTML Layout in Java"
@@ -75,7 +75,7 @@
 				<n:p>The principle of View/Logic separation is preserved; while the ViewModel provides the data, the client-side JS handles the positioning and scrolling.</n:p>
 			</template>
 		</sh:apply>
-		
+
 		<n:div class="demo-footer">
 			<n:div class="text-content">
 				<n:p>Cultivate with ZK 8 now!</n:p>
@@ -86,7 +86,7 @@
 				</n:div>
 			</n:div>
 		</n:div>
-		
+
 		<template name="demoSection">
 			<n:section class="${sectionStyle}">
 				<n:div class="section-content">
@@ -103,7 +103,7 @@
 				</n:div>
 			</n:section>
 		</template>
-		
+
 		<template name="tooltipToggle">
 			<n:div class="tooltip-anchor" style="${offsetStyle}">
 				<div zclass="tooltip-toggle" 
@@ -144,5 +144,5 @@
 				calculateHeaderHeight();
 			});
 		</script>
-	</div>	
+	</div>
 </zk>

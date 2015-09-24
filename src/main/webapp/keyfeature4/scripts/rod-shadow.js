@@ -19,7 +19,13 @@ zk.afterMount(function() {
 		$bottomPadding.height((container.totalSize - numLoadedRows) * container.rowHeight);
 	});
 	// register scroll event
+	container.scrollLeft = 0;
+	jq('.head .header.fakebar').width(jq.scrollbarWidth());
 	$container.on('scroll', function(evt) {
+		if (container.scrollLeft != $container.scrollLeft()) { //sync header scroll
+			container.scrollLeft = $container.scrollLeft();
+			syncHorizontalScroll();
+		}
 		if (previewBar.scrollToView)
 			return;
 		if (container.loadingPosition) {
@@ -37,6 +43,7 @@ zk.afterMount(function() {
 	// callback after scrolling
 	binder.after('loadData', function() {
 		container.loadingPosition = null;
+		syncHorizontalScroll();
 		hideLoading();
 	});
 	// callback after scrolling
@@ -46,6 +53,10 @@ zk.afterMount(function() {
 		$topPadding.height(begin * container.rowHeight);
 		$bottomPadding.height((container.totalSize - numLoadedRows - begin) * container.rowHeight);
 	});
+	function syncHorizontalScroll() {
+		$container.scrollLeft(container.scrollLeft);
+		jq('.z-hlayout.head').scrollLeft(container.scrollLeft);
+	}
 	function showLoading(direction) {
 		var $spinner = jq('.spinner');
 		$spinner.addClass(direction).css('display', 'block');
@@ -120,7 +131,14 @@ zk.afterMount(function() {
 	});
 	// callback after click on preview layer
 	binder.after('updateScroll', function(begin) {
-		if (previewBar.scrollToView)
+		if (previewBar.scrollToView) {
 			$container.scrollTop(begin * container.rowHeight);
+			syncHorizontalScroll();
+		}
 	});
+	zk.afterResize(function() {
+		$container.find('> .list-item').each(function(index, el) {
+			jq(el).outerWidth(el.scrollWidth);
+		});
+	})
 });

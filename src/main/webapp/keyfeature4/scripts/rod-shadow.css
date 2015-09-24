@@ -14,6 +14,9 @@
 	text-transform: uppercase;
 	color: #3c3c3c;
 }
+.head .header.fakebar {
+	visibility: hidden;
+}
 
 #container {
 	margin: 0px;
@@ -168,6 +171,80 @@
 .z-loading {
 	display: none;
 }
+.head .header.name {
+	width: 158px;
+}
+.head .header.cuisine {
+	width: 64px;
+}
+.head .header.address {
+	width: 223px;
+}
+.head .header.city {
+	width: 131px;
+}
+.head .header.url {
+	width: 111px;
+}
+.head .header.rating {
+	width: 100px;
+}
+.list-item .content.name {
+	width: 158px;
+}
+.list-item .content.cuisine {
+	width: 64px;
+}
+.list-item .content.address {
+	width: 223px;
+}
+.list-item .content.city {
+	width: 131px;
+}
+.list-item .content.url {
+	width: 111px;
+}
+.list-item .content.rating {
+	width: 100px;
+}/*
+@media screen and (min-width: 480px) and (max-width: 759px) {
+	.head .header.name {
+		width: 158px;
+	}
+	.head .header.cuisine {
+		width: 64px;
+	}
+	.head .header.address {
+		width: 223px;
+	}
+	.head .header.city {
+		width: 131px;
+	}
+	.head .header.url {
+		width: 111px;
+	}
+	.head .header.rating {
+		width: 100px;
+	}
+	.list-item .content.name {
+		width: 158px;
+	}
+	.list-item .content.cuisine {
+		width: 64px;
+	}
+	.list-item .content.address {
+		width: 223px;
+	}
+	.list-item .content.city {
+		width: 131px;
+	}
+	.list-item .content.url {
+		width: 111px;
+	}
+	.list-item .content.rating {
+		width: 100px;
+	}
+}
 @media screen and (min-width: 760px) and (max-width: 959px) {
 	.head .header.name {
 		width: 145px;
@@ -184,7 +261,7 @@
 	.head .header.url {
 		width: 102px;
 	}
-	.head .header.ranking {
+	.head .header.rating {
 		width: 92px;
 	}
 	.list-item .content.name {
@@ -202,7 +279,7 @@
 	.list-item .content.url {
 		width: 102px;
 	}
-	.list-item .content.ranking {
+	.list-item .content.rating {
 		width: 92px;
 	}
 }
@@ -222,7 +299,7 @@
 	.head .header.url {
 		width: 111px;
 	}
-	.head .header.ranking {
+	.head .header.rating {
 		width: 100px;
 	}
 	.list-item .content.name {
@@ -240,7 +317,7 @@
 	.list-item .content.url {
 		width: 111px;
 	}
-	.list-item .content.ranking {
+	.list-item .content.rating {
 		width: 100px;
 	}
 }
@@ -260,7 +337,7 @@
 	.head .header.url {
 		width: 102px;
 	}
-	.head .header.ranking {
+	.head .header.rating {
 		width: 92px;
 	}
 	.list-item .content.name {
@@ -278,7 +355,7 @@
 	.list-item .content.url {
 		width: 102px;
 	}
-	.list-item .content.ranking {
+	.list-item .content.rating {
 		width: 92px;
 	}
 }
@@ -298,7 +375,7 @@
 	.head .header.url {
 		width: 111px;
 	}
-	.head .header.ranking {
+	.head .header.rating {
 		width: 100px;
 	}
 	.list-item .content.name {
@@ -316,7 +393,7 @@
 	.list-item .content.url {
 		width: 111px;
 	}
-	.list-item .content.ranking {
+	.list-item .content.rating {
 		width: 100px;
 	}
 }
@@ -336,7 +413,7 @@
 	.head .header.url {
 		width: 111px;
 	}
-	.head .header.ranking {
+	.head .header.rating {
 		width: 100px;
 	}
 	.list-item .content.name {
@@ -354,7 +431,8 @@
 	.list-item .content.url {
 		width: 111px;
 	}
-	.list-item .content.ranking {
+	.list-item .content.rating {
 		width: 100px;
 	}
 }
+*/
