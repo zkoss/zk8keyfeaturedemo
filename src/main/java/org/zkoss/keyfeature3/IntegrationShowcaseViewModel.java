@@ -19,7 +19,7 @@ public class IntegrationShowcaseViewModel {
 	private boolean zk = true;
 	private String percentage = "33%";
 	private String chartist_percentage = "55%";
-	private String syntax = "var i = 0;\n\nfor (var i = 0; i < 10; i++) {\n\tconsole.log('Hello');\n}\n";
+	private String syntax = "var i = 0;\n\nfor (var i = 0; i < 10; i++) {\n\tconsole.log('Hello');\n}";
 	private String markdown = "#Attendtion \n The team made some adjustments in the **style.css** file. \n Please remember to remove ~~italic~~, and changethe style to: \n \t font-style: normal; \n\n For more information, please read the [style guide](https://example.com).";
 
 	public boolean isLike() {
