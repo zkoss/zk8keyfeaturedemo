@@ -13,15 +13,16 @@ body {
 	background: #008cb5;
 }
 .top-header .logo {
-	background: url('../image/top_zk_logo.svg') center center no-repeat;
-	background-size: 50% 50%;
-	width: 107px;
+	background: url('../image/zk8_logo.svg') center center no-repeat;
+	background-size: contain;
+	width: 60px;
 	height: 60px;
+	margin-left: 15px;
 }
 .top-header .logo a {
 	display: block;
-	width: 107px;
-	height: 86px;
+	width: 60px;
+	height: 60px;
 }
 .demo-header {
 	width: 100%;
