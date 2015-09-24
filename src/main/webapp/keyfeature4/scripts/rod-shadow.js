@@ -136,9 +136,4 @@ zk.afterMount(function() {
 			syncHorizontalScroll();
 		}
 	});
-	zk.afterResize(function() {
-		$container.find('> .list-item').each(function(index, el) {
-			jq(el).outerWidth(el.scrollWidth);
-		});
-	})
 });

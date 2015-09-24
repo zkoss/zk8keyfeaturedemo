@@ -167,7 +167,12 @@
 		transform: scale(1.0);
 	}
 }
-
+.z-hlayout {
+	display: inline-block;
+}
+.head.z-hlayout {
+	display: block;
+}
 .z-loading {
 	display: none;
 }
