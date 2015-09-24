@@ -42,7 +42,7 @@
 				contentURI="feature2.zul"
 				learnMoreLink="#">
 			<template name="description">
-				<n:p>ZK 8's MVVM pattern cleanly separates view and logic, allowing representation of the same data structure with varying detail, layout or even functionality.</n:p>
+				<n:p>ZK 8's MVVM pattern cleanly separates view and logic, allowing representation of the same data structure with varying detail, layout and even functionality.</n:p>
 			</template>
 			<template name="tooltip">
 				<n:p>Choose a template to render the view in different ways</n:p>
@@ -68,7 +68,7 @@
 				contentURI="feature4.zul"
 				learnMoreLink="#">
 			<template name="description">
-				<n:p>ZK 8's Client binding allows you to trigger commands on the server-side and register callbacks on the client-side to ensure effective communication, empowering even AngularJS/ReactJS with Java.</n:p>
+				<n:p>ZK 8's Client binding allows you to trigger commands on the server-side and register callbacks on the client-side, ensuring effective communication and empowering even AngularJS/ReactJS with Java.</n:p>
 			</template>
 			<template name="tooltip">
 				<n:p>In this example, we used ZK 8’s Client Binding to render data on demand in a “seamlessly” scrollable view.</n:p>
