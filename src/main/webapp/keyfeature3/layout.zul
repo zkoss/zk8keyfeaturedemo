@@ -1,31 +1,30 @@
 <zk xmlns:ca="client/attribute" xmlns:sh="shadow" xmlns:n="native">
 	<vlayout hflex="1" spacing="0px" sclass="bgColor">
-		<hlayout hflex="1" height="24px" spacing="0px"
-			style="background-color: white;">
+		<hlayout hflex="1" spacing="0px" sclass="titleBlock">
 			<label zclass="title" value="DEFAULT" hflex="1" />
 			<separator width="8px" orient="vertical" height="30px"
 				sclass="bgColor" />
 			<label zclass="title" value="INTEGRATED" hflex="1" />
 		</hlayout>
 		<separator height="1px" hflex="1" sclass="codeSeparator" />
-		<hlayout hflex="1" height="161px" spacing="0px">
+		<hlayout hflex="1" sclass="codeBlock" spacing="0px">
 			<div hflex="1" sclass="codeBox">
-				<textbox ca:data-codeMirror='{"height": 160}'
+				<textbox ca:data-codeMirror='{"height": auto}'
 					multiline="true" value="@init(vm.loadSource(before))" />
 			</div>
 			<separator width="8px" orient="vertical" height="161px" />
 			<div hflex="1" sclass="codeBox">
-				<textbox ca:data-codeMirror='{"height": 160}'
+				<textbox ca:data-codeMirror='{"height": auto}'
 					multiline="true" value="@init(vm.loadSource(after))" />
 			</div>
 		</hlayout>
 		<separator height="10px" />
-		<hlayout hflex="1" height="271px" spacing="0px">
-			<div height="270px" hflex="1" sclass="exampleBox">
+		<hlayout hflex="1" sclass="exampleBlock" spacing="0px">
+			<div hflex="1" sclass="before exampleBox">
 				<sh:apply templateURI="${before}" />
 			</div>
 			<separator width="8px" orient="vertical" height="271px" />
-			<div height="270px" hflex="1" sclass="exampleBox">
+			<div hflex="1" sclass="after exampleBox">
 				<sh:apply templateURI="${after}" />
 			</div>
 		</hlayout>

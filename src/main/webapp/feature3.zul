@@ -2,9 +2,10 @@
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client"
 	xmlns:sh="shadow">
 	<style src="/keyfeature3/css/custom-style.css" />
+	<script src="/keyfeature3/scripts/bootstrap/responsive-tabs.js" />
 	<div zclass="demo-feature3"
 		viewModel="@id('vm') @init('org.zkoss.keyfeature3.IntegrationShowcaseViewModel')">
-		<n:ul class="nav nav-tabs">
+		<n:ul class="nav nav-tabs responsive">
 			<sh:apply template="tab" tabId="chartist" sclass="active" />
 			<sh:apply template="tab" tabId="labelauty" />
 			<sh:apply template="tab" tabId="highlight" />
@@ -26,9 +27,11 @@
 			jq('.demo-feature3 .nav-tabs a').on('shown.bs.tab', function() {
 				zUtl.fireSized(zk.$('.demo-feature3'));
 			});
+			
+			 // fakewaffle.responsiveTabs(['xs', 'sm']);
 		</script>
 
-		<n:div class="tab-content">
+		<n:div class="tab-content responsive">
 			<n:div class="tab-pane active" id="chartist">
 				<layout
 					before="/keyfeature3/template/chartist-before.zul"

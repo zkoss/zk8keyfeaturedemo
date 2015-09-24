@@ -1,40 +1,4 @@
-input.labelauty+label {
-	display: inline-block;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 10px 12px 15px 12px;
-}
-
-input.labelauty.disable-icon+label>span.labelauty-checked-image {
-	background-image: url(../scripts/auty/images/input-disabled.png);
-}
-
-input.labelauty.disable-icon+label>span.labelauty-unchecked-image {
-	background-image: url(../scripts/auty/images/input-disabled.png);
-}
-
-input.labelauty.terms-icon+label>span.labelauty-checked-image {
-	background-image: url(../scripts/auty/images/terms-checked.png);
-}
-
-input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
-	background-image: url(../scripts/auty/images/terms-unchecked.png);
-}
-
-.statement {
-	font-size: 14px;
-}
-
-.container {
-	margin: 12px 0px 0px 8px;
-	background-color: white;
-	padding: 10px;
-}
-
-.z-checkbox input[type=checkbox][disabled=disabled]+label.z-checkbox-content {
-	opacity: 0.5;
-}
-
+/* bootstrap tabs */
 .demo-feature3 .nav-tabs li {
 	font-style: normal;
 	color: #3c3c3c;
@@ -56,6 +20,7 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	border-bottom-color: transparent;
 }
 
+/*  tab layout */
 .demo-feature3 .tab-pane .title {
 	font-size: 11px;
 	font-style: normal;
@@ -64,15 +29,30 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	margin-left: 10px;
 }
 
+.demo-feature3 .bgColor {
+	background-color: #f5f5f5;
+}
+
+.demo-feature3 .titleBlock {
+	height: 24px;
+	background-color: white;
+}
+
+.demo-feature3 .codeBlock {
+	height: 161px;	
+}
+
 .demo-feature3 .codeBox {
 	border-color: #dcdcdc;
 	border-width: 0 0 1px 0;
 	border-style: solid;
+	height: 160px;
 }
 
-.demo-feature3 .bgColor {
-	background-color: #f5f5f5;
+.demo-feature3 .exampleBlock {
+	height: 271px;	
 }
+
 .demo-feature3 .exampleBox {
 	display: table-cell;
 	vertical-align: middle;
@@ -81,59 +61,17 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	background-color: white;
 	border-radius: 0 0 5px 5px;
 	border-style: solid;
+	height: 270px;
 }
 
+/*  chartist */
 .demo-feature3 .chartistContent {
 	margin: 0 auto;
-	width: 55%;
+	width: 80%;
 }
 
-.demo-feature3 .labelautyContent {
-	margin: 0 auto;
-	width: 55%;
-}
-
-.demo-feature3 .highlightContent {
-	margin: 0 auto 0px auto;
-	width: 90%;
-	height: 220px;
-}
-
-.demo-feature3 .markdownContent {
-	margin: 0 auto 0px auto;
-	width: 90%;
-	height: 220px;
-}
-
-.demo-feature3 .markdownContent h1 {
-	margin-top: 0px;
-}
-
-.demo-feature3 .maskContent {
-	margin: 0 auto 0px auto;
-	width: 350px;
-	height: 160px;
-}
-
-.demo-feature3 .maskContent input[type="text"] {
-	font-size: 13px;
-}
-
-.demo-feature3 .maskContent .z-label {
-	font-size: 14px;
-}
-
-.demo-feature3 .view-source {
-	padding-right: 10px;
-}
-
-.demo-feature3 .z-checkbox-content {
-	font-size: 19px;
-	margin-left: 5px;
-}
-
-.demo-feature3 .z-checkbox > input {
-	margin-bottom: 7px;
+.demo-feature3 .before .chartistContent .z-label {
+	font-size: 100px;
 }
 
 .ct-series-a .ct-slice-pie {
@@ -148,6 +86,89 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	font-size: 2.3em;
 	line-height: 1
 }
+
+/*  labelauty */
+.demo-feature3 .labelautyContent {
+	margin: 0 auto;
+	width: 55%;
+}
+
+input.labelauty+label {
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 12px 15px 12px;
+}
+
+.demo-feature3 .z-checkbox-content {
+	font-size: 19px;
+	margin-left: 5px;
+}
+
+.demo-feature3 .z-checkbox>input {
+	margin-bottom: 7px;
+}
+
+input.labelauty.disable-icon+label>span.labelauty-checked-image {
+	background-image: url(../scripts/auty/images/input-disabled.png);
+}
+
+input.labelauty.disable-icon+label>span.labelauty-unchecked-image {
+	background-image: url(../scripts/auty/images/input-disabled.png);
+}
+
+input.labelauty.terms-icon+label>span.labelauty-checked-image {
+	background-image: url(../scripts/auty/images/terms-checked.png);
+}
+
+input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
+	background-image: url(../scripts/auty/images/terms-unchecked.png);
+}
+
+.z-checkbox input[type=checkbox][disabled=disabled]+label.z-checkbox-content
+	{
+	opacity: 0.5;
+}
+
+/*  highlight */
+.demo-feature3 .highlightContent {
+	margin: 0 auto 0px auto;
+	width: 90%;
+	height: 220px;
+}
+
+/*  markdown */
+.demo-feature3 .markdownContent {
+	margin: 0 auto 0px auto;
+	width: 90%;
+	height: 220px;
+}
+
+.demo-feature3 .markdownContent h1 {
+	margin-top: 0px;
+}
+
+/*  mask */
+.demo-feature3 .maskContent {
+	margin: 0 auto 0px auto;
+	width: 350px;
+	height: 160px;
+}
+
+.demo-feature3 .maskContent input[type="text"] {
+	font-size: 13px;
+}
+
+.demo-feature3 .maskContent .z-label {
+	font-size: 14px;
+}
+
+/*  view source */
+.demo-feature3 .view-source {
+	padding-right: 10px;
+}
+
+/*  code mirror */
 .demo-feature3 .CodeMirror-gutters {
 	width: 15px !important;
 }
@@ -158,4 +179,54 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 
 .demo-feature3 .CodeMirror-gutter-wrapper {
 	left: -30px !important;
+}
+
+/* reposive design */
+@media screen and (min-width: 320px) and (max-width: 479px) {
+}
+
+@media screen and (min-width: 480px) and (max-width: 759px) {
+}
+
+@media screen and (min-width: 760px) and (max-width: 959px) {
+	.demo-feature3 .codeBox {
+		height: 100px;
+	}
+	.demo-feature3 .before .chartistContent .z-label {
+		font-size: 85px;
+	}
+	
+	input.labelauty+label {
+		font-size: 12px;
+		padding: 8px 10px 14px 10px;
+	}
+	
+	.demo-feature3 .z-checkbox-content {
+		font-size: 14px;
+		margin-left: 5px;
+	}
+	
+	.demo-feature3 .maskContent {
+		width: 300px;
+	}
+	
+	.demo-feature3 .maskContent .z-label {
+		font-size: 12px;
+	}
+	
+	.demo-feature3 .maskContent input[type="text"] {
+		font-size: 10px;
+	}
+}
+
+@media screen and (min-width: 960px) and (max-width: 1159px) {
+}
+
+@media screen and (min-width: 1160px) {
+}
+
+@media screen and (min-width: 1275px) {
+}
+
+@media screen and (min-width: 1360px) {
 }

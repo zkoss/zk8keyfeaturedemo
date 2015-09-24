@@ -1,8 +1,6 @@
 <zk xmlns:ca="client/attribute">
 <vlayout sclass="chartistContent">
-<label value="@load(vm.chartist_percentage)"
-	ca:data-chartist-pie='{"width": "200", 
-	"height": "200", "total": "100"}'
-	hflex="1" />
+<label height="200px" width="200px" sclass="ct-golden-section" value="@load(vm.chartist_percentage)"
+	ca:data-chartist-pie='{"total": "100"}' />
 </vlayout>
 </zk>

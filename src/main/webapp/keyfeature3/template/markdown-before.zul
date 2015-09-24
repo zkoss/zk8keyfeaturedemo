@@ -1,6 +1,6 @@
 <zk>
 <vlayout sclass="markdownContent">
-<textbox rows="12" cols="52" value="@bind(vm.markdown)"
+<textbox rows="12" hflex="1" value="@bind(vm.markdown)"
 	instant="true" />
 </vlayout>
 </zk>
