@@ -42,7 +42,7 @@ body {
 	margin: 16px;
 	width: 240px;
 	height: 255px;
-	text-align: initial;
+	text-align: left;
 }
 
 .item-grid .item-seller {
@@ -99,7 +99,7 @@ body {
 	display: inline-block;
 	white-space: nowrap;
 	width: 100%;
-	text-align: initial;
+	text-align: left;
 }
 
 .item-list:first-child {
@@ -161,7 +161,7 @@ body {
 	position: relative;
 	padding-left: 115px; 
 	min-height: 135px;
-	text-align: initial;
+	text-align: left;
 }
 
 .seller-tree .seller {
@@ -237,7 +237,7 @@ body {
 
 /* editiable */
 .item-editable {
-	text-align: initial;
+	text-align: left;
 }
 
 /* raw */
@@ -245,5 +245,5 @@ body {
 	font-size: 17px;
 	position: relative;
     left: 25px;
-    text-align: initial;
+    text-align: left;
 }
