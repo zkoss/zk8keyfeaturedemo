@@ -1,30 +1,30 @@
 <zk>
 <vlayout sclass="maskContent">
-<hlayout vflex="1">
+<hlayout hflex="1">
 	<div hflex="1">
 		<label value="Collection Time: " />
 	</div>
 	<textbox hflex="2" value="21143513" />
 </hlayout>
-<hlayout vflex="1">
+<hlayout hflex="1">
 	<div hflex="1">
 		<label value="Delivery Date: " />
 	</div>
 	<textbox hflex="2" value="10122015" />
 </hlayout>
-<hlayout vflex="1">
+<hlayout hflex="1">
 	<div hflex="1">
 		<label value="Tracking No.: " />
 	</div>
 	<textbox hflex="2" value="AAA000000" />
 </hlayout>
-<hlayout vflex="1">
+<hlayout hflex="1">
 	<div hflex="1">
 		<label value="Price: " />
 	</div>
 	<textbox hflex="2" value="999999" />
 </hlayout>
-<hlayout vflex="1">
+<hlayout hflex="1" >
 	<div hflex="1">
 		<label value="Contact No.: " />
 	</div>

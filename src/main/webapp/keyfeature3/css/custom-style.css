@@ -34,23 +34,27 @@
 }
 
 .demo-feature3 .titleBlock {
-	height: 24px;
+/* 	height: 24px; */
 	background-color: white;
 }
 
+.demo-feature3 .codeSeparator {
+	background-color: #f5f5f5;	
+}
+
 .demo-feature3 .codeBlock {
-	height: 161px;	
+/* 	height: 161px;	 */
 }
 
 .demo-feature3 .codeBox {
 	border-color: #dcdcdc;
 	border-width: 0 0 1px 0;
 	border-style: solid;
-	height: 160px;
+/* 	height: 160px; */
 }
 
 .demo-feature3 .exampleBlock {
-	height: 271px;
+/* 	height: 271px; */
 }
 
 .demo-feature3 .exampleBox {
@@ -61,13 +65,13 @@
 	background-color: white;
 	border-radius: 0 0 5px 5px;
 	border-style: solid;
-	height: 270px;
+/* 	height: 270px; */
 }
 
 /*  chartist */
 .demo-feature3 .chartistContent {
 	margin: 0 auto;
-	width: 80%;
+	width: 50%;
 }
 
 .demo-feature3 .before .chartistContent .z-label {
@@ -90,15 +94,9 @@
 /*  labelauty */
 .demo-feature3 .labelautyContent {
 	margin: 0 auto;
-	width: 55%;
+	width: 80%;
 }
 
-input.labelauty+label {
-	display: inline-block;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 10px 12px 15px 12px;
-}
 
 .demo-feature3 .z-checkbox-content {
 	font-size: 19px;
@@ -107,6 +105,13 @@ input.labelauty+label {
 
 .demo-feature3 .z-checkbox>input {
 	margin-bottom: 7px;
+}
+
+input.labelauty+label {
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 12px 15px 12px;
 }
 
 input.labelauty.disable-icon+label>span.labelauty-checked-image {
@@ -151,8 +156,7 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 /*  mask */
 .demo-feature3 .maskContent {
 	margin: 0 auto 0px auto;
-	width: 350px;
-	height: 160px;
+	width: 90%;
 }
 
 .demo-feature3 .maskContent input[type="text"] {
@@ -169,6 +173,10 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 }
 
 /*  code mirror */
+.demo-feature3 .CodeMirror {
+	height: 100%;	
+}
+
 .demo-feature3 .CodeMirror-gutters {
 	width: 15px !important;
 }
@@ -183,14 +191,11 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 
 /* reposive design */
 @media screen and (min-width: 320px) and (max-width: 479px) {
-	.demo-feature3 .codeBox {
-		height: 100px;
-	}
 	.demo-feature3 .before .chartistContent .z-label {
-		font-size: 45px;
+		font-size: 35px;
 	}
 	.ct-label {
-		font-size: 2em;
+		font-size: 1em;
 	}
 	
 	input.labelauty+label {
@@ -213,16 +218,16 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 }
 
 @media screen and (min-width: 480px) and (max-width: 759px) {
-	.demo-feature3 .codeBox {
-		height: 100px;
-	}
 	.demo-feature3 .before .chartistContent .z-label {
-		font-size: 65px;
+		font-size: 60px;
 	}
-	input.labelauty+label {
-		font-size: 8px;
-		padding: 4px 5px 9px 5px;
+	.ct-label {
+		font-size: 1.5em;
 	}
+/* 	input.labelauty+label { */
+/* 		font-size: 8px; */
+/* 		padding: 4px 5px 9px 5px; */
+/* 	} */
 	.demo-feature3 .z-checkbox-content {
 		font-size: 12px;
 		margin-left: 2px;
@@ -240,7 +245,7 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 
 @media screen and (min-width: 760px) and (max-width: 959px) {
 	.demo-feature3 .codeBox {
-		height: 100px;
+/* 		height: 100px; */
 	}
 	.demo-feature3 .before .chartistContent .z-label {
 		font-size: 85px;
