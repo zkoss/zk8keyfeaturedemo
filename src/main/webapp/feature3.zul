@@ -12,7 +12,7 @@
 			<sh:apply template="tab" tabId="mask" />
 
 			<template name="tab">
-				<n:li class="${sclass}">
+				<n:li class="${sclass} ${tabId}">
 					<n:a href="#${tabId}" aria-controls="${tabId}"
 						role="tab" data-toggle="tab">
 						${tabId}
@@ -26,6 +26,10 @@
 			jq('.demo-feature3 .nav-tabs a').on('shown.bs.tab', function() {
 				zUtl.fireSized(zk.$('.demo-feature3'));
 			});
+			if (zk.ie == 9) {
+				jq('.demo-feature3 .markdown').css('display', 'none');
+				jq('.demo-feature3 #markdown').css('display', 'none');
+			}
 		</script>
 
 		<n:div class="tab-content">
