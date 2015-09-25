@@ -1,5 +1,5 @@
 <zk>
-<vlayout sclass="chartistContent">
+<vlayout width="50%" sclass="chartistContent">
 <textbox width="100%" value="@bind(vm.chartist_percentage)" instant="true" />
 <label value="@load(vm.chartist_percentage)" />
 </vlayout>
