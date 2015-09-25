@@ -1,6 +1,6 @@
 <zk xmlns:n="native">
 	<div viewModel="@id('vm') @init('org.zkoss.keyfeature2.EditCatalogViewModel')"
-		 form="@id('catalogForm') @load(catalog) @save(catalog, before='save')">
+		 form="@id('catalogForm') @load(catalog) @save(catalog, before='save')" sclass="item-editable">
 		<n:table class="table">
 			<n:thead>
 				<n:tr sclass="form-group-lg ">

@@ -40,22 +40,21 @@ body {
 }
 .demo-header .text-content h2 {
 	font-size: 50px;
-	margin-bottom: 40px;
+	margin: 0 15px 40px 15px;
 }
 .demo-header .text-content p {
 	font-weight: 400;
 	font-size: 27px;
 	line-height: 1.5em;
-	margin-bottom: 45px;
+	margin: 0 15px 45px 15px;
 }
 .demo-header .button.learn-more {
 	margin-right: 25px;
 }
-
+/* demo section overall*/
 .demo-section {
 	width: 100%;
 }
-
 .demo-section-light-blue {
 	background-color: #1686c8; 
 	color: #ffffff; 
@@ -67,15 +66,6 @@ body {
 .demo-section-white {
 	background-color: #ffffff; 
 	color: #373737; 
-}
-
-.debug {
-	outline: 1px solid orange;
-	outline-style: dashed;
-}
-/* demo section overall*/
-.demo-section {
-	width: 100%;
 }
 .demo-section .section-content {
 	width: 100%;
@@ -193,7 +183,7 @@ body {
 	color: #565656;
 }
 .shadow20 {
-	box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.45);
+	box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.45);
 }
 /* feature 1 */
 .demo-feature1 .scale {
@@ -252,6 +242,10 @@ body {
 	-webkit-transform-origin: top left;
 	transform-origin: top left;
 }
+.demo-feature2-code .demo-panel-header {
+	background-color: #e6e6e6;
+	color: #fbfbfb;
+}
 /* feature 3 */
 .demo-feature3 .tab-content {
 	background-color: #ffffff;
@@ -265,17 +259,7 @@ body {
 .demo-feature4 {
 }
 /*Responsive styles*/
-@media screen and (min-width: 320px) and (max-width: 479px) {
-	.demo-header .text-content h2 {
-		font-size: 42 px;
-		margin-left: 15px;
-		margin-right: 15px;
-	}
-	.demo-header .text-content p {
-		font-size: 21 px;
-		margin-left: 15px;
-		margin-right: 15px;
-	}
+@media screen and (max-width: 479px) {
 	.button {
 		display: block;
 		margin: 0 auto;
@@ -286,7 +270,7 @@ body {
 	.demo-section .section-content {
 		width: 100%;
 		margin: 0 auto;
-		padding: 60px 0px 100px;
+		padding: 60px 0px 80px;
 	}
 	.demo-section .text-content {
 		position: static;
@@ -319,6 +303,9 @@ body {
 		height: 400px;
 		margin: 0 auto;
 	}
+	.demo-feature1-code.shadow20 {
+		box-shadow: none;
+	}
 	.demo-feature2 {
 		width: 300px;
 		height: 500px;
@@ -327,13 +314,16 @@ body {
 	.demo-feature2 .scale {
 		width: 140%;
 		height: 140%;
-		-ms-transform: scale(0.715);
-		-webkit-transform: scale(0.715);
-		transform: scale(0.715);
+		-ms-transform: scale(0.7143);
+		-webkit-transform: scale(0.7143);
+		transform: scale(0.7143);
 	}
 	.demo-feature2-code {
 		width: 300px;
 		margin: 0 auto;
+	}
+	.demo-feature2-code.shadow20 {
+		box-shadow: none;
 	}
 	.demo-feature3 {
 		width: 300px;
@@ -343,25 +333,11 @@ body {
 		width: 300px;
 		margin: 0 auto;
 	}
-	.demo-footer .button.learn-more,
-	.demo-footer .button.download {
-		margin: 0 auto 25px;
-	}
 }
 @media screen and (min-width: 480px) and (max-width: 759px) {
-	.demo-header .text-content h2 {
-		font-size: 42 px;
-		margin-left: 15px;
-		margin-right: 15px;
-	}
-	.demo-header .text-content p {
-		font-size: 21 px;
-		margin-left: 15px;
-		margin-right: 15px;
-	}
 	.demo-section .section-content {
 		width: 100%;
-		padding: 60px 30px 100px;
+		padding: 85px 30px 100px;
 	}
 	.demo-section .text-content {
 		position: static;
@@ -373,7 +349,7 @@ body {
 		margin-bottom: 50px;
 	}
 	.demo-feature1 {
-		height: 600px;
+		height: 445px;
 		margin-bottom: 30px;
 	}
 	.demo-feature1 .scale {
@@ -386,6 +362,9 @@ body {
 	.demo-feature1-code {
 		height: 400px;
 	}
+	.demo-feature1-code.shadow20 {
+		box-shadow: none;
+	}
 	.demo-feature2 {
 		height: 500px;
 		margin-bottom: 30px;
@@ -393,10 +372,15 @@ body {
 	.demo-feature2 .scale {
 		width: 140%;
 		height: 140%;
-		-ms-transform: scale(0.715);
-		-webkit-transform: scale(0.715);
-		transform: scale(0.715);
+		-ms-transform: scale(0.7143);
+		-webkit-transform: scale(0.7143);
+		transform: scale(0.7143);
 	}
+	.demo-feature2-code.shadow20 {
+		box-shadow: none;
+	}
+}
+@media screen (max-width: 759px) {
 	.demo-footer .button {
 		display: block;
 		margin: 0 auto;
@@ -406,16 +390,18 @@ body {
 		margin: 0 auto 25px;
 	}
 }
-@media screen and (min-width: 760px) and (max-width: 959px) {
+@media screen and (max-width: 959px) {
 	.demo-header .text-content h2 {
-		font-size: 42 px;
+		font-size: 42px;
 	}
 	.demo-header .text-content p {
-		font-size: 21 px;
+		font-size: 21px;
 	}
+}
+@media screen and (min-width: 760px) and (max-width: 959px) {
 	.demo-section .section-content {
-		width: 100%; /* minus 20px to prevent horizontal scrollbar */
-		padding: 60px 65px 100px;
+		width: 100%;
+		padding: 85px 65px 100px;
 	}
 	.demo-section .text-content {
 		position: relative;
@@ -448,9 +434,9 @@ body {
 	.demo-feature1 .scale {
 		width: 140%;
 		height: 140%;
-		-ms-transform: scale(0.715);
-		-webkit-transform: scale(0.715);
-		transform: scale(0.715);
+		-ms-transform: scale(0.7143);
+		-webkit-transform: scale(0.7143);
+		transform: scale(0.7143);
 	}
 	.demo-feature1-code {
 		position: absolute;
@@ -459,6 +445,9 @@ body {
 		top: 0px;
 		right: 0px;
 	}
+	.demo-feature1-code.shadow20 {
+		box-shadow: none;
+	}
 	.demo-feature2 {
 		width: 90%;
 		height: 500px;
@@ -466,11 +455,11 @@ body {
 		margin-bottom: 60px;
 	}
 	.demo-feature2 .scale {
-		width: 140%;
-		height: 140%;
-		-ms-transform: scale(0.715);
-		-webkit-transform: scale(0.715);
-		transform: scale(0.715);
+		width: 152%;
+		height: 152%;
+		-ms-transform: scale(0.658);
+		-webkit-transform: scale(0.658);
+		transform: scale(0.658);
 	}
 	.demo-feature2-code {
 		position: absolute;
@@ -478,10 +467,6 @@ body {
 		height: 160px;
 		bottom: -80px;
 		right: 0px;
-	}
-	.demo-feature3 {
-	}
-	.demo-feature4 {
 	}
 }
 @media screen and (min-width: 960px) and (max-width: 1159px) {
@@ -499,12 +484,12 @@ body {
 	}
 	.demo-section .text-content h2 {
 		width: 320px;
-		padding-top: 55px;
+		padding-top: 85px;
 		float: left;
 	}
 	.demo-section .text-content p {
 		width: 100%;
-		padding-top: 55px;
+		padding-top: 85px;
 		padding-left: 350px;
 	}
 	.demo-section .demo-content {
@@ -587,9 +572,9 @@ body {
 	.demo-feature1 .scale {
 		width: 151%;
 		height: 151%;
-		-ms-transform: scale(0.664);
-		-webkit-transform: scale(0.664);
-		transform: scale(0.664);
+		-ms-transform: scale(0.66225);
+		-webkit-transform: scale(0.66225);
+		transform: scale(0.66225);
 	}
 	.demo-feature1-code {
 		position: absolute;
@@ -606,9 +591,9 @@ body {
 	.demo-feature2 .scale {
 		width: 140%;
 		height: 140%;
-		-ms-transform: scale(0.7);
-		-webkit-transform: scale(0.7);
-		transform: scale(0.7);
+		-ms-transform: scale(0.7143);
+		-webkit-transform: scale(0.7143);
+		transform: scale(0.7143);
 	}
 	.demo-feature2-code {
 		position: absolute;
@@ -616,10 +601,6 @@ body {
 		height: 160px;
 		bottom: 100px;
 		right: 70px;
-	}
-	.demo-feature3 {
-	}
-	.demo-feature4 {
 	}
 }
 @media screen and (min-width: 1275px) {
@@ -649,17 +630,12 @@ body {
 		transform: scale(0.78125);
 	}
 	.demo-feature1-code {
-		position: absolute;
-		width: 500px;
-		height: 380px;
-		bottom: 100px;
 		right: 35px;
 	}
 	.demo-feature2 {
 		width: 740px;
 		max-width: 100%;
 		height: 600px;
-		margin-bottom: 65px;
 	}
 	.demo-feature2 .scale {
 		width: 113%;
@@ -667,13 +643,6 @@ body {
 		-ms-transform: scale(0.88500);
 		-webkit-transform: scale(0.88500);
 		transform: scale(0.88500);
-	}
-	.demo-feature2-code {
-		position: absolute;
-		width: 500px;
-		height: 160px;
-		bottom: 100px;
-		right: 70px;
 	}
 	.demo-feature3 {
 		width: 830px;
@@ -695,74 +664,11 @@ body {
 		padding: 125px 70px 100px 70px;
 		margin-left: 384px;
 	}
-	.demo-feature1 {
-		width: 630px;
-		max-width: 100%;
-		height: 450px;
-		margin-bottom: 140px;
-	}
-	.demo-feature1 .scale {
-		width: 128%;
-		height: 128%;
-		-ms-transform: scale(0.78125);
-		-webkit-transform: scale(0.78125);
-		transform: scale(0.78125);
-	}
 	.demo-feature1-code {
-		position: absolute;
-		width: 500px;
-		height: 380px;
-		bottom: 100px;
 		right: 70px;
 	}
-	.demo-feature2 {
-		width: 740px;
-		max-width: 100%;
-		height: 600px;
-		margin-bottom: 65px;
-	}
-	.demo-feature2 .scale {
-		width: 113%;
-		height: 113%;
-		-ms-transform: scale(0.88500);
-		-webkit-transform: scale(0.88500);
-		transform: scale(0.88500);
-	}
-	.demo-feature2-code {
-		position: absolute;
-		width: 500px;
-		height: 160px;
-		bottom: 100px;
-		right: 70px;
-	}
-	.demo-feature3 {
-		width: 830px;
-	}
-	.demo-feature4 {
-		width: 830px;
-	}
 }
-/* Code Mirror customization */
-.CodeMirror-gutter .CodeMirror-linenumbers{
-	background-color: #ffffff;
-	font-size: 10px;
-}
-.demo-feature2-code .CodeMirror {
-	height: 95px;
-	background-color: #464646;
-	color: #ffffff;
-}
-.demo-feature2-code .CodeMirror-gutters {
-	background-color: #464646;
-	color: #999999;
-}
-.demo-feature2-code .cm-s-default .cm-comment {
-	color: #b5a79a;
-}
-.demo-feature2-code .cm-s-default .cm-tag,
-.demo-feature2-code .cm-s-default .cm-attribute {
-	color: #ffffff;
-}
-.demo-feature2-code .cm-s-default .cm-string {
-	color: #de7d80;
+.debug {
+	outline: 1px solid orange;
+	outline-style: dashed;
 }

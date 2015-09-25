@@ -3,6 +3,7 @@
 <zk>
 	<device-config>
 		<device-type>ajax</device-type>
+		<!-- fix for labelauty -->
 		<embed><![CDATA[<script>
 			zk.afterLoad('zul.wgt', function() {
 				var xCheckbox = {};

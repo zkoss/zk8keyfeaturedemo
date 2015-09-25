@@ -30,7 +30,8 @@ body {
 .data-container {
 	box-sizing: border-box;
 	font-family: Helvetica,Arial,sans-serif;
-	color: #4B4B4B
+	color: #4B4B4B;
+	text-align: center;
 }
 
 /*grid*/
@@ -41,6 +42,7 @@ body {
 	margin: 16px;
 	width: 240px;
 	height: 255px;
+	text-align: initial;
 }
 
 .item-grid .item-seller {
@@ -57,6 +59,7 @@ body {
 
 .item-grid .item-seller .seller-name {
 	display: inline-block;
+	font-size: 17px;
 }
 
 .item-grid .item-image {
@@ -78,11 +81,12 @@ body {
 
 .item-grid .item-info .item-title {
 	display: block;
+	font-size: 16px;
 	font-weight: bold;
 }
 .item-grid .item-info .item-price {
 	display: block;
-	margin-top: 3px;
+	font-size: 16px;
 }
 
 
@@ -95,6 +99,7 @@ body {
 	display: inline-block;
 	white-space: nowrap;
 	width: 100%;
+	text-align: initial;
 }
 
 .item-list:first-child {
@@ -154,14 +159,19 @@ body {
 
 .seller-tree {
 	position: relative;
-	padding-left: 165px; 
+	padding-left: 115px; 
 	min-height: 135px;
+	text-align: initial;
 }
 
 .seller-tree .seller {
 	position: absolute;
-	left: 75px;
+	left: 25px;
 	height: 100%;
+}
+
+.seller-tree .seller .seller-name {
+	font-size: 17px;
 }
 
 .seller-tree .seller-icon {
@@ -217,6 +227,7 @@ body {
 .seller-tree .item-info .item-title,
 .seller-tree .item-info .item-price {
 	display: block;
+	font-size: 16px;
 }
 .seller-tree .item-info .item-title {
 	padding-top: 10px;
@@ -224,7 +235,15 @@ body {
 	font-weight: bold;
 }
 
+/* editiable */
+.item-editable {
+	text-align: initial;
+}
+
 /* raw */
 .raw-list {
 	font-size: 17px;
+	position: relative;
+    left: 25px;
+    text-align: initial;
 }

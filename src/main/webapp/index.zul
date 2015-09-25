@@ -3,6 +3,7 @@
 <?script src="/resources/js/bootstrap.min.js" ?>
 <?link rel="stylesheet" type="text/css" href="/resources/css/demo.css"?>
 <?link rel="stylesheet" type="text/css" href="/resources/css/demo-tooltips.css"?>
+<?link rel="stylesheet" type="text/css" href="/resources/css/demo-codemirror.css"?>
 <?link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" ?>
 <?link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/font-hack/2.013/css/hack.min.css" ?>
 
@@ -15,10 +16,10 @@
 		<n:div class="demo-header">
 			<n:div class="text-content">
 				<n:h2>Harvest JavaScript From Java Roots</n:h2>
-				<n:p>Stay true to your Java roots and effortlessly keep up with <n:br/> front-end innovations.</n:p>
+				<n:p>Stay true to your Java roots and effortlessly keep up with front-end innovations.</n:p>
 				<n:div>
-					<n:a class="button learn-more" href="#">Learn More</n:a>
-					<n:a class="button download" href="#">Download</n:a>
+					<n:a class="button learn-more" href="http://www.zkoss.org/product/zk/zk8">Learn More</n:a>
+					<n:a class="button download" href="http://www.zkoss.org/download/zk?zk8">Download</n:a>
 				</n:div>
 			</n:div>
 		</n:div>
@@ -80,9 +81,9 @@
 			<n:div class="text-content">
 				<n:p>Cultivate with ZK 8 now!</n:p>
 				<n:div>
-					<n:a class="button learn-more" href="#">Learn More</n:a>
-					<n:a class="button download" href="#">Download</n:a>
-					<n:a class="button demo" href="#">View All Demos</n:a>
+					<n:a class="button learn-more" href="http://www.zkoss.org/product/zk/zk8">Learn More</n:a>
+					<n:a class="button download" href="http://www.zkoss.org/download/zk?zk8">Download</n:a>
+					<n:a class="button demo" href="http://www.zkoss.org/zkdemo/">View All Demos</n:a>
 				</n:div>
 			</n:div>
 		</n:div>
@@ -115,7 +116,7 @@
 							trigger: 'manual',
 							html: true,
 							container: 'body'
-							});
+						});
 						jq(tooltipContent).remove();"
 					w:onClick="jq(this).popover('show');"/>
 			</n:div>

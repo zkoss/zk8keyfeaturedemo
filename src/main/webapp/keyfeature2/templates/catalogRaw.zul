@@ -1,6 +1,8 @@
 <zk xmlns:x="xhtml" xmlns:n="native">
-<n:samp sclass="raw-list">
+<n:div sclass="raw-list">
+<n:samp>
 Product;Price;Seller<n:br/>
 <forEach items="@init(catalog.items)">${each.title};${each.price};${each.seller.name}<n:br/></forEach>
 </n:samp>
+</n:div>
 </zk>
