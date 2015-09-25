@@ -157,6 +157,7 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 .demo-feature3 .maskContent {
 	margin: 0 auto 0px auto;
 	width: 90%;
+	padding: 5px;
 }
 
 .demo-feature3 .maskContent input[type="text"] {
