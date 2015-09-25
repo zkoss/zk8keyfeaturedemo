@@ -19,15 +19,9 @@ import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
 import org.zkoss.bind.annotation.NotifyChange;
-import org.zkoss.bind.annotation.ToClientCommand;
 import org.zkoss.keyfeature2.catalog.Catalog;
 
-/**
- * @author jumperchen
- *
- */
-@ToClientCommand({"filter, changeMode"})
-public class DataListViewModel {
+public class CatalogViewModel {
 	
 	private List<TemplateInfo> availableTemplates = new ArrayList<TemplateInfo>();
 	private TemplateInfo currentTemplate;

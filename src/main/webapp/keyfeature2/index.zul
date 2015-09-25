@@ -1,7 +1,7 @@
 
 <zk xmlns:n="native" xmlns:x="xhtml">
 	<style src="/keyfeature2/css/style.css"/>
-	<div viewModel="@id('vm') @init('org.zkoss.keyfeature2.DataListViewModel')">
+	<div viewModel="@id('vm') @init('org.zkoss.keyfeature2.CatalogViewModel')">
 		<n:div style="text-align: right">		
 			<n:div sclass="btn-group toolbar">
 				<forEach items="@init(vm.availableTemplates)" >

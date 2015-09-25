@@ -26,7 +26,7 @@
 					</textbox>
 				</n:div>
 				<n:div class="view-source">
-					<n:a href="#"><n:i class="z-icon-file-code-o"></n:i> View Source</n:a>
+					<n:a href="https://github.com/zkoss/zk8keyfeaturedemo/blob/master/src/main/webapp/keyfeature2/index.zul" target="_blank"><n:i class="z-icon-file-code-o"></n:i> View Source</n:a>
 				</n:div>
 			</vlayout>
 		</template>
