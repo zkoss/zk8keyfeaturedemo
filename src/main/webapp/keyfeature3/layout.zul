@@ -29,7 +29,7 @@
 			</div>
 		</hlayout>
 		<div height="30px" class="view-source">
-			<n:a href="#">
+			<n:a href="https://github.com/zkoss/zk8keyfeaturedemo/tree/master/src/main/webapp/keyfeature3/template">
 				<n:i class="z-icon-file-code-o"></n:i>
 				View Source
 			</n:a>

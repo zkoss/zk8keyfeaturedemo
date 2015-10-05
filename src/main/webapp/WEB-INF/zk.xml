@@ -112,7 +112,7 @@
 				function (wgt, dataValue) {
 					var renderChart = function(value) {
 						wgt.$setValue('');
-						new Chartist.Pie(wgt.$n(), {series: [parseFloat(value)], labels: [value]}, dataValue); 
+						zk.chartist = new Chartist.Pie(wgt.$n(), {series: [parseFloat(value)], labels: [value]}, dataValue); 
 					};
 					wgt.setOverride("setValue", renderChart); 
 					renderChart(wgt.getValue());
@@ -192,4 +192,11 @@
 		<device-type>ajax</device-type>    
 		<timeout-uri></timeout-uri>    
 	</session-config>
+	<client-config>
+	    <debug-js>true</debug-js>
+	</client-config>
+	<library-property>
+	    <name>org.zkoss.web.classWebResource.cache</name>
+	    <value>false</value>
+	</library-property>
 </zk>
