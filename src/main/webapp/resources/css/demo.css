@@ -186,6 +186,11 @@ body {
 	box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.45);
 }
 /* feature 1 */
+
+.demo-feature1-container{
+	
+}
+
 .demo-feature1 .scale {
 	position: relative;
 	-ms-transform-origin: top left;
