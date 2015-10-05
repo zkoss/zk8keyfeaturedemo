@@ -272,6 +272,10 @@ body {
 	.demo-header .button.learn-more {
 		margin: 0 auto 25px;
 	}
+	.demo-footer .button.learn-more,
+	.demo-footer .button.download {
+		margin: 0 auto 25px;
+	}
 	.demo-section .section-content {
 		width: 100%;
 		margin: 0 auto;

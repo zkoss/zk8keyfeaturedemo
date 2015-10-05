@@ -97,9 +97,8 @@
 	width: 60%;
 }
 
-
-.demo-feature3 .z-checkbox {
-	padding: 10px 0 10px 0;
+.demo-feature3 .before .labelautyContent .z-vlayout-inner {
+	padding: 10px 0 10px 0 !important;
 }
 
 .demo-feature3 .z-checkbox-content {
@@ -229,22 +228,25 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	.ct-label {
 		font-size: 1.5em;
 	}
+	.demo-feature3 .labelautyContent {
+	    width: 85%;
+	}
 /* 	input.labelauty+label { */
 /* 		font-size: 8px; */
 /* 		padding: 4px 5px 9px 5px; */
 /* 	} */
 	.demo-feature3 .z-checkbox-content {
-		font-size: 12px;
+		font-size: 16px;
 		margin-left: 2px;
 	}
 	.demo-feature3 .maskContent {
-		width: 170px;
+/* 		width: 170px; */
 	}
 	.demo-feature3 .maskContent .z-label {
-		font-size: 10px;
+		font-size: 12px;
 	}
 	.demo-feature3 .maskContent input[type="text"] {
-		font-size: 9px;
+		font-size: 11px;
 	}
 }
 
@@ -254,6 +256,9 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	}
 	.demo-feature3 .before .chartistContent .z-label {
 		font-size: 85px;
+	}
+	.demo-feature3 .labelautyContent {
+	    width: 60%;
 	}
 	input.labelauty+label {
 		font-size: 12px;
@@ -283,8 +288,5 @@ input.labelauty.terms-icon+label>span.labelauty-unchecked-image {
 	}
 	.demo-feature3 .z-checkbox>input {
 	    font-size: 20px;
-	}
-	.demo-feature3 .z-checkbox-content {
-	    margin: 12px 0 12px 8px;
 	}
 }

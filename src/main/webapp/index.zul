@@ -18,7 +18,7 @@
 				<n:p>Stay true to your Java roots and effortlessly keep up with front-end innovations.</n:p>
 				<n:div>
 					<n:a class="button learn-more" href="http://www.zkoss.org/product/zk/zk8">Learn More</n:a>
-					<n:a class="button download" href="http://www.zkoss.org/download/zk?zk8">Download</n:a>
+					<n:a class="button download" href="http://www.zkoss.org/download/zk">Download</n:a>
 				</n:div>
 			</n:div>
 		</n:div>
@@ -81,7 +81,7 @@
 				<n:p>Cultivate with ZK 8 now!</n:p>
 				<n:div>
 					<n:a class="button learn-more" href="http://www.zkoss.org/product/zk/zk8">Learn More</n:a>
-					<n:a class="button download" href="http://www.zkoss.org/download/zk?zk8">Download</n:a>
+					<n:a class="button download" href="http://www.zkoss.org/download/zk">Download</n:a>
 					<n:a class="button demo" href="http://www.zkoss.org/zkdemo/">View All Demos</n:a>
 				</n:div>
 			</n:div>

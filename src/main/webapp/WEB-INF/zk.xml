@@ -188,33 +188,6 @@
 			</script>
 	    </data-handler>
 	</client-config>
-	<device-config>
-		<device-type>ajax</device-type>
-		<embed><![CDATA[
-		<script type="text/javascript">
-		zk.afterLoad('zul.wgt', function() {
-			var xCheckbox = {};
-			zk.override(zul.wgt.Checkbox.prototype, xCheckbox, {
-				setChecked: function (checked) {
-					if (zk.mobile) {
-						this._checked = checked;
-						if (this.desktop) {
-							var n = this.$n('real');
-							checked ? jq(n).attr('checked', 'checked') : jq(n).removeAttr('checked');
-							n.checked = checked || false;
-							jq(n).removeClass('z-icon-check');
-							if (checked && n.type == 'checkbox')
-								jq(n).addClass('z-icon-check');
-						}
-					} else {
-						xCheckbox.setChecked.apply(this, arguments);
-					}
-				}
-			});
-		});
-		</script>
-		]]></embed>
-	</device-config>
 	<session-config>
 		<device-type>ajax</device-type>    
 		<timeout-uri></timeout-uri>    
