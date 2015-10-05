@@ -1,7 +1,6 @@
 <?component name="demoPanel" templateURI="/templates/demoPanel.zul"?>
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
 
-<!-- TODO debug why this happens and post a bug -->
 <div sclass="demo-feature1-container" w:onBind="jq('.demo-feature1').scroll(function() {this.scrollTop = 0})"><!-- workaround div - shadow element doesn't work when it is a root -->
 	
 	<sh:apply template="tooltipToggle" offsetStyle="left: 30px;"/>
