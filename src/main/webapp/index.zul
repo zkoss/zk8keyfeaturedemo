@@ -51,11 +51,11 @@
 
 		<sh:apply template="demoSection"
 				sectionStyle="demo-section demo-section-blue" 
-				title="Easily Integrate Third-Party Javascript Libraries"
+				title="Easily Integrate Third-Party JavaScript Libraries"
 				contentURI="feature3.zul"
 				learnMoreLink="#">
 			<template name="description">
-				<n:p>By using ZK 8's Data-handler, you can conveniently incorporate many third-party Javascript libraries.</n:p>
+				<n:p>By using ZK 8's Data-handler, you can conveniently incorporate many third-party JavaScript libraries.</n:p>
 			</template>
 			<template name="tooltip">
 				<n:p>tooltip</n:p>
