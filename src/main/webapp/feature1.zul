@@ -1,7 +1,7 @@
 <?component name="demoPanel" templateURI="/templates/demoPanel.zul"?>
 <zk xmlns:n="native" xmlns:ca="client/attribute" xmlns:w="client" xmlns:sh="shadow">
 
-<div sclass="demo-feature1-container" w:onBind="jq('.demo-feature1').scroll(function() {this.scrollTop = 0})"><!-- workaround div - shadow element doesn't work when it is a root -->
+<div sclass="demo-feature1-container" w:onBind="jq('.demo-feature1').scroll(function() {this.scrollTop = 0});jq('.code-tabpanel').click(function() {t = setTimeout(function(){jq('.code-codemirror').next()[0].CodeMirror.refresh()},100);});"><!-- workaround div - shadow element doesn't work when it is a root -->
 	
 	<sh:apply template="tooltipToggle" offsetStyle="left: 30px;"/>
 	
@@ -19,7 +19,7 @@
 			<tabbox hflex="1" vflex="1">
 				<tabs id="tabs">
 					<tab label="statBoxTemplate.zul" />
-					<tab label="index.zul" />
+					<tab sclass="code-tabpanel" label="index.zul" />
 				</tabs>
 				<tabpanels vflex="1">
 					<tabpanel renderdefer="100"  >
@@ -53,7 +53,7 @@ stat box, based on the box values -->
 				<tabpanel>
 					<vlayout>
 						<textbox ca:data-codeMirror="true" rows="10"
-							multiline="true">
+							multiline="true" sclass="code-codemirror">
 							<attribute name="value"><![CDATA[<!--Defining the statbox element and using it in the main index.zul file-->
 <?component name="statBox" templateURI="statBoxTemplate.zul"?>
 
