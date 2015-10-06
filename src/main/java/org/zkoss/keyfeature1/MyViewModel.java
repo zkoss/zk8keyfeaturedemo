@@ -3,6 +3,7 @@ package org.zkoss.keyfeature1;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
+import org.zkoss.bind.annotation.NotifyChange;
 import org.zkoss.bind.annotation.ToClientCommand;
 import org.zkoss.json.JSONObject;
 import org.zkoss.zk.ui.util.Clients;
@@ -16,7 +17,7 @@ public class MyViewModel {
 	private ListModelList<StatBlock> myStats = new ListModelList<StatBlock>();
 	private ListModelList<Message> myMessages = new ListModelList<Message>();
 	private ListModelList<PanelButton> myPanelButtons = new ListModelList<PanelButton>();
-	private String messageTextbox;
+	private String messageTextbox = "";
 	private JSONObject scrollProperty = new JSONObject();
 
 	@Init
@@ -54,6 +55,10 @@ public class MyViewModel {
 		this.messageTextbox = messageTextbox;
 	}
 	
+	public String getMessageTextbox() {
+		return messageTextbox;
+	}
+
 	public JSONObject getScrollProperty() {
 		return scrollProperty;
 	}
@@ -69,9 +74,11 @@ public class MyViewModel {
 	}
 	
 	@Command(ADD_NEW_MESSAGE)
+	@NotifyChange("messageTextbox")
 	public void addNewMessage() {
 		if (messageTextbox != null && !"".equals(messageTextbox)) {
 			myMessages.add(new Message(new User("John Doe", "./img/user-7.jpg"), messageTextbox));
+			messageTextbox = "";
 		}
 	}
 

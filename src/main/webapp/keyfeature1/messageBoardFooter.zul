@@ -1,6 +1,6 @@
 <h:div class="input-group" xmlns:h="native">
 	<textbox onOK="@command('addNewMessage')"
-		value="@save(vm.messageTextbox)" class="form-control bg-silver"
+		value="@bind(vm.messageTextbox)" class="form-control bg-silver"
 		placeholder="Enter message" />
 	<h:span class="input-group-btn">
 		<button class="btn btn-primary"
