@@ -8,7 +8,9 @@
 			<sh:apply template="tab" tabId="chartist" sclass="active" />
 			<sh:apply template="tab" tabId="labelauty" />
 			<sh:apply template="tab" tabId="highlight" />
-			<sh:apply template="tab" tabId="markdown" />
+			<if test="${!(zk.ie lt 10)}">
+				<sh:apply template="tab" tabId="markdown" />
+			</if>
 			<sh:apply template="tab" tabId="mask" />
 
 			<template name="tab">
@@ -21,16 +23,12 @@
 			</template>
 		</n:ul>
 
-		<!-- TODO transfer into a data-handler -->
+		<!-- could also be done in a data-handler -->
 		<script defer="true">
 			jq('.demo-feature3 .nav-tabs a').on('shown.bs.tab', function() {
 				zUtl.fireSized(zk.$('.demo-feature3'));
 				zk.chartist.update();
 			});
-			if (zk.ie == 9) {
-				jq('.demo-feature3 .markdown').css('display', 'none');
-				jq('.demo-feature3 #markdown').css('display', 'none');
-			}
 		</script>
 
 		<n:div class="tab-content">
