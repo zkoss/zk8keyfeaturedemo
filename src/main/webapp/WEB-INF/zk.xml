@@ -112,10 +112,11 @@
 				function (wgt, dataValue) {
 					var renderChart = function(value) {
 						wgt.$setValue('');
-						zk.chartist = new Chartist.Pie(wgt.$n(), {series: [parseFloat(value)], labels: [value]}, dataValue); 
+						wgt.chart = new Chartist.Pie(wgt.$n(), {series: [parseFloat(value)], labels: [value]}, dataValue); 
 					};
 					wgt.setOverride("setValue", renderChart); 
 					renderChart(wgt.getValue());
+					wgt.listen({onAfterSize: function() {wgt.chart.update();}});
 				}
 			</script>
 		</data-handler>
