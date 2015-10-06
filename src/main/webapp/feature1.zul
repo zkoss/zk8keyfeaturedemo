@@ -69,7 +69,7 @@ stat box, based on the box values -->
 				</tabpanels>
 			</tabbox>
 			<n:div class="view-source">
-				<n:a href="https://github.com/zkoss/zk8keyfeaturedemo/tree/master/src/main/webapp/keyfeature1"><n:i class="z-icon-file-code-o"></n:i> View Source</n:a>
+				<n:a href="https://github.com/zkoss/zk8keyfeaturedemo/tree/master/src/main/webapp/keyfeature1"  target="_blank"><n:i class="z-icon-file-code-o"></n:i> View Source</n:a>
 			</n:div>
 		</vlayout>
 		</template>
