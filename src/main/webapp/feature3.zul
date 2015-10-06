@@ -49,11 +49,13 @@
 					before="/keyfeature3/template/highlight-before.zul"
 					after="/keyfeature3/template/highlight-after.zul" />
 			</n:div>
-			<n:div class="tab-pane" id="markdown">
-				<layout
-					before="/keyfeature3/template/markdown-before.zul"
-					after="/keyfeature3/template/markdown-after.zul" />
-			</n:div>
+			<if test="${!(zk.ie lt 10)}">
+				<n:div class="tab-pane" id="markdown">
+					<layout
+						before="/keyfeature3/template/markdown-before.zul"
+						after="/keyfeature3/template/markdown-after.zul" />
+				</n:div>
+			</if>
 			<n:div class="tab-pane" id="mask">
 				<layout before="/keyfeature3/template/mask-before.zul"
 					after="/keyfeature3/template/mask-after.zul" />
