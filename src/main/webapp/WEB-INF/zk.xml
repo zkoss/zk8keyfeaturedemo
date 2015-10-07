@@ -120,37 +120,6 @@
 				}
 			</script>
 		</data-handler>
-		<data-handler>
-			<name>easypiechart</name>
-			<script src="/keyfeature3/scripts/easypiechart/jquery.easy-pie-chart.js"/>
-			<script>
-				function (wgt, dataValue) {
-					var configuration = dataValue.length > 0 ? $.evalJSON(dataValue) : {},
-						$w = jq(wgt.$n()),
-						size = $w.data('size'),
-						label = $w.find('span'),
-						defaultConfig = { //Change the text by step (Animation)
-							onStep: function(value) {
-								label.text(~~value + '%');
-							},
-							onStop: function(from, to) {
-								label.text(~~to + '%');
-							}
-						};
-				
-					$.extend(configuration, defaultConfig, size ? {size: size} : {});
-					$w.easyPieChart(configuration);
-				
-					var self = this;
-					if (self.after) {
-						self.after('$clientUpdate', function (evt) {
-							if (evt != null)
-								$w.data('easyPieChart').update(evt);
-						});
-					}
-				}
-			</script>
-		</data-handler>
 	    <data-handler>
 			<name>codeMirror</name>
 			<link rel="stylesheet" type="text/css" href="/resources/css/codemirror.css"/>

@@ -6,13 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
-import org.zkoss.bind.annotation.NotifyCommand;
-import org.zkoss.bind.annotation.ToClientCommand;
 import org.zkoss.zk.ui.WebApps;
 import org.zkoss.zsoup.helper.StringUtil;
 
-@NotifyCommand(value = "easypiechart$clientUpdate", onChange = "_vm_.percentage")
-@ToClientCommand({ "easypiechart$clientUpdate" })
 public class IntegrationShowcaseViewModel {
 
 	private boolean like = true;
