@@ -12,7 +12,7 @@ zk.afterMount(function() {
 	container.rowHeight = $container.find('> .list-item').outerHeight(true);
 	container.loadData = function (index, direction) {
 		container.loadingPosition = $container.scrollTop();
-		binder.command('loadData', {loadingIndex: index, direction: direction});
+		binder.command('loadData', {loadingIndex: index, direction: direction}, {duplicateIgnore:{'loadData': true}}, 50);
 	}
 	binder.after('initData', function(totalSize) {
 		container.totalSize = totalSize;
@@ -26,10 +26,7 @@ zk.afterMount(function() {
 			container.scrollLeft = $container.scrollLeft();
 			syncHorizontalScroll();
 		}
-		if (previewBar.scrollToView)
-			return;
-		if (container.loadingPosition) {
-			$container.scrollTop(container.loadingPosition);
+		if (previewBar.scrollToView || container.loadingPosition) {
 			return;
 		}
 		if ($bottomPadding.position().top < $container.height()) {
@@ -101,7 +98,7 @@ zk.afterMount(function() {
 			return;
 		prevIndex = index;
 		preview.prevY = y;
-		binder.command('showPreview', {showIndex: index});
+		binder.command('showPreview', {showIndex: index}, {duplicateIgnore:{'showPreview': true}}, 50);
 	});
 	$previewLayer.mouseout(function(evt) {
 		preview.shallShow = false;
