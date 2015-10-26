@@ -5,14 +5,14 @@
 	<artifactId>zk8keyfeaturedemo</artifactId>
 	<version>0.0.1</version>
 	<properties>
-		<zk.version>8.0.0.FL.20150923-Eval</zk.version>
+		<zk.version>8.0.0-Eval</zk.version>
 		<commons-io>2.4</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 	</properties>
 	<packaging>war</packaging>
-	<name>The zkcase8 Project</name>
-	<description>The zkcase8 Project</description>
+	<name>The zk8 keyfeature demo Project</name>
+	<description>The zk8 keyfeature demo Project</description>
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
