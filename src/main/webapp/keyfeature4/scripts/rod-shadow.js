@@ -26,9 +26,8 @@ zk.afterMount(function() {
 			container.scrollLeft = $container.scrollLeft();
 			syncHorizontalScroll();
 		}
-		if (previewBar.scrollToView || container.loadingPosition) {
+		if (previewBar.scrollToView)
 			return;
-		}
 		if ($bottomPadding.position().top < $container.height()) {
 			container.loadData(Math.floor($container.scrollTop() / container.rowHeight), 'down');
 			showLoading('bottom');

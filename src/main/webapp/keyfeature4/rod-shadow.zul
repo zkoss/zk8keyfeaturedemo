@@ -23,7 +23,7 @@
 						<n:div class="content address">${each.address}</n:div>
 						<n:div class="content city">${each.city}</n:div>
 						<n:div class="content url">
-							<a href="${each.url}" label="Website Link" sclass="link" />
+							<a href="${each.url}" label="Website Link" sclass="link" target="_blank"/>
 						</n:div>
 						<n:div class="content rating">
 							<forEach begin="1" end="${each.rating}">
