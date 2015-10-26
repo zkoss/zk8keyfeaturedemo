@@ -28,7 +28,7 @@
 							<forEach begin="1" end="${each.rating}">
 								<image src="/keyfeature4/icons/rate_full.svg" />
 							</forEach>
-							<forEach begin="1" end="${5 - each.rating}">
+							<forEach begin="${each.rating + 1}" end="5">
 								<image src="/keyfeature4/icons/rate_empty.svg" />
 							</forEach>
 						</n:div>
@@ -46,7 +46,7 @@
 		<x:div id="preview">
 			<if test="@load(not empty vm.preview)">
 				<vlayout>
-					<label value="@load(vm.preview.cityName)" sclass="title" />
+					<label value="@load(('City/Town: ' += vm.preview.cityName))" sclass="title" />
 					<x:div class="list">
 						<forEach items="@load(vm.preview.numberOfType)">
 							<n:div class="number-of-type">
