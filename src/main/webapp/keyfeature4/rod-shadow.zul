@@ -1,5 +1,5 @@
 <zk xmlns:x="xhtml" xmlns:n="native" xmlns:w="client">
-	<script type="text/javascript" src="/keyfeature4/scripts/rod-shadow.js"></script>
+	<script type="text/javascript" src="/keyfeature4/scripts/rod-shadow.min.js"></script>
 	
 	<div sclass="viewport" viewModel="@id('vm') @init('org.zkoss.keyfeature4.ShadowRodVM')" width="100%">
 		<hlayout valign="middle" spacing="0" sclass="head">

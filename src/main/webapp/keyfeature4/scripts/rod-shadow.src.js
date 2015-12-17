@@ -1,4 +1,4 @@
-zk.loadCSS('/zk8keyfeaturedemo/keyfeature4/scripts/rod-shadow.css');
+zk.loadCSS('/zk8keyfeaturedemo/keyfeature4/scripts/rod-shadow.min.css');
 zk.afterMount(function() {
 	/* Data List */
 	var container = zk.Widget.$('$container');

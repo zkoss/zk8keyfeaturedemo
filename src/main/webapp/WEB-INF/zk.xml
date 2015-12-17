@@ -49,8 +49,8 @@
 		</data-handler>
 		<data-handler>
 			<name>labelauty</name>
-			<link href="/keyfeature3/scripts/auty/jquery-labelauty.css" rel="stylesheet" />
-			<script src="/keyfeature3/scripts/auty/jquery-labelauty.js"/>
+			<link href="/keyfeature3/scripts/auty/jquery-labelauty.min.css" rel="stylesheet" />
+			<script src="/keyfeature3/scripts/auty/jquery-labelauty.min.js"/>
 			<script>
 				function (wgt, dataValue) {
 					jq(wgt._subnodes.real).labelauty(dataValue);
@@ -106,8 +106,8 @@
 			<name>chartist-pie</name>
 		    <link rel="stylesheet" href="/keyfeature3/scripts/chartist/chartist.min.css"/>
 		    <script src="/keyfeature3/scripts/chartist/chartist.min.js"></script>
-		    <script src="/keyfeature3/scripts/chartist/matchMedia.js"></script>
-		    <script src="/keyfeature3/scripts/chartist/matchMedia.addListener.js"></script>
+		    <script src="/keyfeature3/scripts/chartist/matchMedia.min.js"></script>
+		    <script src="/keyfeature3/scripts/chartist/matchMedia.addListener.min.js"></script>
 			<script>
 				function (wgt, dataValue) {
 					var renderChart = function(value) {
@@ -122,9 +122,9 @@
 		</data-handler>
 	    <data-handler>
 			<name>codeMirror</name>
-			<link rel="stylesheet" type="text/css" href="/resources/css/codemirror.css"/>
-            <script src="/resources/js/codemirror.js"/>
-       		<script src="/resources/js/xml.js"/>
+			<link rel="stylesheet" type="text/css" href="/resources/css/codemirror.min.css"/>
+            <script src="/resources/js/codemirror.min.js"/>
+       		<script src="/resources/js/xml.min.js"/>
             <script>
 	            function(wgt, dataValue) {
             		var myTextArea = wgt.$n();

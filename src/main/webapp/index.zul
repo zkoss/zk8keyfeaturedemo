@@ -2,11 +2,11 @@
 <?link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css" ?>
 <?script src="/resources/js/bootstrap.min.js" ?>
 <?link rel="shortcut icon" type="image/ico" href="/resources/image/favicon.ico"?>
-<?link rel="stylesheet" type="text/css" href="/resources/css/demo.css"?>
-<?link rel="stylesheet" type="text/css" href="/resources/css/demo-tooltips.css"?>
-<?link rel="stylesheet" type="text/css" href="/resources/css/demo-codemirror.css"?>
+<?link rel="stylesheet" type="text/css" href="/resources/css/demo.min.css"?>
+<?link rel="stylesheet" type="text/css" href="/resources/css/demo-tooltips.min.css"?>
+<?link rel="stylesheet" type="text/css" href="/resources/css/demo-codemirror.min.css"?>
 <?link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" ?>
-<?link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/font-hack/2.013/css/hack.min.css" ?>
+<?link rel="stylesheet" type="text/css" href="/resources/css/hack.min.css" ?>
 	<div>
 		<n:div class="top-header">
 			<n:div class="logo">
