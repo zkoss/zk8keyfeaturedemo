@@ -4,7 +4,7 @@
 <?component name="messageBoardFooter" templateURI="messageBoardFooter.zul"?>
 <?import org.zkoss.keyfeature1.MyViewModel?>
 <?style src="/resources/css/font-awesome.min.css"?>
-<?style src="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"?>
+<?style src="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"?>
 <?style src="/keyfeature1/scripts/bootstrap.min.css"?>
 <?style src="/keyfeature1/scripts/style.min.css"?>
 <zk xmlns:h="native" xmlns:x="xhtml">
