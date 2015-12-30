@@ -12,8 +12,8 @@
 	height: 14px;
 	border-radius: 50%;
 	background-color: #e95d22;
-	-webkit-animation: flashing 1.5s infinite;
-	animation: flashing 1.5s infinite;
+	-webkit-animation: flashing 1.5s steps(15) infinite;
+	animation: flashing 1.5s steps(15) infinite;
 	z-index: 1;
 }
 
@@ -50,7 +50,7 @@
     opacity: 0;
   }
   20% {
-    transform: scale(1);
+    transform: scale(1); 
     opacity: 1;
   }
   to {
